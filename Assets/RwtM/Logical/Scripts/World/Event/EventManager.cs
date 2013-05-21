@@ -24,7 +24,11 @@ public class EventManager : MonoBehaviour
 
   void Update ()
   {
-
+    if (eventQueue.Peek ().complete)
+    {
+      eventQueue.Dequeue ();
+      eventQueue.Peek ().Begin ();
+    }
   }
 
   void BeginEvent (GameEvent gameEvent)

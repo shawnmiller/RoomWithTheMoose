@@ -3,23 +3,42 @@ using System.Collections;
 
 public class EventTrigger : MonoBehaviour
 {
-  public bool isRunOnce = true;
-  public int maxActivationCount = 1;
+  [SerializeField]
+  private bool isRunOnce = true;
+  [SerializeField]
+  private int maxActivationCount = 1;
+
   private int currentActivationCount;
 
-  public bool activateOnObjectInteraction = false;
+  [SerializeField]
+  private bool activateOnObjectPickUp = false;
+  [SerializeField]
+  private bool activateOnObjectPutDown = false;
+  [SerializeField]
+  private InteractableItem activationObject;
 
 
   // Use this for initialization
   void Start ()
   {
-
+    if (activateOnObjectPickUp && activateOnObjectPutDown)
+    {
+      Debug.LogWarning("This event will trigger on both pick up and put down. If this is intended, please ensure that Max Activation Count > 1 and Is Run Once is FALSE");
+    }
   }
 
   // Update is called once per frame
   void Update ()
   {
+    if (!(activateOnObjectPickUp || activateOnObjectPutDown))
+    {
+      return;
+    }
 
+    if (activationObject.Activated)
+    {
+      TriggerEvent ();
+    }
   }
 
   void OnTriggerEnter (Collider other)
