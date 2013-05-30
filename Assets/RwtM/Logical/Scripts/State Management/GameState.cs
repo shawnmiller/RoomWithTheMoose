@@ -15,6 +15,13 @@ public class GameState : MonoBehaviour {
   }
 
   private StateType state;
+
+  public StateType State
+  {
+    get { return state; }
+  }
+
+  private bool saveOnTransitionToMenu;
   private bool transitionComplete;
 
   void Awake ()
@@ -25,6 +32,24 @@ public class GameState : MonoBehaviour {
 
   public void Transition (StateType newState)
   {
-
+    switch (newState)
+    {
+      case StateType.Main_Menu:
+        break;
+      case StateType.Settings_Menu:
+        break;
+      case StateType.Continue_Menu:
+        break;
+      case StateType.Credits:
+        break;
+      case StateType.In_Game:
+        break;
+      case StateType.In_Game_Paused:
+        break;
+      case StateType.Game_Over:
+        break;
+      default:
+        break;
+    }
   }
 }

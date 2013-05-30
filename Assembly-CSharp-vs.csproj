@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4213E09F-6957-8B65-2612-4DB820F6346F}</ProjectGuid>
+	<ProjectGuid>{43EFD500-20B1-CAAD-A9DE-5861AC9935D1}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -44,17 +44,25 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RwtM\Logical\Scripts\Character\Inventory.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Character\PlayerController.cs" />
+     <Compile Include="Assets\RwtM\Logical\Scripts\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\RwtM\Logical\Scripts\GUI\InventoryDisplay.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Menu\Settings.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\LoadGame.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\SaveGame.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\SaveManager.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\State Management\GameState.cs" />
+     <Compile Include="Assets\RwtM\Logical\Scripts\State Management\StateType.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventManager.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventTrigger.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\GameEvent.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\World\Interaction\InteractableItem.cs" />
+     <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
+     <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\Temp\TempShader.shader" />
+     <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
+     <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\TextureCopy.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
