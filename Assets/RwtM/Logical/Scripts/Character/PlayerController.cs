@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
   [SerializeField]
   private float walkSpeed;
   [SerializeField]
-  private float runSpeed;
+  private float runSpeedModifier;
   [SerializeField]
   private float gravity;
   [SerializeField]
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     if (Input.GetKey (KeyCode.LeftShift) && Time.time > stopRunTime + rerunWaitTime)
     {
       isRunning = true;
-      currentSpeed = runSpeed;
+      currentSpeed *= runSpeedModifier;
     }
     else
     {
@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
       isRunning = false;
     }
 
+    // Stamina regeneration
     if (!isRunning)
     {
       currentStamina = Mathf.Min (stamina, currentStamina + (staminaRegeneration * Time.fixedDeltaTime));
@@ -69,11 +70,13 @@ public class PlayerController : MonoBehaviour
       currentStamina = Mathf.Max (0, currentStamina - Time.fixedDeltaTime);
     }
 
-    Vector3 moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical"));
+    //Vector3 moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical"));
+    Vector3 moveDirection = new Vector3 (0f, 0f, Input.GetAxis ("Vertical"));
     moveDirection = transform.TransformDirection (moveDirection);
     moveDirection = moveDirection.normalized;
     moveDirection = AlignToGroundNormal (moveDirection);
     moveDirection *= currentSpeed * Time.fixedDeltaTime;
+    moveDirection.y -= gravity * Time.fixedDeltaTime;
 
     controller.Move (moveDirection);
 	}

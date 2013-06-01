@@ -5,6 +5,7 @@
   Continue_Menu,
   Credits,
   In_Game,
+  In_Game_Memory,
   In_Game_Paused,
   Game_Over,
   End_Game

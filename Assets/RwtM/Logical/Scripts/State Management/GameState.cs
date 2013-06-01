@@ -27,7 +27,9 @@ public class GameState : MonoBehaviour {
   void Awake ()
   {
     state = StateType.Main_Menu;
-    //Transition (StateType.Main_Menu);
+
+    // For testing purposes
+    state = StateType.In_Game;
   }
 
   public void Transition (StateType newState)
