@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RwtM\Logical\Scripts\Character\CameraController.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Character\Inventory.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Character\PlayerController.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Enemy\EnemyController.cs" />
@@ -63,6 +64,13 @@
      <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\Temp\TempShader.shader" />
      <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
      <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\TextureCopy.shader" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{B2C799F9-F98C-52A4-7412-70EB0EF3FCE9}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
