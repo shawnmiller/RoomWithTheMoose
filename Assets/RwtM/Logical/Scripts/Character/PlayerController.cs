@@ -16,10 +16,12 @@ public class PlayerController : MonoBehaviour
   private float stamina;
   [SerializeField]
   private float staminaRegeneration;
+  //[SerializeField]
+  //private float rerunWaitTime;
   [SerializeField]
-  private float rerunWaitTime;
+  private float minStartRunStamina;
   private float stopRunTime;
-  private float currentStamina;
+  public float currentStamina;
   private bool isRunning;
   
   // Cached objects
@@ -37,28 +39,13 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate () 
   {
-    if (!(gameState.State == StateType.In_Game))
+    if (!(gameState.State == StateType.In_Game) && controllable)
     {
       return;
     }
 
     float currentSpeed = walkSpeed;
-
-    // Stringy run handling code
-    // TODO: Clean up
-    if (Input.GetKey (KeyCode.LeftShift) && Time.time > stopRunTime + rerunWaitTime)
-    {
-      isRunning = true;
-      currentSpeed *= runSpeedModifier;
-    }
-    else
-    {
-      if (isRunning)
-      {
-        stopRunTime = Time.time;
-      }
-      isRunning = false;
-    }
+    isRunning = DetermineRunState ();
 
     // Stamina regeneration
     if (!isRunning)
@@ -67,6 +54,7 @@ public class PlayerController : MonoBehaviour
     }
     else
     {
+      currentSpeed *= runSpeedModifier;
       currentStamina = Mathf.Max (0, currentStamina - Time.fixedDeltaTime);
     }
 
@@ -94,5 +82,14 @@ public class PlayerController : MonoBehaviour
     {
       return direction;
     }
+  }
+
+  private bool DetermineRunState ()
+  {
+    if (currentStamina - Time.fixedDeltaTime < 0)                                                   { return false; }
+    if (!isRunning && currentStamina > minStartRunStamina && Input.GetKeyDown (KeyCode.LeftShift))  { return true; }
+    if (isRunning && Input.GetKey (KeyCode.LeftShift))                                              { return true; }
+
+    return false;
   }
 }

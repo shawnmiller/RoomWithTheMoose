@@ -51,6 +51,7 @@
      <Compile Include="Assets\RwtM\Logical\Scripts\GUI\InventoryDisplay.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Menu\Settings.cs" />
+     <Compile Include="Assets\RwtM\Logical\Scripts\Misc\Globals.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\LoadGame.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\SaveGame.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\SaveManager.cs" />

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 public class CameraController : MonoBehaviour
 {
   [SerializeField]
@@ -46,15 +47,17 @@ public class CameraController : MonoBehaviour
       return;
     }
 
-    currentX += Input.GetAxis ("Mouse X");
-    currentX = ClampCircular (currentX);
-    currentY += Input.GetAxis ("Mouse Y");
-    currentY = ClampVertical (currentY);
+    HandleNormalControls ();
   }
 
   void HandleNormalControls ()
   {
-
+    currentX += Input.GetAxis ("Mouse X");
+    currentX = ClampCircular (currentX);
+    currentY += Input.GetAxis ("Mouse Y");
+    currentY = ClampVertical (currentY);
+    transform.rotation = Quaternion.Euler (0, currentX, 0);
+    neckJoint.rotation = Quaternion.Euler (-currentY, currentX, 0);
   }
 
   void HandleLookControls ()
