@@ -3,12 +3,15 @@ using System.Collections;
 
 public class EventTrigger : MonoBehaviour
 {
-  [SerializeField]
+  /*[SerializeField]
   private bool isRunOnce = true;
   [SerializeField]
   private int maxActivationCount = 1;
 
-  private int currentActivationCount;
+  private int currentActivationCount;*/
+
+  [SerializeField]
+  private EventTriggerMethod triggerMethod;
 
   [SerializeField]
   private bool activateOnObjectPickUp = false;
@@ -23,7 +26,7 @@ public class EventTrigger : MonoBehaviour
   {
     if (activateOnObjectPickUp && activateOnObjectPutDown)
     {
-      Debug.LogWarning("This event will trigger on both pick up and put down. If this is intended, please ensure that Max Activation Count > 1 and Is Run Once is FALSE");
+      Debug.LogWarning("This event will trigger on both pick up and put down.");
     }
   }
 
@@ -56,9 +59,9 @@ public class EventTrigger : MonoBehaviour
 
     // Destroy if this event only runs once or has reached
     // its activation limit.
-    if (isRunOnce)
+    /*if (isRunOnce)
     {
       Destroy (this);
-    }
+    }*/
   }
 }

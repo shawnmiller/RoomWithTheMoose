@@ -60,6 +60,7 @@
     <Compile Include="Assets\RwtM\Logical\Scripts\State Management\StateType.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventManager.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventTrigger.cs" />
+    <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventTriggerMethod.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\GameEvent.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Interaction\InteractableItem.cs" />
     <None Include="Assets\RwtM\Shaders\BlendShader.shader" />

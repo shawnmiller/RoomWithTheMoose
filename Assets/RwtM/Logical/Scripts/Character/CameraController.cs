@@ -14,20 +14,27 @@ public class CameraController : MonoBehaviour
   [SerializeField]
   private Transform neckJoint;
 
+  private bool isLooking;
   [SerializeField]
-  private Vector3 lookLeftRotation;
+  private Quaternion lookLeftRotation;
   [SerializeField]
-  private Vector3 lookRightRotation;
+  private Quaternion lookRightRotation;
+  [SerializeField]
+  private float lookSpeed;
+
   // 0 = forward, -1 = left, 1 = right
   private int lookDirection = 0; 
   // Used to store the direction that they were looking prior to using a look left/right
-  private Vector3 storedLookRotation;
+  private Quaternion storedLookRotation;
+  // The actual direction we're looking at
+  private Quaternion currentLookRotation;
 
   private float currentX;
   private float currentY;
 
   // Cached objects
   private GameState gameState;
+
 
   void Start ()
   {
@@ -47,7 +54,17 @@ public class CameraController : MonoBehaviour
       return;
     }
 
-    HandleNormalControls ();
+    isLooking = (Input.GetKey (KeyCode.Mouse1) ? true : false);
+
+    if (!isLooking)
+    {
+      HandleNormalControls ();
+    }
+    else
+    {
+      HandleNormalControls ();
+      //HandleLookControls ();
+    }
   }
 
   void HandleNormalControls ()
@@ -56,6 +73,7 @@ public class CameraController : MonoBehaviour
     currentX = ClampCircular (currentX);
     currentY += Input.GetAxis ("Mouse Y");
     currentY = ClampVertical (currentY);
+    Quaternion targetRotation = Quaternion.Euler (-currentY, currentX, 0);
     transform.rotation = Quaternion.Euler (0, currentX, 0);
     neckJoint.rotation = Quaternion.Euler (-currentY, currentX, 0);
   }
