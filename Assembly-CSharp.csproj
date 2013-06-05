@@ -58,6 +58,7 @@
     <Compile Include="Assets\RwtM\Logical\Scripts\Saving\SaveManager.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\State Management\GameState.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\State Management\StateType.cs" />
+    <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\Event.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventManager.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventTrigger.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventTriggerMethod.cs" />

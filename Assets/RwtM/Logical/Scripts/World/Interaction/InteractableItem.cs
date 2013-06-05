@@ -4,21 +4,36 @@ using System.Collections;
 public class InteractableItem : MonoBehaviour
 {
   private bool isBeingUsed;
+  private bool hasBeenUsed;
+  [SerializeField]
+  private GameObject inventoryItem;
 
   public bool Activated
   {
     get { return isBeingUsed; }
   }
 
-  // Use this for initialization
-  void Start ()
+  public bool WasActivated
   {
-
+    get { return hasBeenUsed; }
   }
 
-  // Update is called once per frame
-  void Update ()
+  public void Activate ()
   {
+    StartCoroutine ("BeginTasks");
+    isBeingUsed = true;
+  }
 
+  public void Deactivate ()
+  {
+    isBeingUsed = false;
+    hasBeenUsed = true;
+    StopCoroutine ("BeginTasks"); // JiC
+  }
+
+  IEnumerator BeginTasks ()
+  {
+    Debug.LogError ("BeginTasks function has not been implemented yet.");
+    return null;
   }
 }
