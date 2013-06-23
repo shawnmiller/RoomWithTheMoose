@@ -3,6 +3,13 @@
 
 public class CameraController : MonoBehaviour
 {
+  private bool controllable;
+
+  public bool Controllable
+  {
+    set { controllable = value; }
+  }
+
   [SerializeField]
   private float xSpeed;
   [SerializeField]
@@ -49,7 +56,7 @@ public class CameraController : MonoBehaviour
 
   void FixedUpdate ()
   {
-    if (!(gameState.State == StateType.In_Game))
+    if (!(gameState.State == StateType.In_Game) || !controllable)
     {
       return;
     }

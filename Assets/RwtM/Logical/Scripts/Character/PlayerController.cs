@@ -6,6 +6,11 @@ public class PlayerController : MonoBehaviour
 {
   private bool controllable;
 
+  public bool Controllable
+  {
+    set { controllable = value; }
+  }
+
   [SerializeField]
   private float walkSpeed;
   [SerializeField]

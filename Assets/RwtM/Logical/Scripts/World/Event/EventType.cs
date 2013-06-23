@@ -6,8 +6,8 @@
   Move_Object_Timed,
   Rotate_Object_Instant,
   Rotate_Object_Timed,
-  Lock_Player_Movement,
-  Lock_Player_Camera,
+  Toggle_Player_Movement,
+  Toggle_Player_Camera,
   Play_Sound,
   Play_Animation,
   Unlock_Event
