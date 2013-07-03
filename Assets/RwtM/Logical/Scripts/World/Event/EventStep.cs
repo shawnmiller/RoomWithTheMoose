@@ -1,46 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EventStep
+public class EventStep : MonoBehaviour
 {
+  private EventStepData data;
   private IDManager idManager;
+  private Event root;
 
-  [SerializeField]
-  private bool exclusive;
+  public void Begin(Event root, EventStepData data)
+  {
+    this.root = root;
+    this.data = data;
 
-  [SerializeField]
-  private EventType type;
-  [SerializeField]
-  private GameObject prefab;
-  [SerializeField]
-  private int associatedID;
-  [SerializeField]
-  private Vector3 position;
-  [SerializeField]
-  private Quaternion rotation;
-  [SerializeField]
-  private string animation;
-  [SerializeField]
-  private AudioClip sound;
-  [SerializeField]
-  private float duration;
-  [SerializeField]
-  private float speed;
-  [SerializeField]
-  private bool toggle;
+    idManager = IDManager.Get();
+
+    if (!this.data.exclusive)
+    {
+      this.root.Processing = false;
+    }
+  }
 
   public IEnumerator Run(Event parent)
   {
+    root = parent;
     parent.Processing = true;
 
-    if (idManager == null)
-    {
-      idManager = IDManager.Get();
-    }
 
-
-
-    switch (type)
+    switch (data.type)
     {
       case EventType.Destroy_Object:
         DestroyObject();
@@ -78,7 +64,7 @@ public class EventStep
       default:
         break;
     }
-    parent.Processing = false;
+    root.Processing = false;
   }
 
   private void DestroyObject()
@@ -89,19 +75,19 @@ public class EventStep
   private void TogglePlayerCamera()
   {
     CameraController camControl = GameObject.FindObjectOfType(typeof(CameraController)) as CameraController;
-    camControl.Controllable = toggle;
+    camControl.Controllable = data.toggle;
   }
 
   private void TogglePlayerControls()
   {
     PlayerController playerControl = GameObject.FindObjectOfType(typeof(PlayerController)) as PlayerController;
-    playerControl.Controllable = toggle;
+    playerControl.Controllable = data.toggle;
   }
 
   private void MoveObjectInstant()
   {
     GameObject sceneObject = GetSceneObject();
-    sceneObject.transform.position = position;
+    sceneObject.transform.position = data.position;
   }
 
   private IEnumerator MoveObjectTimed()
@@ -110,9 +96,9 @@ public class EventStep
     float startTime = Time.time;
     Vector3 start = sceneObject.transform.position;
 
-    while (Time.time < startTime + duration)
+    while (Time.time < startTime + data.duration)
     {
-      Vector3 newPosition = Vector3.Lerp(start, position, Time.deltaTime * speed);
+      Vector3 newPosition = Vector3.Lerp(start, data.position, Time.deltaTime * data.speed);
       sceneObject.transform.position = newPosition;
       yield return new WaitForSeconds(Time.deltaTime);
     }
@@ -121,19 +107,19 @@ public class EventStep
   private void PlayAnimation()
   {
     GameObject sceneObject = GetSceneObject();
-    sceneObject.animation.Play(animation);
+    sceneObject.animation.Play(data.animation);
   }
 
   private void PlaySound()
   {
     GameObject sceneObject = GetSceneObject();
-    sceneObject.audio.PlayOneShot(sound);
+    sceneObject.audio.PlayOneShot(data.sound);
   }
 
   private void RotateObjectInstant()
   {
     GameObject sceneObject = GetSceneObject();
-    sceneObject.transform.rotation = rotation;
+    sceneObject.transform.rotation = data.rotation;
   }
 
   private IEnumerator RotateObjectOverTime()
@@ -142,9 +128,9 @@ public class EventStep
     float startTime = Time.time;
     Quaternion start = sceneObject.transform.rotation;
 
-    while(Time.time < startTime + duration)
+    while (Time.time < startTime + data.duration)
     {
-      Quaternion newRotation = Quaternion.Slerp(start, rotation, Time.deltaTime * speed);
+      Quaternion newRotation = Quaternion.Slerp(start, data.rotation, Time.deltaTime * data.speed);
       sceneObject.transform.rotation = newRotation;
       yield return new WaitForSeconds(Time.deltaTime);
     }
@@ -152,7 +138,7 @@ public class EventStep
 
   private void SpawnObject()
   {
-    GameObject.Instantiate(prefab, position, rotation);
+    GameObject.Instantiate(data.prefab, data.position, data.rotation);
   }
 
   private void UnlockEvent()
@@ -168,6 +154,6 @@ public class EventStep
   /// <returns>The object with the associated ID from within the scene.</returns>
   private GameObject GetSceneObject()
   {
-    return idManager.GetObjectByID(associatedID);
+    return idManager.GetObjectByID(data.associatedID);
   }
 }

@@ -48,10 +48,12 @@
     <Compile Include="Assets\RwtM\Logical\Scripts\Character\CameraController.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Character\Inventory.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Character\PlayerController.cs" />
+    <Compile Include="Assets\RwtM\Logical\Scripts\DistanceComparer.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\GUI\InventoryDisplay.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Menu\Settings.cs" />
+    <Compile Include="Assets\RwtM\Logical\Scripts\Misc\CoroutineMonkey.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Misc\Globals.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Saving\LoadGame.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Saving\SaveGame.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="Assets\RwtM\Logical\Scripts\State Management\StateType.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\Event.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventManager.cs" />
+    <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventStepData.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventStep.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventTrigger.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Event\EventTriggerMethod.cs" />
@@ -68,6 +71,7 @@
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Interaction\InteractableItem.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Item ID\IDManager.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Item ID\ObjectID.cs" />
+    <None Include="Assets\Resources\EventStepSchema.xsd" />
     <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
     <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\Temp\TempShader.shader" />
     <None Include="Assets\RwtM\Shaders\CreepIn.shader" />

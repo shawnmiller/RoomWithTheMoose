@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EventStepSchema"
+    targetNamespace="http://tempuri.org/EventStepSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/EventStepSchema.xsd"
+    xmlns:mstns="http://tempuri.org/EventStepSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  
+  <xs:complexType name="vector3">
+    <xs:sequence>
+      <xs:element name="x" type="xs:float"/>
+      <xs:element name="y" type="xs:float"/>
+      <xs:element name="z" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="Event">
+    <xs:sequence>
+      <xs:element name="eventtype" type ="xs:string"/>
+    
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="SpawnObject">
+    <xs:sequence>
+      <xs:element name="prefab" type="xs:string"/>
+      <xs:element name="position" type="vector3"/>
+      <xs:element name="rotation" type="vector3"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

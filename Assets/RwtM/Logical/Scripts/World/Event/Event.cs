@@ -1,15 +1,26 @@
 ﻿using UnityEngine;
+using System.Xml;
+using System.Xml.Schema;
 using System.Collections.Generic;
 
 public class Event : MonoBehaviour
 {
+  [SerializeField]
+  private int eventID;
+
   private bool running;
-  private Queue<EventStep> eventSteps;
+  private Queue<EventStepData> eventData;
   private bool processing;
 
   public bool Processing
   {
     set { processing = value; }
+  }
+
+  void Start()
+  {
+    eventData = new Queue<EventStepData>();
+    ReadFromFile();
   }
 
   void Update()
@@ -25,19 +36,15 @@ public class Event : MonoBehaviour
     }
   }
 
-  public void Init(int eventID)
-  {
-    eventSteps = new Queue<EventStep>();
-  }
-
   void BeginNext()
   {
-    EventStep currentStep = eventSteps.Dequeue();
-    StartCoroutine(currentStep.Run(this));
+    EventStepData currentData = eventData.Dequeue();
+    EventStep newStep = gameObject.AddComponent<EventStep>();
+    newStep.Begin(this, currentData);
+  }
 
-    if (eventSteps.Peek() != null)
-    {
-      BeginNext();
-    }
+  void ReadFromFile()
+  {
+    throw new System.NotImplementedException();
   }
 }
