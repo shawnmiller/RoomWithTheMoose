@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Xml;
 using System.Xml.Schema;
 using System.Collections.Generic;
@@ -77,29 +78,29 @@ public class Event : MonoBehaviour
       switch (reqValues[i])
       {
         case "exclusive":
-
+          data.exclusive = Boolean.Parse(current.Value);
           break;
         case "position":
-
+          data.position = CompositeVector3(current);
           break;
         case "rotation":
-
+          data.rotation = Quaternion.Euler(CompositeVector3(current));
           break;
         case "duration":
-
+          data.duration = Single.Parse(current.Value);
           break;
         case "sceneid":
         case "eventid":
-
+          data.associatedID = Int32.Parse(current.Value);
           break;
         case "prefab":
-
+          data.prefab = Resources.Load("prefabs/" + current.Value, typeof(GameObject)) as GameObject;
           break;
         case "soundname":
-
+          data.sound = Resources.Load("sounds/" + current.Value, typeof(AudioClip)) as AudioClip;
           break;
         case "animation":
-
+          data.animation = current.Value;
           break;
       }
     }
