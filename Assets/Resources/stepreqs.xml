@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<reqs>
+  <SpawnObject>
+    <req>exclusive</req>
+    <req>prefab</req>
+    <req>position</req>
+    <req>rotation</req>
+  </SpawnObject>
+  <DestroyObject>
+    <req>exclusive</req>
+    <req>sceneid</req>
+  </DestroyObject>
+  <MoveObjectInstant>
+    <req>exclusive</req>
+    <req>sceneid</req>
+    <req>position</req>
+  </MoveObjectInstant>
+  <MoveObjectOverTime>
+    <req>exclusive</req>
+    <req>sceneid</req>
+    <req>position</req>
+    <req>duration</req>
+  </MoveObjectOverTime>
+  <RotateObjectInstant>
+    <req>exclusive</req>
+    <req>sceneid</req>
+    <req>rotation</req>
+  </RotateObjectInstant>
+  <RotateObjectOverTime>
+    <req>exclusive</req>
+    <req>sceneid</req>
+    <req>rotation</req>
+    <req>duration</req>
+  </RotateObjectOverTime>
+  <TogglePlayerMovement>
+    <req>exclusive</req>
+  </TogglePlayerMovement>
+  <TogglePlayerCamera>
+    <req>exclusive</req>
+  </TogglePlayerCamera>
+  <PlaySound>
+    <req>exclusive</req>
+    <req>soundname</req>
+    <req>position</req>
+  </PlaySound>
+  <PlayAnimation>
+    <req>exclusive</req>
+    <req>sceneid</req>
+    <req>animation</req>
+  </PlayAnimation>
+  <UnlockEvent>
+    <req>exclusive</req>
+    <req>eventid</req>
+  </UnlockEvent>
+</reqs>

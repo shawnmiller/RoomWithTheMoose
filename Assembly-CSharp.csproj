@@ -50,6 +50,7 @@
     <Compile Include="Assets\RwtM\Logical\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\DistanceComparer.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Enemy\EnemyController.cs" />
+    <Compile Include="Assets\RwtM\Logical\Scripts\File Management\CoreExtraction.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\GUI\InventoryDisplay.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\Menu\Settings.cs" />
@@ -74,8 +75,12 @@
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Interaction\InteractableItem.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Item ID\IDManager.cs" />
     <Compile Include="Assets\RwtM\Logical\Scripts\World\Item ID\ObjectID.cs" />
+    <None Include="Assets\Resources\Test.xml" />
     <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
     <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\Temp\TempShader.shader" />
+    <None Include="Assets\Resources\stepreqs.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
     <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\TextureCopy.shader" />
   </ItemGroup>
@@ -89,6 +94,7 @@
       <Name>Assembly-UnityScript-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 	   Other similar extension points exist, see Microsoft.Common.targets.
