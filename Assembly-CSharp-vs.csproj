@@ -49,6 +49,7 @@
      <Compile Include="Assets\RwtM\Logical\Scripts\Character\PlayerController.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\DistanceComparer.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\RwtM\Logical\Scripts\File Management\CoreExtraction.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\GUI\InventoryDisplay.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Menu\Settings.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\RwtM\Logical\Scripts\Misc\Globals.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Misc\MultiDictionary.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Misc\Test Scripts\FilePathTest.cs" />
+     <Compile Include="Assets\RwtM\Logical\Scripts\Misc\Test Scripts\UITextureCropping.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\LoadGame.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\SaveGame.cs" />
      <Compile Include="Assets\RwtM\Logical\Scripts\Saving\SaveManager.cs" />
