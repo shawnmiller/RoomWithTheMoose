@@ -6,7 +6,7 @@ public static class PathMaker
   ///</summary>
   ///<param name="separator"> The character used for separating each folder/file. </param>
   ///<param name="pathPieces"> A string array with a sorted path from root -> filename.ext </param>
-  public static string BuildPath(string[] pathPieces, char separator)
+  public static string BuildPath(string[] pathPieces, string separator)
   {
     if(pathPieces.Length == 1)
     {

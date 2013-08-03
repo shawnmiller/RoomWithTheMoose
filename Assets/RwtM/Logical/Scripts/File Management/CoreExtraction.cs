@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Collectionns.Generic;
 
 public class CoreExtraction : MonoBehaviour
 {
@@ -39,17 +40,26 @@ public class CoreExtraction : MonoBehaviour
     foreach (TextAsset asset in pull)
     {
       string[] lines = asset.text.Split(new char[] {'\n'});
-
-      Regex cRemove = new Regex("[<>- ]");
-      string pathLine = cRemove.Replace(lines[0], "");
-      string fileName = pathLine.Substring(pathLine.LastIndexOf('/'), pathLine.Length - 1);
-
-      string directory = Application.dataPath + pathLine.Substring(0, pathLine.LastIndexOf('/'));
+      
+      Regex cRemove = new Regex("[<>!- ]");
+      string path = cRemove.Replace(lines[0], "");
+      
+      List<string> pathBreakdown = new List<string>(Application.dataPath.Split('/'));
+      pathBreakdown.Add(Globals.FILE_EXTRACTION_ROOT);
+      pathBreakdown.AddRange(path.Split("/"));
+      path = PathMaker.BuildPath(pathBreakdown, @"\");
+      
+      string[] fileData = new string[lines.Length-1];
+      System.Array.Copy(lines, 1, fileData, 0, fileData.Length-1);
+      
+      string directory = path.Substring(0, path.LastIndexOf('/'));
       
       if (!Directory.Exists(directory))
       {
         Directory.CreateDirectory(directory);
       }
+      
+      File.WriteAllLines(path, fileData);
     }
   }
 }
