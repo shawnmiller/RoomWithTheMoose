@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class StepDataRequirements
 {
   private const string filePath = "/data/stepreqs.xml";
-  private static readonly StepDataRequirements instance = new StepDataRequirements();
+  private static StepDataRequirements instance;
 
   private StepDataRequirements()
   {
@@ -30,6 +30,10 @@ public class StepDataRequirements
 
   public static StepDataRequirements Get()
   {
+    if (instance == null)
+    {
+      instance = new StepDataRequirements();
+    }
     return instance;
   }
 
