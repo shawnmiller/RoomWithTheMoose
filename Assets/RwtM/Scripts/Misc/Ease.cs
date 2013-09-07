@@ -1,14 +1,16 @@
 using UnityEngine;
+using Easing;
 
 public class Ease
 {
-  private EaseType _type;
+  private EasingType _type;
   private float _startTime;
   private float _duration;
   private object _value;
   private string _mask;
 
-  public Ease(EaseType type, float duration, object toEase)
+  public Ease(EasingType
+    type, float duration, object toEase)
   {
     _type = type;
     _startTime = Time.time;
@@ -16,7 +18,7 @@ public class Ease
     _mask = "";
   }
 
-  public Ease(EaseType type, float duration, object toEase, string mask)
+  public Ease(EasingType type, float duration, object toEase, string mask)
   {
     _type = type;
     _startTime = Time.time;
@@ -26,6 +28,7 @@ public class Ease
 
   public object GetCurrent()
   {
-    
+    Debug.LogError("Ease.GetCurrent() is NYI");
+    return _value;
   }
 }

@@ -55,8 +55,11 @@
      <Compile Include="Assets\RwtM\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\RwtM\Scripts\Menu\Settings.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\CoroutineMonkey.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Misc\Ease.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Misc\EasingType.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Globals.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\MultiDictionary.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Misc\StaticVectorEasing.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\FilePathTest.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\UITextureCropping.cs" />
      <Compile Include="Assets\RwtM\Scripts\Saving\LoadGame.cs" />
