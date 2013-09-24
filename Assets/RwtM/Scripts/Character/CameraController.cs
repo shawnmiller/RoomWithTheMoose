@@ -3,7 +3,7 @@
 
 public class CameraController : MonoBehaviour
 {
-  private bool controllable;
+  private bool controllable = true;
 
   public bool Controllable
   {
@@ -58,6 +58,8 @@ public class CameraController : MonoBehaviour
   {
     if (!(gameState.State == StateType.In_Game) || !controllable)
     {
+      Debug.Log("Controllable: " + controllable);
+      Debug.Log("Not working.");
       return;
     }
 
