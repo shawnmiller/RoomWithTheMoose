@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-public class CoreExtraction : MonoBehaviour
+public class CoreExtraction : GameComponent
 {
   void Start()
   {

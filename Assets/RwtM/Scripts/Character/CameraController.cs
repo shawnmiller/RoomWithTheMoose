@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class CameraController : MonoBehaviour
+public class CameraController : StateComponent
 {
   private bool controllable = true;
 
@@ -45,7 +45,8 @@ public class CameraController : MonoBehaviour
 
   void Start ()
   {
-    gameState = GameState.Get ();
+    base.Start();
+
     if(!neckJoint)
     {
       neckJoint = transform.GetChild(0);
@@ -56,7 +57,7 @@ public class CameraController : MonoBehaviour
 
   void FixedUpdate ()
   {
-    if (!(gameState.State == StateType.In_Game) || !controllable)
+    if (!(_state.State == StateType.In_Game) || !controllable)
     {
       Debug.Log("Controllable: " + controllable);
       Debug.Log("Not working.");

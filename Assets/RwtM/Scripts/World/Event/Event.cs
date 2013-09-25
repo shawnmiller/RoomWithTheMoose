@@ -4,7 +4,7 @@ using System.Xml;
 using System.Xml.Schema;
 using System.Collections.Generic;
 
-public class Event : MonoBehaviour
+public class Event : GameComponent
 {
   [SerializeField]
   private int eventID;

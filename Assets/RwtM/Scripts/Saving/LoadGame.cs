@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class LoadGame : MonoBehaviour {
+public class LoadGame : GameComponent
+{
 
 	// Use this for initialization
 	void Start () {

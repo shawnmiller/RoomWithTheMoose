@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class SaveManager : MonoBehaviour {
+public class SaveManager : GameComponent
+{
 
 	// Use this for initialization
 	void Start () {

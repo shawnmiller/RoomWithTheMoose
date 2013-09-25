@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EventStep : MonoBehaviour
+public class EventStep : GameComponent
 {
   private EventStepData data;
   private IDManager idManager;

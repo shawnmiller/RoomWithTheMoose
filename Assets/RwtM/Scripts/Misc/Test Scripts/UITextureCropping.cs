@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class UITextureCropping : MonoBehaviour
+public class UITextureCropping : GameComponent
 {
   public Texture2D texture;
   public float percent = 1f;

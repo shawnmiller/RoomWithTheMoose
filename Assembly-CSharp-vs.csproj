@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_1;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,24 +44,28 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RwtM\Scripts\Base\Classes\GameComponent.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Base\Classes\Singleton.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Base\Classes\StateComponent.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Base\Interfaces\IStateWatcher.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\CameraController.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\Inventory.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\PlayerController.cs" />
-     <Compile Include="Assets\RwtM\Scripts\DistanceComparer.cs" />
      <Compile Include="Assets\RwtM\Scripts\Enemy\EnemyController.cs" />
      <Compile Include="Assets\RwtM\Scripts\File Management\CoreExtraction.cs" />
      <Compile Include="Assets\RwtM\Scripts\File Management\PathMaker.cs" />
      <Compile Include="Assets\RwtM\Scripts\GUI\InventoryDisplay.cs" />
      <Compile Include="Assets\RwtM\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\RwtM\Scripts\Menu\Settings.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\CoroutineMonkey.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\Ease.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\EasingType.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\Globals.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\MultiDictionary.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\StaticVectorEasing.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\DistanceComparer.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\FilePathTest.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\UITextureCropping.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Required\Globals.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Required\Helpers\Ease.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Required\Helpers\EasingType.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Required\Helpers\MultiDictionary.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Required\Helpers\StaticVectorEasing.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Required\TimeKeeper.cs" />
      <Compile Include="Assets\RwtM\Scripts\Saving\LoadGame.cs" />
      <Compile Include="Assets\RwtM\Scripts\Saving\SaveGame.cs" />
      <Compile Include="Assets\RwtM\Scripts\Saving\SaveManager.cs" />

@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.IO;
 
-public class FilePathTest : MonoBehaviour {
+public class FilePathTest : GameComponent
+{
 
 	// Use this for initialization
 	void Start () {

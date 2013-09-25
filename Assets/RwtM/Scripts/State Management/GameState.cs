@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class GameState : MonoBehaviour {
-  // Singleton
+public class GameState : Singleton<GameState> {
+  /*// Singleton
   private static GameState manager = null;
   public static GameState Get ()
   {
@@ -12,7 +12,7 @@ public class GameState : MonoBehaviour {
     }
 
     return manager;
-  }
+  }*/
 
   private StateType state;
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class InteractableItem : MonoBehaviour
+public class InteractableItem : GameComponent
 {
   private bool isBeingUsed;
   private bool hasBeenUsed;

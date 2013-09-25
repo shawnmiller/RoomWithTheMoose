@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class Settings : MonoBehaviour {
+public class Settings : GameComponent
+{
 
 	// Use this for initialization
 	void Start () {

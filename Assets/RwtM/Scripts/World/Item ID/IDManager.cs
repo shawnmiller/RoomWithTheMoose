@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class IDManager : MonoBehaviour
+public class IDManager : GameComponent
 {
   // Singleton
   private static IDManager manager = null;

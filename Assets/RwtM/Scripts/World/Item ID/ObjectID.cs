@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class ObjectID : MonoBehaviour
+public class ObjectID : GameComponent
 {
   private int id;
 

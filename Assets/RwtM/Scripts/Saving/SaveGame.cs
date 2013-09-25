@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class SaveGame : MonoBehaviour {
+public class SaveGame : GameComponent
+{
 
 	// Use this for initialization
 	void Start () {
