@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EventStep : GameComponent
+public class EventStep : MonoBehaviour
 {
-  private EventStepData data;
+  public EventStepData data;
   private IDManager idManager;
   private Event root;
 
@@ -13,18 +13,11 @@ public class EventStep : GameComponent
     this.data = data;
 
     idManager = IDManager.Get();
-
-    if (!this.data.exclusive)
-    {
-      this.root.Processing = false;
-    }
   }
 
   public IEnumerator Run(Event parent)
   {
     root = parent;
-    parent.Processing = true;
-
 
     switch (data.type)
     {
@@ -64,7 +57,6 @@ public class EventStep : GameComponent
       default:
         break;
     }
-    root.Processing = false;
   }
 
   private void DestroyObject()
@@ -98,7 +90,7 @@ public class EventStep : GameComponent
 
     while (Time.time < startTime + data.duration)
     {
-      Vector3 newPosition = Vector3.Lerp(start, data.position, Time.deltaTime * data.speed);
+      Vector3 newPosition = Vector3.Lerp(start, data.position, Mathf.Min(Time.deltaTime * data.speed, 1f));
       sceneObject.transform.position = newPosition;
       yield return new WaitForSeconds(Time.deltaTime);
     }
@@ -130,7 +122,7 @@ public class EventStep : GameComponent
 
     while (Time.time < startTime + data.duration)
     {
-      Quaternion newRotation = Quaternion.Slerp(start, data.rotation, Time.deltaTime * data.speed);
+      Quaternion newRotation = Quaternion.Slerp(start, data.rotation, Mathf.Min(Time.deltaTime * data.speed, 1f));
       sceneObject.transform.rotation = newRotation;
       yield return new WaitForSeconds(Time.deltaTime);
     }

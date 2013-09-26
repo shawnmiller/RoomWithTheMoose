@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EventTrigger : GameComponent
+public class EventTrigger : MonoBehaviour
 {
   /*[SerializeField]
   private bool isRunOnce = true;

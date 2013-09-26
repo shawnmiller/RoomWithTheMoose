@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class EventStepData
+[System.Serializable]
+public class EventStepData : System.IComparable<EventStepData>
 {
   public EventType type;
   public bool exclusive;
@@ -10,7 +11,21 @@ public class EventStepData
   public Quaternion rotation;
   public string animation;
   public AudioClip sound;
+  public float startTime;
   public float duration;
   public float speed;
   public bool toggle;
+
+  public int CompareTo(EventStepData other)
+  {
+    if (this.startTime < other.startTime)
+    {
+      return -1;
+    }
+    else if (this.startTime > other.startTime)
+    {
+      return 1;
+    }
+    return 0;
+  }
 }

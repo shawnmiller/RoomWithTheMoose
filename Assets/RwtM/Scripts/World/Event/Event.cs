@@ -4,26 +4,25 @@ using System.Xml;
 using System.Xml.Schema;
 using System.Collections.Generic;
 
-public class Event : GameComponent
+public class Event : StateComponent
 {
-  [SerializeField]
-  private int eventID;
+  public int eventID;
+  public Queue<EventStepData> eventData = new Queue<EventStepData>();
 
   private bool running;
-  private Queue<EventStepData> eventData;
-  private bool processing;
+  private int activeSteps;
+  //private bool waiting;
+  private EventStepData next;
 
-  private XmlNode valueTypesRoot;
-
-  public bool Processing
-  {
-    set { processing = value; }
-  }
+  //GameState state;
+  TimeKeeper keeper;
 
   void Start()
   {
-    eventData = new Queue<EventStepData>();
-    ReadFromFile();
+    //state = GameState.Get();
+    base.Start();
+    next = eventData.Dequeue();
+    keeper = new TimeKeeper(TimeKeeper.KeeperMode.FixedUpdate);
   }
 
   void Update()
@@ -32,21 +31,67 @@ public class Event : GameComponent
     {
       return;
     }
+  }
 
-    if (!processing)
+  void FixedUpdate()
+  {
+    if (!running || _state.State != StateType.In_Game) { return; }
+    if (eventData.Count == 0) { return; }
+
+    keeper.Tick();
+
+    while (next != null && ShouldRunNext())
     {
-      BeginNext();
+      PlayStep();
     }
   }
 
-  void BeginNext()
+  bool ShouldRunNext()
+  {
+    if (next != null && keeper.GetTime() >= next.startTime)
+    {
+      return true;
+    }
+    return false;
+  }
+
+  void PlayStep()
+  {
+    EventStep newStep = gameObject.AddComponent<EventStep>();
+    newStep.Begin(this, next);
+
+    // Prep the next event
+    next = eventData.Dequeue();
+  }
+
+  public void Activate()
+  {
+    running = true;
+  }
+
+  public void StepDone()
+  {
+    --activeSteps;
+
+    if (eventData.Count == 0 && activeSteps == 0)
+    {
+      EventManager manager = EventManager.Get();
+      if (manager != null)
+      {
+
+      }
+    }
+  }
+
+  // Moved to PlayStep()
+  /*void BeginNext()
   {
     EventStepData currentData = eventData.Dequeue();
     EventStep newStep = gameObject.AddComponent<EventStep>();
     newStep.Begin(this, currentData);
-  }
+  }*/
 
-  void ReadFromFile()
+  /*void ReadFromFile()
   {
     TextAsset asset = new TextAsset();
     asset = (TextAsset)Resources.Load(eventID + ".xml", typeof(TextAsset));
@@ -119,5 +164,5 @@ public class Event : GameComponent
     temp.z = System.Single.Parse(((XmlElement)toVector3).GetElementsByTagName("z")[0].Value);
 
     return temp;
-  }
+  }*/
 }
