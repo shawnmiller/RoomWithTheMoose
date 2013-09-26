@@ -16,7 +16,7 @@ public class EventStepData : System.IComparable<EventStepData>
   public float speed;
   public bool toggle;
 
-  public int CompareTo(EventStepData other)
+  int System.IComparable<EventStepData>.CompareTo(EventStepData other)
   {
     if (this.startTime < other.startTime)
     {
