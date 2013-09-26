@@ -1,36 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class IDManager : GameComponent
+public class IDManager : Singleton<IDManager>
 {
-  // Singleton
+  /*// Singleton
   private static IDManager manager = null;
   public static IDManager Get()
   {
     manager = (IDManager)FindObjectOfType(typeof(IDManager));
 
     return manager;
-  }
+  }*/
 
 
-  private List<ObjectID> IDs;
+  private Dictionary<int, GameObject> IDs;
 
   void Awake()
   {
-    IDs = new List<ObjectID>();
+    IDs = new Dictionary<int, GameObject>();
   }
 
-  public void AddID(ObjectID id)
+  public void AddObject(GameObject obj)
   {
-    if (!IDs.Contains(id))
+    ObjectID id = obj.GetComponent<ObjectID>();
+    if (id == null)
     {
-      IDs.Add(id);
+      Debug.LogError("No ObjectID found on " + obj.name);
+    }
+    if (!IDs.ContainsKey(id.id))
+    {
+      IDs.Add(id.id, obj);
     }
   }
 
   public GameObject GetObjectByID(int id)
   {
-    ObjectID result = IDs.Find(x => x.ID == id);
+    return IDs[id];
+
+    /*GameObject result = IDs.Find(x => x.ID == id);
     if (result != null)
     {
       return result.gameObject;
@@ -38,6 +45,6 @@ public class IDManager : GameComponent
     else
     {
       return null;
-    }
+    }*/
   }
 }

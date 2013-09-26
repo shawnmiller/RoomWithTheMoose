@@ -13,11 +13,13 @@ public class EventStep : MonoBehaviour
     this.data = data;
 
     idManager = IDManager.Get();
+
+    StartCoroutine("Run");
   }
 
-  public IEnumerator Run(Event parent)
+  public IEnumerator Run()
   {
-    root = parent;
+    //root = parent;
 
     switch (data.type)
     {
@@ -51,6 +53,9 @@ public class EventStep : MonoBehaviour
       case EventType.Spawn_Object:
         SpawnObject();
         break;
+      case EventType.World_Swap:
+        WorldSwap();
+        break;
       case EventType.Unlock_Event:
         UnlockEvent();
         break;
@@ -59,27 +64,48 @@ public class EventStep : MonoBehaviour
     }
   }
 
+  void Complete()
+  {
+    Destroy(this);
+    // Misbehaving code
+    /*Event e = gameObject.GetComponent<Event>();
+    if (e != null)
+    {
+      Destroy(this);
+    }
+    EventStep[] steps = gameObject.GetComponents<EventStep>();
+    if (steps.Length > 1)
+    {
+      Destroy(this);
+    }
+    Destroy(gameObject);*/
+  }
+
   private void DestroyObject()
   {
     GameObject.Destroy(GetSceneObject());
+    Complete();
   }
 
   private void TogglePlayerCamera()
   {
     CameraController camControl = GameObject.FindObjectOfType(typeof(CameraController)) as CameraController;
     camControl.Controllable = data.toggle;
+    Complete();
   }
 
   private void TogglePlayerControls()
   {
     PlayerController playerControl = GameObject.FindObjectOfType(typeof(PlayerController)) as PlayerController;
     playerControl.Controllable = data.toggle;
+    Complete();
   }
 
   private void MoveObjectInstant()
   {
     GameObject sceneObject = GetSceneObject();
     sceneObject.transform.position = data.position;
+    Complete();
   }
 
   private IEnumerator MoveObjectTimed()
@@ -94,24 +120,28 @@ public class EventStep : MonoBehaviour
       sceneObject.transform.position = newPosition;
       yield return new WaitForSeconds(Time.deltaTime);
     }
+    Complete();
   }
 
   private void PlayAnimation()
   {
     GameObject sceneObject = GetSceneObject();
     sceneObject.animation.Play(data.animation);
+    Complete();
   }
 
   private void PlaySound()
   {
     GameObject sceneObject = GetSceneObject();
     sceneObject.audio.PlayOneShot(data.sound);
+    Complete();
   }
 
   private void RotateObjectInstant()
   {
     GameObject sceneObject = GetSceneObject();
     sceneObject.transform.rotation = data.rotation;
+    Complete();
   }
 
   private IEnumerator RotateObjectOverTime()
@@ -126,11 +156,21 @@ public class EventStep : MonoBehaviour
       sceneObject.transform.rotation = newRotation;
       yield return new WaitForSeconds(Time.deltaTime);
     }
+    Complete();
   }
 
   private void SpawnObject()
   {
-    GameObject.Instantiate(data.prefab, data.position, data.rotation);
+    GameObject temp = GameObject.Instantiate(data.prefab, data.position, data.rotation) as GameObject;
+    ObjectID id = temp.AddComponent<ObjectID>();
+    id.id = data.associatedID;
+    idManager.AddObject(temp);
+    Complete();
+  }
+
+  private void WorldSwap()
+  {
+    throw new System.NotImplementedException();
   }
 
   private void UnlockEvent()
@@ -138,6 +178,7 @@ public class EventStep : MonoBehaviour
     GameObject sceneObject = GetSceneObject();
     EventTrigger trigger = sceneObject.GetComponent<EventTrigger>();
     trigger.enabled = true;
+    Complete();
   }
 
   /// <summary>

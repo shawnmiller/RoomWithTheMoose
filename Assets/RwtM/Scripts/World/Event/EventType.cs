@@ -10,5 +10,6 @@
   Toggle_Player_Camera,
   Play_Sound,
   Play_Animation,
+  World_Swap,
   Unlock_Event
 }

@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{43EFD500-20B1-CAAD-A9DE-5861AC9935D1}</ProjectGuid>
+	<ProjectGuid>{1B163FB7-7BDB-FCEE-C147-E87D1946A1E4}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,53 +44,38 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\RwtM\Scripts\Base\Classes\GameComponent.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Base\Classes\Singleton.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Base\Classes\StateComponent.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Base\Interfaces\IStateWatcher.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Character\CameraController.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Character\Inventory.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Character\PlayerController.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Enemy\EnemyController.cs" />
-     <Compile Include="Assets\RwtM\Scripts\File Management\CoreExtraction.cs" />
-     <Compile Include="Assets\RwtM\Scripts\File Management\PathMaker.cs" />
-     <Compile Include="Assets\RwtM\Scripts\GUI\InventoryDisplay.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Menu\MainMenu.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Menu\Settings.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\DistanceComparer.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\FilePathTest.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\UITextureCropping.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Required\Globals.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Required\Helpers\Ease.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Required\Helpers\EasingType.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Required\Helpers\MultiDictionary.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Required\Helpers\StaticVectorEasing.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Required\TimeKeeper.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Saving\LoadGame.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Saving\SaveGame.cs" />
-     <Compile Include="Assets\RwtM\Scripts\Saving\SaveManager.cs" />
-     <Compile Include="Assets\RwtM\Scripts\State Management\GameState.cs" />
-     <Compile Include="Assets\RwtM\Scripts\State Management\StateType.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\Event.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\EventManager.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\EventStep.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\EventStepData.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\EventTrigger.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\EventTriggerMethod.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\EventType.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\GameEvent.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Event\StepDataRequirements.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Interaction\InteractableItem.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Item ID\IDManager.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Item ID\ObjectID.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\BaseEditor.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\EditorGUIExtension.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\EventEditor.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\EventStepDataWindow.cs" />
      <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
      <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\iPhonePlayer\EditorExtensions\UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WP8.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\WP8Support\EditorExtensions\UnityEditor.WP8.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Metro.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\MetroSupport\EditorExtensions\UnityEditor.Metro.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.BB10.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\BB10Player\EditorExtensions\UnityEditor.BB10.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{B2C799F9-F98C-52A4-7412-70EB0EF3FCE9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
       <Project>{04AB9F82-B562-C3DF-674C-B186F7F7058B}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{43EFD500-20B1-CAAD-A9DE-5861AC9935D1}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

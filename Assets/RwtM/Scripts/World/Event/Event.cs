@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class Event : StateComponent
 {
   public int eventID;
+  public List<EventStepData> tempData = new List<EventStepData>();
   public Queue<EventStepData> eventData = new Queue<EventStepData>();
 
   private bool running;
@@ -19,30 +20,37 @@ public class Event : StateComponent
 
   void Start()
   {
-    //state = GameState.Get();
     base.Start();
+
+    foreach (EventStepData data in tempData)
+    {
+      eventData.Enqueue(data);
+    }
+    tempData.Clear();
+
     next = eventData.Dequeue();
     keeper = new TimeKeeper(TimeKeeper.KeeperMode.FixedUpdate);
-  }
-
-  void Update()
-  {
-    if (!running)
-    {
-      return;
-    }
   }
 
   void FixedUpdate()
   {
     if (!running || _state.State != StateType.In_Game) { return; }
-    if (eventData.Count == 0) { return; }
+    if (next == null && eventData.Count == 0) { Destroy(this); }
 
     keeper.Tick();
 
     while (next != null && ShouldRunNext())
     {
       PlayStep();
+    }
+  }
+
+  void GetNext()
+  {
+    next = null;
+    if (!(eventData.Count == 0))
+    {
+      next = eventData.Dequeue();
     }
   }
 
@@ -57,16 +65,20 @@ public class Event : StateComponent
 
   void PlayStep()
   {
+    Debug.Log("Playing Step: " + next.type);
     EventStep newStep = gameObject.AddComponent<EventStep>();
     newStep.Begin(this, next);
 
-    // Prep the next event
-    next = eventData.Dequeue();
+    GetNext();
   }
 
   public void Activate()
   {
     running = true;
+    foreach (EventStepData data in eventData)
+    {
+      Debug.Log("Step: " + data.type);
+    }
   }
 
   public void StepDone()
