@@ -3,9 +3,9 @@
 
 public class ObjectID : GameComponent
 {
-  private int id;
+  public int id;
 
-  public int ID
+  /*public int ID
   {
     get { return id; }
   }
@@ -14,5 +14,5 @@ public class ObjectID : GameComponent
   {
     IDManager manager = GameObject.FindObjectOfType(typeof(IDManager)) as IDManager;
     manager.AddID(this);
-  }
+  }*/
 }

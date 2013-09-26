@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class EventManager : Singleton<EventManager>
+public class EventManager : MonoBehaviour
 {
-  /*// Singleton
+  // Singleton
   private static EventManager manager = null;
   public static EventManager Get ()
   {
@@ -13,7 +13,7 @@ public class EventManager : Singleton<EventManager>
     }
 
     return manager;
-  }*/
+  }
 
   Queue<GameEvent> eventQueue;
 

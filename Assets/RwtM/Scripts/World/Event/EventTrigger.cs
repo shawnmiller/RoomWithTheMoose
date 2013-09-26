@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EventTrigger : GameComponent
+public class EventTrigger : MonoBehaviour
 {
   /*[SerializeField]
   private bool isRunOnce = true;
@@ -10,23 +10,18 @@ public class EventTrigger : GameComponent
 
   private int currentActivationCount;*/
 
-  [SerializeField]
-  private EventTriggerMethod triggerMethod;
+  public EventTriggerMethod triggerMethod;
 
   // Object-based activation
-  [SerializeField]
-  private bool activateOnObjectPickUp = false;
-  [SerializeField]
-  private bool activateOnObjectPutDown = false;
-  [SerializeField]
-  private InteractableItem activationObject;
+  public bool activateOnObjectPickUp = false;
+  public bool activateOnObjectPutDown = false;
+  public InteractableItem activationObject;
 
   // Look-based activation
-  [SerializeField]
-  private float viewAngle;
-  private Transform lookPoint;
+  public float viewAngle;
+  public Transform lookPoint;
 
-  private Event eventToActivate;
+  public Event eventToActivate;
 
 
   // Use this for initialization
@@ -58,16 +53,20 @@ public class EventTrigger : GameComponent
 
   void OnTriggerEnter (Collider other)
   {
-    if (other.transform.root.tag != "Player" &&
-        triggerMethod != EventTriggerMethod.Enter_Trigger)
+    Debug.Log("Entered Trigger");
+    Debug.Log("Is player: " + (other.transform.root.tag == "Player"));
+    Debug.Log("Trigger method is Enter: " + (triggerMethod == EventTriggerMethod.Enter_Trigger));
+    if (other.transform.root.tag == "Player" &&
+        triggerMethod == EventTriggerMethod.Enter_Trigger)
     {
+      Debug.Log("Event Trigger");
       TriggerEvent ();
     }
   }
 
   void OnTriggerStay(Collider other)
   {
-    if (other.transform.root.tag != "Player" &&
+    if (other.transform.root.tag != "Player" ||
         triggerMethod != EventTriggerMethod.Look_Alignment)
     {
       return;
@@ -86,8 +85,8 @@ public class EventTrigger : GameComponent
   void TriggerEvent ()
   {
     // Activate the event.
+    eventToActivate.Activate();
 
-
-    throw new System.NotImplementedException ();
+    //throw new System.NotImplementedException ();
   }
 }

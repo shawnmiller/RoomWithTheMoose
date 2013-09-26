@@ -4,49 +4,106 @@ using System.Xml;
 using System.Xml.Schema;
 using System.Collections.Generic;
 
-public class Event : GameComponent
+public class Event : StateComponent
 {
-  [SerializeField]
-  private int eventID;
+  public int eventID;
+  public List<EventStepData> tempData = new List<EventStepData>();
+  public Queue<EventStepData> eventData = new Queue<EventStepData>();
 
   private bool running;
-  private Queue<EventStepData> eventData;
-  private bool processing;
+  private int activeSteps;
+  //private bool waiting;
+  private EventStepData next;
 
-  private XmlNode valueTypesRoot;
-
-  public bool Processing
-  {
-    set { processing = value; }
-  }
+  //GameState state;
+  TimeKeeper keeper;
 
   void Start()
   {
-    eventData = new Queue<EventStepData>();
-    ReadFromFile();
+    base.Start();
+
+    foreach (EventStepData data in tempData)
+    {
+      eventData.Enqueue(data);
+    }
+    tempData.Clear();
+
+    next = eventData.Dequeue();
+    keeper = new TimeKeeper(TimeKeeper.KeeperMode.FixedUpdate);
   }
 
-  void Update()
+  void FixedUpdate()
   {
-    if (!running)
-    {
-      return;
-    }
+    if (!running || _state.State != StateType.In_Game) { return; }
+    if (next == null && eventData.Count == 0) { Destroy(this); }
 
-    if (!processing)
+    keeper.Tick();
+
+    while (next != null && ShouldRunNext())
     {
-      BeginNext();
+      PlayStep();
     }
   }
 
-  void BeginNext()
+  void GetNext()
+  {
+    next = null;
+    if (!(eventData.Count == 0))
+    {
+      next = eventData.Dequeue();
+    }
+  }
+
+  bool ShouldRunNext()
+  {
+    if (next != null && keeper.GetTime() >= next.startTime)
+    {
+      return true;
+    }
+    return false;
+  }
+
+  void PlayStep()
+  {
+    Debug.Log("Playing Step: " + next.type);
+    EventStep newStep = gameObject.AddComponent<EventStep>();
+    newStep.Begin(this, next);
+
+    GetNext();
+  }
+
+  public void Activate()
+  {
+    running = true;
+    foreach (EventStepData data in eventData)
+    {
+      Debug.Log("Step: " + data.type);
+    }
+  }
+
+  public void StepDone()
+  {
+    --activeSteps;
+
+    if (eventData.Count == 0 && activeSteps == 0)
+    {
+      EventManager manager = EventManager.Get();
+      if (manager != null)
+      {
+
+      }
+    }
+  }
+
+  // Moved to PlayStep()
+  /*void BeginNext()
   {
     EventStepData currentData = eventData.Dequeue();
     EventStep newStep = gameObject.AddComponent<EventStep>();
     newStep.Begin(this, currentData);
-  }
+  }*/
 
-  void ReadFromFile()
+  /*void ReadFromFile()
   {
     TextAsset asset = new TextAsset();
     asset = (TextAsset)Resources.Load(eventID + ".xml", typeof(TextAsset));
@@ -119,5 +176,5 @@ public class Event : GameComponent
     temp.z = System.Single.Parse(((XmlElement)toVector3).GetElementsByTagName("z")[0].Value);
 
     return temp;
-  }
+  }*/
 }

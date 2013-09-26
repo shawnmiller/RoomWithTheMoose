@@ -5,6 +5,8 @@ Project("{5E3FF2E0-0B81-20F4-A996-B0B80B0D3024}") = "RoomWithTheMoose", "Assembl
 EndProject
 Project("{5E3FF2E0-0B81-20F4-A996-B0B80B0D3024}") = "RoomWithTheMoose", "Assembly-CSharp-vs.csproj", "{43EFD500-20B1-CAAD-A9DE-5861AC9935D1}"
 EndProject
+Project("{5E3FF2E0-0B81-20F4-A996-B0B80B0D3024}") = "RoomWithTheMoose", "Assembly-CSharp-Editor-vs.csproj", "{1B163FB7-7BDB-FCEE-C147-E87D1946A1E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,16 @@ Global
 		{43EFD500-20B1-CAAD-A9DE-5861AC9935D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43EFD500-20B1-CAAD-A9DE-5861AC9935D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43EFD500-20B1-CAAD-A9DE-5861AC9935D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B163FB7-7BDB-FCEE-C147-E87D1946A1E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B163FB7-7BDB-FCEE-C147-E87D1946A1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B163FB7-7BDB-FCEE-C147-E87D1946A1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B163FB7-7BDB-FCEE-C147-E87D1946A1E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 													GlobalSection(MonoDevelopProperties) = preSolution
+																	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
