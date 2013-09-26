@@ -110,13 +110,15 @@ public class EventStep : MonoBehaviour
 
   private IEnumerator MoveObjectTimed()
   {
+    Debug.Log("Starting Timed Object Move");
     GameObject sceneObject = GetSceneObject();
     float startTime = Time.time;
     Vector3 start = sceneObject.transform.position;
 
     while (Time.time < startTime + data.duration)
     {
-      Vector3 newPosition = Vector3.Lerp(start, data.position, Mathf.Min(Time.deltaTime * data.speed, 1f));
+      Vector3 newPosition = Vector3.Lerp(start, data.position, Mathf.Min((Time.time - startTime) / data.duration, 1f));
+      //Vector3 newPosition = Vector3.Lerp(start, data.position, Mathf.Min(Time.deltaTime * data.speed, 1f));
       sceneObject.transform.position = newPosition;
       yield return new WaitForSeconds(Time.deltaTime);
     }
@@ -152,7 +154,7 @@ public class EventStep : MonoBehaviour
 
     while (Time.time < startTime + data.duration)
     {
-      Quaternion newRotation = Quaternion.Slerp(start, data.rotation, Mathf.Min(Time.deltaTime * data.speed, 1f));
+      Quaternion newRotation = Quaternion.Slerp(start, data.rotation, Mathf.Min((Time.time - startTime) / data.duration, 1f));
       sceneObject.transform.rotation = newRotation;
       yield return new WaitForSeconds(Time.deltaTime);
     }

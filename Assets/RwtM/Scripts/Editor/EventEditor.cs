@@ -18,6 +18,10 @@ public class EventEditor : EditorWindow
   static void Init()
   {
     EventEditor eventEd = EditorWindow.GetWindow<EventEditor>();
+    if (Selection.activeGameObject != null)
+    {
+      eventEd.currentEvent = Selection.activeGameObject.GetComponent<Event>();
+    }
   }
 
   // Update is called once per frame
@@ -85,6 +89,7 @@ public class EventEditor : EditorWindow
     if (currentEvent != null)
     {
       Debug.Log("Saving Event");
+      eventSteps.Sort();
       currentEvent.tempData = eventSteps;
       EditorUtility.SetDirty(currentEvent);
     }
