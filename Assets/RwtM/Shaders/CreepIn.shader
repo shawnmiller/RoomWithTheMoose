@@ -13,7 +13,7 @@ Shader "RWTM/CreepIn"
 		Tags
 		{
 			"Queue"="Geometry"
-			"RenderType"="Opaque"
+			"RenderType"="Transparent"
 		}
 
 		CGPROGRAM

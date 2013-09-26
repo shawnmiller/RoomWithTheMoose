@@ -83,6 +83,8 @@
      <Compile Include="Assets\RwtM\Scripts\World\Interaction\InteractableItem.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Item ID\IDManager.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Item ID\ObjectID.cs" />
+     <Compile Include="Assets\RwtM\Scripts\World\Transitioning\WorldState.cs" />
+     <Compile Include="Assets\RwtM\Scripts\World\Transitioning\WorldStateTexture.cs" />
      <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
      <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
