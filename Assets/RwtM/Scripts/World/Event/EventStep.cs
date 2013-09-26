@@ -54,7 +54,7 @@ public class EventStep : MonoBehaviour
         SpawnObject();
         break;
       case EventType.World_Swap:
-        WorldSwap();
+        StartCoroutine("WorldSwap");
         break;
       case EventType.Unlock_Event:
         UnlockEvent();
@@ -170,9 +170,17 @@ public class EventStep : MonoBehaviour
     Complete();
   }
 
-  private void WorldSwap()
+  private IEnumerator WorldSwap()
   {
-    throw new System.NotImplementedException();
+    WorldState world = WorldState.Get();
+    float startTime = Time.time;
+
+    while (Time.time < startTime + data.duration)
+    {
+      world.position = ((Time.time - startTime) / data.duration) * data.speed;
+      yield return new WaitForSeconds(Time.deltaTime);
+    }
+    Complete();
   }
 
   private void UnlockEvent()
