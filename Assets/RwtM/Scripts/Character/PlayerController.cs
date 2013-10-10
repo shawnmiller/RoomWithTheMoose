@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : GameComponent
 {
-  private bool controllable;
+  private bool controllable = true;
 
   public bool Controllable
   {
@@ -44,7 +44,7 @@ public class PlayerController : GameComponent
 	// Update is called once per frame
 	void FixedUpdate () 
   {
-    if (!(gameState.State == StateType.In_Game) && controllable)
+    if (!(gameState.State == StateType.In_Game) || !controllable)
     {
       return;
     }

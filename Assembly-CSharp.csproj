@@ -50,11 +50,19 @@
      <Compile Include="Assets\RwtM\Scripts\Base\Interfaces\IStateWatcher.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\CameraController.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\Inventory.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Character\ItemUser.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\PlayerController.cs" />
      <Compile Include="Assets\RwtM\Scripts\Enemy\EnemyController.cs" />
      <Compile Include="Assets\RwtM\Scripts\File Management\CoreExtraction.cs" />
      <Compile Include="Assets\RwtM\Scripts\File Management\PathMaker.cs" />
      <Compile Include="Assets\RwtM\Scripts\GUI\InventoryDisplay.cs" />
+     <Compile Include="Assets\RwtM\Scripts\GUI\MemoryItemGUI.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Items\InteractableItem.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Items\ItemIntefaces.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Items\MemoryItem.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Items\MemoryItemData.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Items\WorldItem.cs" />
      <Compile Include="Assets\RwtM\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\RwtM\Scripts\Menu\Settings.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\DistanceComparer.cs" />
@@ -80,7 +88,6 @@
      <Compile Include="Assets\RwtM\Scripts\World\Event\EventType.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Event\GameEvent.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Event\StepDataRequirements.cs" />
-     <Compile Include="Assets\RwtM\Scripts\World\Interaction\InteractableItem.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Item ID\IDManager.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Item ID\ObjectID.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Transitioning\WorldState.cs" />
