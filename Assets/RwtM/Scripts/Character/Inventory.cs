@@ -11,7 +11,7 @@ public class Inventory : GameComponent
     get { return inventory.Count == INVENTORY_SIZE; }
   }
 
-  public GameComponent[] Inventory
+  public GameComponent[] InventoryArray
   {
     get { return inventory.ToArray(); }
   }

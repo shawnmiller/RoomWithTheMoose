@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 
-public class Item : GameComponent, IUseable
+public class WorldItem : Item, IUseable
 {
-  void 
+  void IUseable.Use()
+  {
+    ++useCount;
+
+    MemoryItem memoryItem = gameObject.GetComponent<MemoryItem>();
+    throw new System.NotImplementedException();
+  }
 }

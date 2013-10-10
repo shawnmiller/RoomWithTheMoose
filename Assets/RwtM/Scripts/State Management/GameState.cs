@@ -34,6 +34,7 @@ public class GameState : Singleton<GameState> {
 
   public void Transition (StateType newState)
   {
+
     switch (newState)
     {
       case StateType.Main_Menu:
@@ -53,5 +54,7 @@ public class GameState : Singleton<GameState> {
       default:
         break;
     }
+
+    state = newState;
   }
 }
