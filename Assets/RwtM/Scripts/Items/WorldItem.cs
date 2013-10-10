@@ -1,3 +1,6 @@
 ﻿using UnityEngine;
 
-public class WorldItem : GameComponent, Item
+public class Item : GameComponent, IUseable
+{
+  void 
+}

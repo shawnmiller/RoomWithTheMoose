@@ -1,5 +1,6 @@
-﻿interface Item
+﻿using UnityEngine;
+
+public abstract class Item : GameComponent
 {
-  void PickUp();
-  void Use();
+  public string name;
 }
