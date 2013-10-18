@@ -32,6 +32,11 @@ local.properties
 ## Unity3D
 #################
 
+Library/EditorUserBuildSettings.asset
+Library/InspectorExpandedItems.asset
+Library/assetDatabase3
+Library/expandedItems
+Library/guidmapper
 Library/*
 Build/*
 Temp/*
