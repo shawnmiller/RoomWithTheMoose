@@ -44,10 +44,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RwtM\Scripts\Editor\BarHandle.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\BaseEditor.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\EditorBar.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\EditorGUIExtension.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\EditorTimeline.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\EventEditor.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\EventStepDataWindow.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\HandleAction.cs" />
      <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
      <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
  <Reference Include="UnityEditor.Graphs">
