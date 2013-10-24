@@ -52,6 +52,7 @@
      <Compile Include="Assets\RwtM\Scripts\Character\Inventory.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\ItemUser.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\PlayerController.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Dev Tools\DevTools.cs" />
      <Compile Include="Assets\RwtM\Scripts\Enemy\EnemyController.cs" />
      <Compile Include="Assets\RwtM\Scripts\File Management\CoreExtraction.cs" />
      <Compile Include="Assets\RwtM\Scripts\File Management\PathMaker.cs" />
