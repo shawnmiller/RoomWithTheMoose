@@ -52,6 +52,7 @@
      <Compile Include="Assets\RwtM\Scripts\Editor\EventEditor.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\EventStepDataWindow.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\HandleAction.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\TimelineBar.cs" />
      <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
      <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">

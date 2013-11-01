@@ -10,9 +10,10 @@ public class EventEditor : EditorWindow
 
   private Vector2 scrollPosition;
 
-  private const int barHeight = 25;
+  private const int barHeight = 40;
 
   private EventStepDataWindow stepDataWindow;
+  private EditorTimeline timeline;
 
   [MenuItem("Moose/Event Editor")]
   static void Init()
@@ -21,6 +22,17 @@ public class EventEditor : EditorWindow
     if (Selection.activeGameObject != null)
     {
       eventEd.currentEvent = Selection.activeGameObject.GetComponent<Event>();
+    }
+  }
+
+  void Update()
+  {
+    Vector2 topleft = new Vector2(270, 0);
+
+    if (timeline != null)
+    {
+      timeline.ResizeGrid(new Rect(topleft.x, topleft.y,
+                                   position.width - topleft.x - 20, position.height - topleft.y - 20));
     }
   }
 
@@ -62,7 +74,14 @@ public class EventEditor : EditorWindow
         
         EditorGUILayout.EndHorizontal();
       }
+
+      // Draw the timeline
+      if(timeline != null)
+      {
+        timeline.Draw();
+      }
       GUILayout.EndScrollView();
+      
       if (GUILayout.Button("Add", GUILayout.Width(40)))
       {
         eventSteps.Add(new EventStepData());
@@ -75,6 +94,8 @@ public class EventEditor : EditorWindow
     if (currentEvent != null)
     {
       eventSteps = currentEvent.tempData;
+      timeline = new EditorTimeline(new Rect(200, 50, position.width - 220, position.height - 70),
+                                    10f, 0f, 10f, barHeight);
       //eventSteps = new List<EventStepData>();
       //eventSteps.AddRange(currentEvent.tempData.ToArray());
     }
