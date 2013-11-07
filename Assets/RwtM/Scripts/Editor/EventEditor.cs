@@ -95,7 +95,7 @@ public class EventEditor : EditorWindow
     {
       eventSteps = currentEvent.tempData;
       timeline = new EditorTimeline(new Rect(200, 50, position.width - 220, position.height - 70),
-                                    10f, 0f, 10f, barHeight);
+                                    10f, barHeight);
       //eventSteps = new List<EventStepData>();
       //eventSteps.AddRange(currentEvent.tempData.ToArray());
     }

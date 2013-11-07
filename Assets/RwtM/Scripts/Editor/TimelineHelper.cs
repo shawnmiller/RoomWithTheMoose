@@ -6,8 +6,9 @@ public static class TimelineHelper
 
   public static int GetOverflowSize(float currentTime, float newTime, float timeScale, Rect timelineArea)
   {
-    int cPixels = Mathf.FloorToInt(timeScale * timelineArea.width);
-    return Mathf.FloorToInt((cPixels * newTime) / currentTime) + SCROLLBAR_SIZE;
+    //return Mathf.FloorToInt(timelineArea.width * 1 + timeScale);
+    //int cPixels = Mathf.FloorToInt(timeScale * timelineArea.width);
+    //return Mathf.FloorToInt((cPixels * newTime) / currentTime) + SCROLLBAR_SIZE;
   }
 
   public static int ConvertTimeToOverflowPixels(float timeToConvert, int overflowSize, float timelineTime)
