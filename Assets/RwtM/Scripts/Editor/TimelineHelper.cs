@@ -2,13 +2,11 @@
 
 public static class TimelineHelper
 {
-  public static const int SCROLLBAR_SIZE = 30;
+  public const int SCROLLBAR_SIZE = 30;
 
-  public static int GetOverflowSize(float currentTime, float newTime, float timeScale, Rect timelineArea)
+  public static Vector2 GetOverflowSize(float timeScale, Rect timelineArea)
   {
-    //return Mathf.FloorToInt(timelineArea.width * 1 + timeScale);
-    //int cPixels = Mathf.FloorToInt(timeScale * timelineArea.width);
-    //return Mathf.FloorToInt((cPixels * newTime) / currentTime) + SCROLLBAR_SIZE;
+    return new Vector2(Mathf.FloorToInt(timelineArea.width * timeScale), timelineArea.height);
   }
 
   public static int ConvertTimeToOverflowPixels(float timeToConvert, int overflowSize, float timelineTime)

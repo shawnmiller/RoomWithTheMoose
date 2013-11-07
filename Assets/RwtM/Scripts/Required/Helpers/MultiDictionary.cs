@@ -1,8 +1,14 @@
 ﻿using System.Collections.Generic;
 
+[System.Serializable]
 public class MultiDictionary<TKey, TValue>
 {
   private Dictionary<TKey, List<TValue>> _data;
+
+  public MultiDictionary()
+  {
+    _data = new Dictionary<TKey, List<TValue>>();
+  }
 
   public void Add(TKey key, TValue value)
   {
@@ -14,6 +20,11 @@ public class MultiDictionary<TKey, TValue>
     {
       _data.Add(key, new List<TValue>() { value });
     }
+  }
+
+  public bool HasKey(TKey key)
+  {
+    return _data.ContainsKey(key);
   }
 
   public TValue[] GetValues(TKey key)
