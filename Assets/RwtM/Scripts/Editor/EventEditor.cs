@@ -10,9 +10,10 @@ public class EventEditor : EditorWindow
 
   private Vector2 scrollPosition;
 
-  private const int barHeight = 25;
+  private const int barHeight = 40;
 
   private EventStepDataWindow stepDataWindow;
+  private EditorTimeline timeline;
 
   [MenuItem("Moose/Event Editor")]
   static void Init()
@@ -21,6 +22,34 @@ public class EventEditor : EditorWindow
     if (Selection.activeGameObject != null)
     {
       eventEd.currentEvent = Selection.activeGameObject.GetComponent<Event>();
+    }
+  }
+
+  void Update()
+  {
+    Vector2 topleft = new Vector2(200, 0);
+
+    if (timeline != null)
+    {
+      timeline.ResizeGrid(new Rect(topleft.x, topleft.y,
+                                   position.width - topleft.x - 20, position.height - topleft.y - 20));
+    }
+  }
+
+  void OnSceneGUI()
+  {
+    Debug.Log("Working");
+    UnityEngine.Event e = UnityEngine.Event.current;
+    if (timeline != null && e.type == UnityEngine.EventType.keyDown)
+    {
+      if(e.keyCode == KeyCode.KeypadPlus)
+      {
+        timeline.GetRescale(1);
+      }
+      if (e.keyCode == KeyCode.KeypadMinus)
+      {
+        timeline.GetRescale(-1);
+      }
     }
   }
 
@@ -54,15 +83,28 @@ public class EventEditor : EditorWindow
           eventSteps.Remove(eventSteps[i]);
           break;
         }
-        if (GUILayout.Button("Edit", GUILayout.Width(80)))
+        /*if (GUILayout.Button("Edit", GUILayout.Width(80)))
         {
-          stepDataWindow = EditorWindow.GetWindow<EventStepDataWindow>();
-          stepDataWindow.Edit(this, eventSteps[i]);
-        }
+          OpenModal(eventSteps[i]);
+          //stepDataWindow = EditorWindow.GetWindow<EventStepDataWindow>();
+          //stepDataWindow.Edit(this, eventSteps[i]);
+        }*/
         
         EditorGUILayout.EndHorizontal();
       }
+
+      // Draw the timeline
+      if(timeline != null)
+      {
+        //timeline.Draw();
+        timeline.DrawBackground();
+        for (int i = 0; i < eventSteps.Count; ++i)
+        {
+          timeline.Draw(eventSteps[i], i);
+        }
+      }
       GUILayout.EndScrollView();
+      
       if (GUILayout.Button("Add", GUILayout.Width(40)))
       {
         eventSteps.Add(new EventStepData());
@@ -70,11 +112,19 @@ public class EventEditor : EditorWindow
     }
   }
 
+  public void OpenModal(EventStepData data)
+  {
+    stepDataWindow = EditorWindow.GetWindow<EventStepDataWindow>();
+    stepDataWindow.Edit(this, data);
+  }
+
   void LoadEventData()
   {
     if (currentEvent != null)
     {
       eventSteps = currentEvent.tempData;
+      timeline = new EditorTimeline(new Rect(200, 50, position.width - 220, position.height - 70),
+                                    1f, barHeight);
       //eventSteps = new List<EventStepData>();
       //eventSteps.AddRange(currentEvent.tempData.ToArray());
     }
