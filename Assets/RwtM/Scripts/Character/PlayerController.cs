@@ -64,7 +64,7 @@ public class PlayerController : GameComponent
     }
 
     //Vector3 moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical"));
-    Vector3 moveDirection = new Vector3 (0f, 0f, Input.GetAxis ("Vertical"));
+    Vector3 moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical"));
     moveDirection = transform.TransformDirection (moveDirection);
     moveDirection = moveDirection.normalized;
     moveDirection = AlignToGroundNormal (moveDirection);

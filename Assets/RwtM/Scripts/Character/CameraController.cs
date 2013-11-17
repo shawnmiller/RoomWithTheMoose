@@ -85,7 +85,9 @@ public class CameraController : StateComponent
     currentY = ClampVertical (currentY);
     Quaternion targetRotation = Quaternion.Euler (-currentY, currentX, 0);
     transform.rotation = Quaternion.Euler (0, currentX, 0);
-    neckJoint.rotation = Quaternion.Euler (-currentY, currentX, 0);
+    neckJoint.localRotation = Quaternion.Euler (-currentY, 0, 0);
+    //transform.rotation = Quaternion.Euler (0, currentX, 0);
+    //neckJoint.rotation = Quaternion.Euler (-currentY, currentX, 0);
   }
 
   void HandleLookControls ()
