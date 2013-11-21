@@ -22,14 +22,14 @@ public class ItemUser : StateComponent
     RaycastHit hit;
     if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance))
     {
-      Debug.Log("Hit something with our pointy thing");
-      MemoryItem item = hit.collider.gameObject.GetComponent<MemoryItem>();
+      Item item = hit.collider.gameObject.GetComponent<Item>();
+      //MemoryItem item = hit.collider.gameObject.GetComponent<MemoryItem>();
       if (item != null)
       {
-        Debug.Log("Hit a memory item with our pointy thing");
-        isUsing = true;
-        MemoryItemGUI memGUI = MemoryItemGUI.Get();
-        memGUI.Display(item.data);
+        item.Use();
+        //isUsing = true;
+        //MemoryItemGUI memGUI = MemoryItemGUI.Get();
+        //memGUI.Display(item, item.data);
       }
     }
   }

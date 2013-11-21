@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 
-public class WorldItem : Item, IUseable
+public class WorldItem : Item
 {
-  void IUseable.Use()
+  public override void Use()
   {
-    ++useCount;
+ 	  base.Use();
+  }
 
-    MemoryItem memoryItem = gameObject.GetComponent<MemoryItem>();
-    throw new System.NotImplementedException();
+  public override void StopUsing()
+  {
+    base.StopUsing();
   }
 }

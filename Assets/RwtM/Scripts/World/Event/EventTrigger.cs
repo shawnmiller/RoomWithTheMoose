@@ -15,7 +15,7 @@ public class EventTrigger : MonoBehaviour
   // Object-based activation
   public bool activateOnObjectPickUp = false;
   public bool activateOnObjectPutDown = false;
-  public InteractableItem activationObject;
+  public Item activationObject;
 
   // Look-based activation
   public float viewAngle;
@@ -40,12 +40,17 @@ public class EventTrigger : MonoBehaviour
   // Update is called once per frame
   void Update ()
   {
-    if (activateOnObjectPickUp && activationObject.Activated)
+    if (triggerMethod == EventTriggerMethod.Item_Pick_Up || triggerMethod == EventTriggerMethod.Item_Put_Down)
+    {
+      Debug.Log("waiting for " + activationObject.transform.name + " status: " + activationObject.InUse);
+    }
+
+    if (triggerMethod == EventTriggerMethod.Item_Pick_Up && activationObject.InUse)
     {
       TriggerEvent ();
     }
 
-    if (activateOnObjectPutDown && activationObject.WasActivated)
+    if (triggerMethod == EventTriggerMethod.Item_Put_Down && activationObject.HasBeenUsed)
     {
       TriggerEvent ();
     }
@@ -53,6 +58,11 @@ public class EventTrigger : MonoBehaviour
 
   void OnTriggerEnter (Collider other)
   {
+    if (this.enabled != true)
+    {
+      return;
+    }
+
     Debug.Log("Entered Trigger");
     Debug.Log("Is player: " + (other.transform.root.tag == "Player"));
     Debug.Log("Trigger method is Enter: " + (triggerMethod == EventTriggerMethod.Enter_Trigger));
@@ -86,7 +96,5 @@ public class EventTrigger : MonoBehaviour
   {
     // Activate the event.
     eventToActivate.Activate();
-
-    //throw new System.NotImplementedException ();
   }
 }

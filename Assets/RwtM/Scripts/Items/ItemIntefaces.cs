@@ -1,6 +1,7 @@
 ﻿interface IUseable
 {
   void Use();
+  void StopUsing();
 }
 
 interface IEquippable

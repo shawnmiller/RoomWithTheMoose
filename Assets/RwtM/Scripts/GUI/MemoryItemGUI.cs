@@ -5,6 +5,7 @@ public class MemoryItemGUI : Singleton<MemoryItemGUI>
   public Transform spawnPoint;
   public float rotationSpeed;
   public Texture2D background;
+  private MemoryItem caller;
   private MemoryItemData data;
   private GameObject display;
   private int currentPage;
@@ -16,8 +17,9 @@ public class MemoryItemGUI : Singleton<MemoryItemGUI>
     _state = GameState.Get();
   }
 
-  public void Display(MemoryItemData data)
+  public void Display(MemoryItem caller, MemoryItemData data)
   {
+    this.caller = caller;
     this.data = data;
     display = Instantiate(data.model, spawnPoint.transform.position, spawnPoint.rotation) as GameObject;
     _state.Transition(StateType.In_Game_Memory);
@@ -41,6 +43,7 @@ public class MemoryItemGUI : Singleton<MemoryItemGUI>
     Rect rect = new Rect(Screen.width - 100, 10, 90, 30);
     if (GUI.Button(rect, "Close"))
     {
+      caller.StopUsing();
       camera.depth = -2;
       Destroy(display);
       _state.Transition(StateType.In_Game);
