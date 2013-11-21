@@ -134,8 +134,11 @@ public class EventStep : MonoBehaviour
 
   private void PlaySound()
   {
-    GameObject sceneObject = GetSceneObject();
-    sceneObject.audio.PlayOneShot(data.sound);
+    //GameObject sceneObject = GetSceneObject();
+    GameObject instance = new GameObject();
+    instance.transform.position = data.position;
+    instance.AddComponent<AudioSource>();
+    instance.audio.PlayOneShot(data.sound);
     Complete();
   }
 

@@ -40,11 +40,6 @@ public class EventTrigger : MonoBehaviour
   // Update is called once per frame
   void Update ()
   {
-    if (triggerMethod == EventTriggerMethod.Item_Pick_Up || triggerMethod == EventTriggerMethod.Item_Put_Down)
-    {
-      Debug.Log("waiting for " + activationObject.transform.name + " status: " + activationObject.InUse);
-    }
-
     if (triggerMethod == EventTriggerMethod.Item_Pick_Up && activationObject.InUse)
     {
       TriggerEvent ();
