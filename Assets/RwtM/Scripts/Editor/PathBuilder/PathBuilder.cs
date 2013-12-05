@@ -13,7 +13,10 @@ public class PathBuilder : Editor
 
     for (int i = 0; i < pathNodes.Length; ++i)
     {
-
+      pathManager.AddNode(pathNodes[i]);
     }
+    pathManager.BuildPaths();
+    pathManager.DrawConnections();
+    EditorUtility.SetDirty(pathManager);
   }
 }

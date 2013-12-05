@@ -30,6 +30,8 @@ public class Item : GameComponent, IUseable
     Debug.Log("Use being called on the base class for object: " + transform.name);
     ++useCount;
     fBeingUsed = true;
+    Screen.showCursor = true;
+    Screen.lockCursor = false;
   }
 
   /// <summary>
@@ -38,5 +40,7 @@ public class Item : GameComponent, IUseable
   public virtual void StopUsing()
   {
     fBeingUsed = false;
+    Screen.showCursor = false;
+    Screen.lockCursor = true;
   }
 }
