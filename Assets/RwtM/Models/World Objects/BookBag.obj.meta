@@ -1,0 +1,95 @@
+fileFormatVersion: 2
+guid: 5313ddaf3f00e43a29bcb53873dcb675
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: grp_Bookbag_obj_leftBuckle
+    100004: grp_Bookbag_obj_LeftHarness
+    100006: grp_Bookbag_obj_leftStrap
+    100008: grp_Bookbag_obj_rightBuckle
+    100010: grp_Bookbag_obj_RightHarness
+    100012: grp_Bookbag_obj_rightStrap
+    100014: obj_BookBag_grp_Bookbag
+    400000: //RootNode
+    400002: grp_Bookbag_obj_leftBuckle
+    400004: grp_Bookbag_obj_LeftHarness
+    400006: grp_Bookbag_obj_leftStrap
+    400008: grp_Bookbag_obj_rightBuckle
+    400010: grp_Bookbag_obj_RightHarness
+    400012: grp_Bookbag_obj_rightStrap
+    400014: obj_BookBag_grp_Bookbag
+    2300000: grp_Bookbag_obj_leftBuckle
+    2300002: grp_Bookbag_obj_LeftHarness
+    2300004: grp_Bookbag_obj_leftStrap
+    2300006: grp_Bookbag_obj_rightBuckle
+    2300008: grp_Bookbag_obj_RightHarness
+    2300010: grp_Bookbag_obj_rightStrap
+    2300012: obj_BookBag_grp_Bookbag
+    3300000: grp_Bookbag_obj_leftBuckle
+    3300002: grp_Bookbag_obj_LeftHarness
+    3300004: grp_Bookbag_obj_leftStrap
+    3300006: grp_Bookbag_obj_rightBuckle
+    3300008: grp_Bookbag_obj_RightHarness
+    3300010: grp_Bookbag_obj_rightStrap
+    3300012: obj_BookBag_grp_Bookbag
+    4300000: grp_Bookbag_obj_leftBuckle
+    4300002: grp_Bookbag_obj_LeftHarness
+    4300004: grp_Bookbag_obj_leftStrap
+    4300006: grp_Bookbag_obj_rightBuckle
+    4300008: grp_Bookbag_obj_RightHarness
+    4300010: grp_Bookbag_obj_rightStrap
+    4300012: obj_BookBag_grp_Bookbag
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

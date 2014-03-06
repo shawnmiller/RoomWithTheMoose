@@ -1,0 +1,230 @@
+fileFormatVersion: 2
+guid: e72b2011b430044c8bce495c7bdb945b
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: grp_ToyJet1_grp_LandingGearFront obj_frontaxis
+    100002: grp_ToyJet1_grp_LandingGearFront obj_frontThing
+    100004: grp_ToyJet1_grp_LandingGearFront obj_frontwheel02
+    100006: grp_ToyJet1_grp_LandingGearLeft obj_leftaxis
+    100008: grp_ToyJet1_grp_LandingGearLeft obj_leftThing
+    100010: grp_ToyJet1_grp_LandingGearLeft obj_leftwheel02
+    100012: grp_ToyJet1_grp_LandingGearRight obj_rightaxis
+    100014: grp_ToyJet1_grp_LandingGearRight obj_rightThing
+    100016: grp_ToyJet1_grp_LandingGearRight obj_rightwheel02
+    100018: grp_ToyJet1_obj_frontwheel01 grp_LandingGearFront
+    100020: grp_ToyJet1_obj_Jet01
+    100022: grp_ToyJet1_obj_Jet02
+    100024: grp_ToyJet1_obj_Jet03
+    100026: grp_ToyJet1_obj_Jet04
+    100028: grp_ToyJet1_obj_leftwheel01 grp_LandingGearLeft
+    100030: grp_ToyJet1_obj_rightwheel01 grp_LandingGearRight
+    100032: grp_ToyJet_grp_LandingGearFront obj_frontaxis
+    100034: grp_ToyJet_grp_LandingGearFront obj_frontThing
+    100036: grp_ToyJet_grp_LandingGearFront obj_frontwheel02
+    100038: grp_ToyJet_grp_LandingGearLeft obj_leftaxis
+    100040: grp_ToyJet_grp_LandingGearLeft obj_leftThing
+    100042: grp_ToyJet_grp_LandingGearLeft obj_leftwheel02
+    100044: grp_ToyJet_grp_LandingGearRight obj_rightaxis
+    100046: grp_ToyJet_grp_LandingGearRight obj_rightThing
+    100048: grp_ToyJet_grp_LandingGearRight obj_rightwheel02
+    100050: grp_ToyJet_obj_frontwheel01 grp_LandingGearFront
+    100052: grp_ToyJet_obj_Jet01
+    100054: grp_ToyJet_obj_Jet02
+    100056: grp_ToyJet_obj_Jet03
+    100058: grp_ToyJet_obj_Jet04
+    100060: grp_ToyJet_obj_leftwheel01 grp_LandingGearLeft
+    100062: grp_ToyJet_obj_rightwheel01 grp_LandingGearRight
+    100064: obj_ToyJet_grp_ToyJet
+    100066: obj_ToyJet_grp_ToyJet1
+    100068: //RootNode
+    400000: grp_ToyJet1_grp_LandingGearFront obj_frontaxis
+    400002: grp_ToyJet1_grp_LandingGearFront obj_frontThing
+    400004: grp_ToyJet1_grp_LandingGearFront obj_frontwheel02
+    400006: grp_ToyJet1_grp_LandingGearLeft obj_leftaxis
+    400008: grp_ToyJet1_grp_LandingGearLeft obj_leftThing
+    400010: grp_ToyJet1_grp_LandingGearLeft obj_leftwheel02
+    400012: grp_ToyJet1_grp_LandingGearRight obj_rightaxis
+    400014: grp_ToyJet1_grp_LandingGearRight obj_rightThing
+    400016: grp_ToyJet1_grp_LandingGearRight obj_rightwheel02
+    400018: grp_ToyJet1_obj_frontwheel01 grp_LandingGearFront
+    400020: grp_ToyJet1_obj_Jet01
+    400022: grp_ToyJet1_obj_Jet02
+    400024: grp_ToyJet1_obj_Jet03
+    400026: grp_ToyJet1_obj_Jet04
+    400028: grp_ToyJet1_obj_leftwheel01 grp_LandingGearLeft
+    400030: grp_ToyJet1_obj_rightwheel01 grp_LandingGearRight
+    400032: grp_ToyJet_grp_LandingGearFront obj_frontaxis
+    400034: grp_ToyJet_grp_LandingGearFront obj_frontThing
+    400036: grp_ToyJet_grp_LandingGearFront obj_frontwheel02
+    400038: grp_ToyJet_grp_LandingGearLeft obj_leftaxis
+    400040: grp_ToyJet_grp_LandingGearLeft obj_leftThing
+    400042: grp_ToyJet_grp_LandingGearLeft obj_leftwheel02
+    400044: grp_ToyJet_grp_LandingGearRight obj_rightaxis
+    400046: grp_ToyJet_grp_LandingGearRight obj_rightThing
+    400048: grp_ToyJet_grp_LandingGearRight obj_rightwheel02
+    400050: grp_ToyJet_obj_frontwheel01 grp_LandingGearFront
+    400052: grp_ToyJet_obj_Jet01
+    400054: grp_ToyJet_obj_Jet02
+    400056: grp_ToyJet_obj_Jet03
+    400058: grp_ToyJet_obj_Jet04
+    400060: grp_ToyJet_obj_leftwheel01 grp_LandingGearLeft
+    400062: grp_ToyJet_obj_rightwheel01 grp_LandingGearRight
+    400064: obj_ToyJet_grp_ToyJet
+    400066: obj_ToyJet_grp_ToyJet1
+    400068: //RootNode
+    2300000: grp_ToyJet1_grp_LandingGearFront obj_frontaxis
+    2300002: grp_ToyJet1_grp_LandingGearFront obj_frontThing
+    2300004: grp_ToyJet1_grp_LandingGearFront obj_frontwheel02
+    2300006: grp_ToyJet1_grp_LandingGearLeft obj_leftaxis
+    2300008: grp_ToyJet1_grp_LandingGearLeft obj_leftThing
+    2300010: grp_ToyJet1_grp_LandingGearLeft obj_leftwheel02
+    2300012: grp_ToyJet1_grp_LandingGearRight obj_rightaxis
+    2300014: grp_ToyJet1_grp_LandingGearRight obj_rightThing
+    2300016: grp_ToyJet1_grp_LandingGearRight obj_rightwheel02
+    2300018: grp_ToyJet1_obj_frontwheel01 grp_LandingGearFront
+    2300020: grp_ToyJet1_obj_Jet01
+    2300022: grp_ToyJet1_obj_Jet02
+    2300024: grp_ToyJet1_obj_Jet03
+    2300026: grp_ToyJet1_obj_Jet04
+    2300028: grp_ToyJet1_obj_leftwheel01 grp_LandingGearLeft
+    2300030: grp_ToyJet1_obj_rightwheel01 grp_LandingGearRight
+    2300032: grp_ToyJet_grp_LandingGearFront obj_frontaxis
+    2300034: grp_ToyJet_grp_LandingGearFront obj_frontThing
+    2300036: grp_ToyJet_grp_LandingGearFront obj_frontwheel02
+    2300038: grp_ToyJet_grp_LandingGearLeft obj_leftaxis
+    2300040: grp_ToyJet_grp_LandingGearLeft obj_leftThing
+    2300042: grp_ToyJet_grp_LandingGearLeft obj_leftwheel02
+    2300044: grp_ToyJet_grp_LandingGearRight obj_rightaxis
+    2300046: grp_ToyJet_grp_LandingGearRight obj_rightThing
+    2300048: grp_ToyJet_grp_LandingGearRight obj_rightwheel02
+    2300050: grp_ToyJet_obj_frontwheel01 grp_LandingGearFront
+    2300052: grp_ToyJet_obj_Jet01
+    2300054: grp_ToyJet_obj_Jet02
+    2300056: grp_ToyJet_obj_Jet03
+    2300058: grp_ToyJet_obj_Jet04
+    2300060: grp_ToyJet_obj_leftwheel01 grp_LandingGearLeft
+    2300062: grp_ToyJet_obj_rightwheel01 grp_LandingGearRight
+    2300064: obj_ToyJet_grp_ToyJet
+    2300066: obj_ToyJet_grp_ToyJet1
+    3300000: grp_ToyJet1_grp_LandingGearFront obj_frontaxis
+    3300002: grp_ToyJet1_grp_LandingGearFront obj_frontThing
+    3300004: grp_ToyJet1_grp_LandingGearFront obj_frontwheel02
+    3300006: grp_ToyJet1_grp_LandingGearLeft obj_leftaxis
+    3300008: grp_ToyJet1_grp_LandingGearLeft obj_leftThing
+    3300010: grp_ToyJet1_grp_LandingGearLeft obj_leftwheel02
+    3300012: grp_ToyJet1_grp_LandingGearRight obj_rightaxis
+    3300014: grp_ToyJet1_grp_LandingGearRight obj_rightThing
+    3300016: grp_ToyJet1_grp_LandingGearRight obj_rightwheel02
+    3300018: grp_ToyJet1_obj_frontwheel01 grp_LandingGearFront
+    3300020: grp_ToyJet1_obj_Jet01
+    3300022: grp_ToyJet1_obj_Jet02
+    3300024: grp_ToyJet1_obj_Jet03
+    3300026: grp_ToyJet1_obj_Jet04
+    3300028: grp_ToyJet1_obj_leftwheel01 grp_LandingGearLeft
+    3300030: grp_ToyJet1_obj_rightwheel01 grp_LandingGearRight
+    3300032: grp_ToyJet_grp_LandingGearFront obj_frontaxis
+    3300034: grp_ToyJet_grp_LandingGearFront obj_frontThing
+    3300036: grp_ToyJet_grp_LandingGearFront obj_frontwheel02
+    3300038: grp_ToyJet_grp_LandingGearLeft obj_leftaxis
+    3300040: grp_ToyJet_grp_LandingGearLeft obj_leftThing
+    3300042: grp_ToyJet_grp_LandingGearLeft obj_leftwheel02
+    3300044: grp_ToyJet_grp_LandingGearRight obj_rightaxis
+    3300046: grp_ToyJet_grp_LandingGearRight obj_rightThing
+    3300048: grp_ToyJet_grp_LandingGearRight obj_rightwheel02
+    3300050: grp_ToyJet_obj_frontwheel01 grp_LandingGearFront
+    3300052: grp_ToyJet_obj_Jet01
+    3300054: grp_ToyJet_obj_Jet02
+    3300056: grp_ToyJet_obj_Jet03
+    3300058: grp_ToyJet_obj_Jet04
+    3300060: grp_ToyJet_obj_leftwheel01 grp_LandingGearLeft
+    3300062: grp_ToyJet_obj_rightwheel01 grp_LandingGearRight
+    3300064: obj_ToyJet_grp_ToyJet
+    3300066: obj_ToyJet_grp_ToyJet1
+    4300000: grp_ToyJet1_grp_LandingGearFront obj_frontaxis
+    4300002: grp_ToyJet1_grp_LandingGearFront obj_frontThing
+    4300004: grp_ToyJet1_grp_LandingGearFront obj_frontwheel02
+    4300006: grp_ToyJet1_grp_LandingGearLeft obj_leftaxis
+    4300008: grp_ToyJet1_grp_LandingGearLeft obj_leftThing
+    4300010: grp_ToyJet1_grp_LandingGearLeft obj_leftwheel02
+    4300012: grp_ToyJet1_grp_LandingGearRight obj_rightaxis
+    4300014: grp_ToyJet1_grp_LandingGearRight obj_rightThing
+    4300016: grp_ToyJet1_grp_LandingGearRight obj_rightwheel02
+    4300018: grp_ToyJet1_obj_frontwheel01 grp_LandingGearFront
+    4300020: grp_ToyJet1_obj_Jet01
+    4300022: grp_ToyJet1_obj_Jet02
+    4300024: grp_ToyJet1_obj_Jet03
+    4300026: grp_ToyJet1_obj_Jet04
+    4300028: grp_ToyJet1_obj_leftwheel01 grp_LandingGearLeft
+    4300030: grp_ToyJet1_obj_rightwheel01 grp_LandingGearRight
+    4300032: grp_ToyJet_grp_LandingGearFront obj_frontaxis
+    4300034: grp_ToyJet_grp_LandingGearFront obj_frontThing
+    4300036: grp_ToyJet_grp_LandingGearFront obj_frontwheel02
+    4300038: grp_ToyJet_grp_LandingGearLeft obj_leftaxis
+    4300040: grp_ToyJet_grp_LandingGearLeft obj_leftThing
+    4300042: grp_ToyJet_grp_LandingGearLeft obj_leftwheel02
+    4300044: grp_ToyJet_grp_LandingGearRight obj_rightaxis
+    4300046: grp_ToyJet_grp_LandingGearRight obj_rightThing
+    4300048: grp_ToyJet_grp_LandingGearRight obj_rightwheel02
+    4300050: grp_ToyJet_obj_frontwheel01 grp_LandingGearFront
+    4300052: grp_ToyJet_obj_Jet01
+    4300054: grp_ToyJet_obj_Jet02
+    4300056: grp_ToyJet_obj_Jet03
+    4300058: grp_ToyJet_obj_Jet04
+    4300060: grp_ToyJet_obj_leftwheel01 grp_LandingGearLeft
+    4300062: grp_ToyJet_obj_rightwheel01 grp_LandingGearRight
+    4300064: obj_ToyJet_grp_ToyJet
+    4300066: obj_ToyJet_grp_ToyJet1
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
