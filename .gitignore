@@ -93,7 +93,6 @@ build/
 *_i.c
 *_p.c
 *.ilk
-*.obj
 *.pch
 *.pdb
 *.pgc
