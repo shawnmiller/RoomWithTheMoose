@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 57feed96118cec0459090cdfda592cdb
+guid: c5833f01a7d4de34aa8a6297ffff1dc4
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
-    100002: polySurface9
+    100002: Chest_Object:polySurface9
     400000: //RootNode
-    400002: polySurface9
-    2300000: polySurface9
-    3300000: polySurface9
-    4300000: polySurface9
+    400002: Chest_Object:polySurface9
+    2300000: Chest_Object:polySurface9
+    3300000: Chest_Object:polySurface9
+    4300000: Chest_Object:polySurface9
     9500000: //RootNode
   materials:
     importMaterials: 0

@@ -1,0 +1,80 @@
+fileFormatVersion: 2
+guid: d3d9035a16c7c654daf3688b9c5e63fb
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: obj_Antenna_Base
+    100002: obj_L_Antenna
+    100004: obj_MiniTV
+    100006: obj_R_Antenna
+    100008: //RootNode
+    400000: obj_Antenna_Base
+    400002: obj_L_Antenna
+    400004: obj_MiniTV
+    400006: obj_R_Antenna
+    400008: //RootNode
+    2300000: obj_Antenna_Base
+    2300002: obj_L_Antenna
+    2300004: obj_MiniTV
+    2300006: obj_R_Antenna
+    3300000: obj_Antenna_Base
+    3300002: obj_L_Antenna
+    3300004: obj_MiniTV
+    3300006: obj_R_Antenna
+    4300000: obj_Antenna_Base
+    4300002: obj_L_Antenna
+    4300004: obj_R_Antenna
+    4300006: obj_MiniTV
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 0
+  userData: 
