@@ -1,14 +1,11 @@
 ﻿public static class PPS
 {
   public const string PP_COMMENT_LINE = "//";                           // Indicates that the line should be ignored
+  public const string PP_NO_MODE = " ";
 
   // Building Phases
   public const string PP_PHASE_OPEN = "Phase";
   public const string PP_PHASE_CLOSE = "EndPhase";
-
-  // Phase Setup
-  public const string PP_PHASE_SETUP_BEGIN = "BeginSetup";
-  public const string PP_PHASE_SETUP_END = "EndSetup";
 
   // Custom Event Setup
   public const string PP_CUSTOM_EVENT_BEGIN = "BeginCustomEvent";
@@ -66,18 +63,27 @@
 
 
   private static MultiDictionary<string, string> ValidInputs = new MultiDictionary<string, string>() {
+      {PP_NO_MODE, PP_PHASE_OPEN},
+
       // Phase Mode
       {PP_PHASE_OPEN, PP_PHASE_CLOSE},
-      {PP_PHASE_OPEN, PP_PHASE_SETUP_BEGIN},
 
-      // Phase Setup Mode
-      {PP_PHASE_SETUP_BEGIN, PP_PHASE_SETUP_END},
-      {PP_PHASE_SETUP_BEGIN, PP_OBJECT_SOUND},
-      {PP_PHASE_SETUP_BEGIN, PP_OBJECT_TIMER},
-      {PP_PHASE_SETUP_BEGIN, PP_OBJECT_TRIGGER},
-      {PP_PHASE_SETUP_BEGIN, PP_OBJECT_VARIABLE},
-      {PP_PHASE_SETUP_BEGIN, PP_CUSTOM_EVENT_BEGIN},
-      {PP_PHASE_SETUP_BEGIN, PP_ACTION_MAKE_INTERACTIBLE},
+      {PP_PHASE_OPEN, PP_OBJECT_SOUND},
+      {PP_PHASE_OPEN, PP_OBJECT_TIMER},
+      {PP_PHASE_OPEN, PP_OBJECT_TRIGGER},
+      {PP_PHASE_OPEN, PP_OBJECT_VARIABLE},
+
+      {PP_PHASE_OPEN, PP_CUSTOM_EVENT_BEGIN},
+
+      {PP_PHASE_OPEN, PP_ACTION_END_PHASE},
+      {PP_PHASE_OPEN, PP_ACTION_MAKE_INTERACTIBLE},
+      {PP_PHASE_OPEN, PP_ACTION_REMOVE_INTERACTIBLE},
+      {PP_PHASE_OPEN, PP_ACTION_PLAY_SOUND},
+      {PP_PHASE_OPEN, PP_ACTION_ENABLE_TRIGGER},
+      {PP_PHASE_OPEN, PP_ACTION_DISABLE_TRIGGER},
+      {PP_PHASE_OPEN, PP_ACTION_INCREMENT_VALUE},
+      {PP_PHASE_OPEN, PP_ACTION_SET_VALUE},
+      {PP_PHASE_OPEN, PP_ACTION_WAIT},
 
       // Sound Creation Mode
       {PP_OBJECT_SOUND, PP_PARAM_NAME},
