@@ -55,6 +55,11 @@ public class TimerManager : Singleton<TimerManager>
     Timers.Add(newTimer);
   }
 
+  public void RegisterTimer(Timer timer)
+  {
+    Timers.Add(timer);
+  }
+
   public void RemoveTimer(string name)
   {
     foreach (Timer t in Timers)

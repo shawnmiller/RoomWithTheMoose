@@ -1,7 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 [System.Serializable]
-public class MultiDictionary<TKey, TValue>
+public class MultiDictionary<TKey, TValue> : IEnumerable
+
+  //IEnumerable<Dictionary<TKey,TValue>>
+  //IEnumerable<Dictionary<TKey, List<TValue>>>
+  //IEnumerable<List<KeyValuePair<TKey, TValue>>>
 {
   private Dictionary<TKey, List<TValue>> _data;
 
@@ -55,5 +60,10 @@ public class MultiDictionary<TKey, TValue>
     {
       // There was no matching key, still correct execution
     }
+  }
+
+  IEnumerator IEnumerable.GetEnumerator()
+  {
+    return _data.GetEnumerator();
   }
 }
