@@ -49,11 +49,16 @@
      <Compile Include="Assets\RwtM\Scripts\Editor\EditorBar.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\EditorGUIExtension.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\EditorTimeline.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\EditorTimelineQuickbar.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\EventEditor.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\EventStepDataContext.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\EventStepDataWindow.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\HandleAction.cs" />
      <Compile Include="Assets\RwtM\Scripts\Editor\TimelineBar.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Editor\TimelineHelper.cs" />
      <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
+     <None Include="Assets\RwtM\Shaders\TheFeels.shader" />
+     <None Include="Assets\Resources\Editor\EventContext.xml" />
      <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
