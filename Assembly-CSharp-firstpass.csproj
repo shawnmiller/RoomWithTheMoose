@@ -46,6 +46,8 @@
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
+     <None Include="Assets\RwtM\Shaders\TheFeels.shader" />
+     <None Include="Assets\Resources\Editor\EventContext.xml" />
      <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

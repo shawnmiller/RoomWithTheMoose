@@ -48,6 +48,8 @@
      <Compile Include="Assets\RwtM\Scripts\Base\Classes\Singleton.cs" />
      <Compile Include="Assets\RwtM\Scripts\Base\Classes\StateComponent.cs" />
      <Compile Include="Assets\RwtM\Scripts\Base\Interfaces\IStateWatcher.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Blind Demo\LightFader.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Blind Demo\LightSpawner.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\CameraController.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\Inventory.cs" />
      <Compile Include="Assets\RwtM\Scripts\Character\ItemUser.cs" />
@@ -68,6 +70,8 @@
      <Compile Include="Assets\RwtM\Scripts\Menu\Settings.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\DistanceComparer.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\FilePathTest.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\ShaderManager.cs" />
+     <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\ShaderUpdater.cs" />
      <Compile Include="Assets\RwtM\Scripts\Misc\Test Scripts\UITextureCropping.cs" />
      <Compile Include="Assets\RwtM\Scripts\Required\Globals.cs" />
      <Compile Include="Assets\RwtM\Scripts\Required\Helpers\Ease.cs" />
@@ -80,6 +84,7 @@
      <Compile Include="Assets\RwtM\Scripts\Saving\SaveManager.cs" />
      <Compile Include="Assets\RwtM\Scripts\State Management\GameState.cs" />
      <Compile Include="Assets\RwtM\Scripts\State Management\StateType.cs" />
+     <Compile Include="Assets\RwtM\Scripts\World\Audio\AmbientTrackManager.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Event\Event.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Event\EventManager.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Event\EventStep.cs" />
@@ -94,6 +99,8 @@
      <Compile Include="Assets\RwtM\Scripts\World\Transitioning\WorldState.cs" />
      <Compile Include="Assets\RwtM\Scripts\World\Transitioning\WorldStateTexture.cs" />
      <None Include="Assets\RwtM\Shaders\BlendShader.shader" />
+     <None Include="Assets\RwtM\Shaders\TheFeels.shader" />
+     <None Include="Assets\Resources\Editor\EventContext.xml" />
      <None Include="Assets\RwtM\Shaders\CreepIn.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
