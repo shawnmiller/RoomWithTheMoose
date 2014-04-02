@@ -8,11 +8,12 @@ public class ShaderUpdater : MonoBehaviour
   void Start()
   {
     manager = ShaderManager.Get();
-    if (shaderMat == null)
+    /*if (shaderMat == null)
     {
-      shaderMat = Resources.LoadAssetAtPath("Assets/RwtM/Shaders/TheFeelsMat.mat", typeof(Material)) as Material;
+      shaderMat = Resources.LoadAssetAtPath("Assets/RwtM/Shaders/TemptedToTouch.mat", typeof(Material)) as Material;
     }
-    renderer.material = shaderMat;
+    renderer.material = shaderMat;*/
+    renderer.material = manager.TouchMaterial;
   }
 
   void Update()
