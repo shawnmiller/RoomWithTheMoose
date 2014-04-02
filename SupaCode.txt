@@ -1,0 +1,241 @@
+Phase
+	Variable Name=InventoryItems Type=Integer Value=0 Global=False
+	Timer Name=Phase1Reminder Duration=45 RepeatCount=999 AutoStart=True Global=False
+	Sound Name=MommyRe Path=Assets/RwtM/Audio/Level1/P1_Obj_Reminder.wav Global=False
+	Timer Name=Alarm Duration=5 RepeatCount=0 AutoStart=True Global=False
+	Sound Name=AlarmRing Path=Assets/RwtM/Audio/Level1/AlarmRing.wav Global=False
+	Timer Name=BusArrive Duration=1200 RepeatCount=0 AutoStart=True Global=True
+	Timer Name=FriendArrive Duration=1500 RepeatCount=0 AutoStart=True Global=True
+	Timer Name=MomDrive Duration=1800 RepeatCount=0 AutoStart=True Global=True
+
+//Phase 1 Setup
+//-------------------------------------------------------
+	BeginCustomEvent Name=Phase1Start
+		MakeInteractible Name=Clothing
+		MakeInteractible Name=BookBag
+		MakeInteractible Name=VoiceRecorder
+	EndCustomEvent
+
+	OnBeginPhase Action=Phase1Start
+
+//Objective Timer
+//-------------------------------------------------------
+	OnTimerComplete Name=Phase1Reminder Action=Phase1ObjectiveReminder
+
+	BeginCustomEvent Name=Phase1ObjectiveReminder
+		PlaySound Name=MommyRe PlayFrom=Mom
+	EndCustomEvent
+
+//Alarm Timer
+//-------------------------------------------------------
+	OnTimerComplete Name=Alarm Action=AlarmRing
+
+	BeginCustomEvent Name=AlarmRing
+		PlaySound Name=Alarm PlayFrom=Alarm
+	EndCustomEvent
+
+//Item Handeling
+//-------------------------------------------------------
+	BeginCustomEvent Name=ItemPickup
+		IncrementValue Name=InventoryItems Value=1
+	EndCustomEvent
+
+	OnPickUpItem Name=Clothing Action=ItemPickedUp
+	OnPickUpItem Name=BookBag Action=ItemPickedUp
+	OnPickUpItem Name=VoiceRecorder Action=ItemPickedUp
+
+//End of Phase Logic 
+//-------------------------------------------------------
+	OnCondition Name=InventoryItems ConditionReq=EqualTo Value=3 Action=EndPhase1
+	
+	BeginCustomEvent Name=EndPhase1
+		completePhase
+	EndCustomEvent
+EndPhase	
+
+
+
+
+
+
+
+
+
+
+
+
+Phase
+	Variable Name=InventoryItems Type=Integer Value=0 Global=False
+	Timer Name=Phase2Reminder Duration=50 RepeatCount=999 AutoStart=True Global=False
+	Sound Name=MommyRe2 Path=Assets/RwtM/Audio/Level1/P2_Obj_Reminder.wav Global=False
+	
+//Phase 2 Setup
+//-------------------------------------------------------
+	BeginCustomEvent Name=Phase2Start
+		MakeInteractible Name=Toothbrush
+		MakeInteractible Name=Toilet
+		MakeInteractible Name=Shoes
+	EndCustomEvent
+
+	OnBeginPhase Action=Phase2Start
+
+//Objective Timer
+//-------------------------------------------------------
+	OnTimerComplete Name=Phase2Reminder Action=Phase2ObjectiveReminder
+
+	BeginCustomEvent Name=Phase2ObjectiveReminder
+		PlaySound Name=MommyRe2 PlayFrom=Mom
+	EndCustomEvent
+
+//Item Handeling
+//-------------------------------------------------------
+	BeginCustomEvent Name=ItemPickup
+		IncrementValue Name=InventoryItems Value=1
+	EndCustomEvent
+
+	OnPickUpItem Name=Toothbrush Action=ItemPickedUp
+	OnPickUpItem Name=Shoes Action=ItemPickedUp
+
+//End of Phase Logic 
+//-------------------------------------------------------
+	OnCondition Name=InventoryItems ConditionReq=EqualTo Value=2 Action=EndPhase2
+	
+	BeginCustomEvent Name=EndPhase2
+		completePhase
+	EndCustomEvent
+EndPhase	
+
+
+
+
+
+
+
+
+
+
+
+
+Phase
+	
+	
+	Variable Name=FriendPickup Type=Bool Value=False Global=True
+	Timer Name=PhoneStart Duration=5 RepeatCount=0 AutoStart=True Global=False
+	Timer Name=RingDuration Duration=18 RepeatCount=0 AutoStart=False Global=False
+	Timer Name=RingSpeed Duration=3 RepeatCount=6 AutoStart=False Global=False
+	Timer Name=MomDelay Duration=5 RepeatCount=0 AutoStart=False Global=False
+
+	Sound Name=RingSound Path=Assets/RwtM/Audio/Level1/P3_Phone_Ring.wav Global=False
+	Sound Name=MomPhoneMono Path=Assets/RwtM/Audio/Level1/P3_Mom_Phone.wav Global=False
+	Sound Name=FriendPhoneDialog Path=Assets/RwtM/Audio/Level1/P3_Friend_Phone.wav Global=False
+
+	OnTimerComplete Name=PhoneStart Action=PhoneRing
+
+	BeginCustomEvent Name=PhoneRing
+		BeginTimer Name=RingDuration
+		BeginTimer Name=RingSpeed
+		BeginTimer Name=MomDelay
+		MakeInteractible Name=Phone
+	EndCustomEvent
+
+//End Phone Ring
+//---------------------------------------------------------------
+	OnTimerComplete Name=RingDuration Action=KillPhone
+	BeginCustomEvent Name=KillPhone
+		RemoveInteractible Name=Phone
+	EndCustomPhase
+
+//Play Phone Ring Sound 
+//---------------------------------------------------------------
+	OnTimerComplete Name=RingSpeed Action=RingPhone
+	BeginCustomEvent Name=RingPhone
+		PlaySound Name=RingSound PlayFrom=Phone
+	EndCustomPhase
+
+// Mom Phone Objective 
+//---------------------------------------------------------------
+	OnTimerComplete Name=MomDelay Action=MomGetPhone
+	BeginCustomEvent Name=MomGetPhone
+		PlaySound Name=MomPhoneMono PlayFrom=Mom
+	EndCustomPhase
+
+
+	OnPickUpItem Name=Phone Action=FriendPickUpTrue
+	BeginCustomEvent Name=FriendPickUpTrue
+		PlaySound Name=FriendPhoneDialog PlayFrom=Phone
+		ToggleBool Name=FriendPickUp Value=True
+	EndCustomEvent
+
+	Variable Name=InventoryItems Type=Integer Value=0 Global=False
+	Timer Name=Phase1Reminder Duration=45 RepeatCount=999 AutoStart=True Global=False
+	Sound Name=MommyRe Path=Assets/RwtM/Audio/Level1/P1_Obj_Reminder.wav Global=False
+	Timer Name=BusArrive Duration=1200 RepeatCount=0 AutoStart=True Global=True
+
+
+	Variable Name=InventoryItems Type=Integer Value=0 Global=False
+	Timer Name=Phase2Reminder Duration=50 RepeatCount=999 AutoStart=True Global=False
+	Sound Name=MommyRe2 Path=Assets/RwtM/Audio/Level1/P2_Obj_Reminder.wav Global=False
+	
+//Phase 3 Setup
+//-------------------------------------------------------
+	BeginCustomEvent Name=Phase1Start
+		MakeInteractible Name= Cereal
+	EndCustomEvent
+
+	OnBeginPhase Action=Phase3Start
+
+//Objective Timer
+//-------------------------------------------------------
+	OnTimerComplete Name=Phase3Reminder Action=Phase3ObjectiveReminder
+
+	BeginCustomEvent Name=Phase3ObjectiveReminder
+		PlaySound Name=MommyRe3 PlayFrom=Mom
+	EndCustomEvent
+
+//Item Handeling
+//-------------------------------------------------------
+	BeginCustomEvent Name=ItemPickup
+		IncrementValue Name=InventoryItems Value=1
+	EndCustomEvent
+
+	OnPickUpItem Name=Cereal Action=ItemPickedUp
+	
+
+//End of Phase Logic 
+//-------------------------------------------------------
+	OnCondition Name=InventoryItems ConditionReq=EqualTo Value=1 Action=EndPhase3
+	
+	BeginCustomEvent Name=EndPhase3
+		completePhase
+	EndCustomEvent
+EndPhase	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
