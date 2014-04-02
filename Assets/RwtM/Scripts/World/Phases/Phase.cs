@@ -7,20 +7,22 @@ public class Phase
   private List<Variable> Variables = new List<Variable>();
   private List<PhaseEvent> Events = new List<PhaseEvent>();
   private List<SoundObj> Sounds = new List<SoundObj>();
-  
-  public struct EventWatchObj
-  {
-    public string GlobalEvent;
-    public string Object;
-    public string PhaseEvent;
-  }
-  public struct SoundObj
-  {
-    public string Name;
-    public AudioClip Sound;
-  }
+  private List<Timer> Timers = new List<Timer>();
 
   private List<EventWatchObj> EventWatchList = new List<EventWatchObj>();
+
+  public void Init()
+  {
+    ObjectController controller = ObjectController.Get();
+    foreach (Variable var in Variables)
+    {
+      controller.AddObject(ObjectCategories.Variable, var);
+    }
+    foreach (SoundObj sound in Sounds)
+    {
+      controller.AddObject(ObjectCategories.Sound, sound);
+    }
+  }
 
   public void Run()
   {
@@ -35,11 +37,12 @@ public class Phase
 
   public void PushGlobalEvent(string eventName, string objectName)
   {
+    //List<EventWatchObj> validEvents = EventWatchList.FindAll(x => x.GlobalEvent == eventName && x.Name == objectName);
     foreach (EventWatchObj e in EventWatchList)
     {
-      if (e.GlobalEvent == eventName && e.Object == objectName)
+      if (e.GlobalEvent == eventName && e.Name == objectName)
       {
-        RunPhaseEvent(e.PhaseEvent);
+        RunPhaseEvent(e.Action);
       }
     }
   }
@@ -83,5 +86,10 @@ public class Phase
   public void AddEventWatcher(EventWatchObj watch)
   {
     EventWatchList.Add(watch);
+  }
+
+  public void AddTimer(Timer timer)
+  {
+    Timers.Add(timer);
   }
 }

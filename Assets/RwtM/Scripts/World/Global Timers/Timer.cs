@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Timer
+public class Timer : DynamicObject
 {
   public string Name { get; set; }
   public float Duration { get; set; }
@@ -20,7 +20,7 @@ public class Timer
         default:
           return true;
       }
-    } 
+    }
   }
   public TimerRepeatType RepeatMode { get; set; }
   public int RepeatCount { get; set; }

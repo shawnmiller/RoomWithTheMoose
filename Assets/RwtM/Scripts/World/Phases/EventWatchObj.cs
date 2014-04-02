@@ -1,6 +1,6 @@
-﻿public struct EventWatchObj
+﻿public class EventWatchObj
 {
-  public string GlobalEvent;
-  public string Name; // Name of the object
-  public string Action;
+  public string GlobalEvent { get; set; }
+  public string Name { get; set; } // Name of the object
+  public string Action { get; set; }
 }

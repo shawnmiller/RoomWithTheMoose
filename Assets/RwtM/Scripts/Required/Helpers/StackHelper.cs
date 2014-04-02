@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿/*using System.Collections.Generic;
 
 public static class StackHelper
 {
@@ -14,4 +14,4 @@ public static class StackHelper
       return null;
     return stack.ToArray()[stack.Count - 1 - count];
   }
-}
+}*/

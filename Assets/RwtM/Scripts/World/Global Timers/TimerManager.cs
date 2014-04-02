@@ -18,14 +18,16 @@ public class TimerManager : Singleton<TimerManager>
       return;
     }
 
-    bool isComplete;
     foreach (Timer t in Timers)
     {
+      Debug.Log("Timer: " + t.Name + "  Duration: " + t.Duration + "  Remaining: " + t.RemainingTime);
       if (t.Update(Time.fixedDeltaTime))
       {
+        Debug.Log(t.Name + " Completed");
         ReportCompletedTimer(t);
         if (t.Obsolete)
         {
+          Debug.Log(t.Name + " Obsolete");
           Timers.Remove(t);
         }
       }
@@ -84,8 +86,27 @@ public class TimerManager : Singleton<TimerManager>
     }
   }
 
-  void ReportCompletedTimer(Timer timer)
+  public void PushGlobalEvent(string Event, string Instigator)
   {
-    throw new System.NotImplementedException();
+    if (Event == PPS.PP_EVENT_BEGIN_PHASE)
+    {
+      PurgeTimers();
+    }
+  }
+
+  private void PurgeTimers()
+  {
+    foreach (Timer timer in Timers)
+    {
+      if (!timer.Global)
+      {
+        Timers.Remove(timer);
+      }
+    }
+  }
+
+  private void ReportCompletedTimer(Timer timer)
+  {
+    PhaseManager.Get().PushGlobalEvent(PPS.PP_EVENT_TIMER_COMPLETED, timer.Name);
   }
 }

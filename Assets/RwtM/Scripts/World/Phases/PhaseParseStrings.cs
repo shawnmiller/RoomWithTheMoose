@@ -36,21 +36,25 @@ public static class PPS
   public const string PP_VAR_TYPE_STRING = "String";
 
   // Predefined Events
+  public const string PP_EVENT_BEGIN_PHASE = "OnBeginPhase";
   public const string PP_EVENT_TIMER_COMPLETED = "OnTimerComplete";
   public const string PP_EVENT_ITEM_PICKUP = "OnPickUpItem";
   public const string PP_EVENT_ENTER_TRIGGER = "OnTriggerEnter";
-  public const string PP_EVENT_MATH_CONDITION = "Condition";
+  public const string PP_EVENT_MATH_CONDITION = "OnCondition";
 
   // Actions
   public const string PP_ACTION_PLAY_SOUND = "PlaySound";
   public const string PP_ACTION_ENABLE_TRIGGER = "EnableTrigger";
   public const string PP_ACTION_DISABLE_TRIGGER = "DisableTrigger";
+  public const string PP_ACTION_BEGIN_TIMER = "BeginTimer";
   public const string PP_ACTION_END_PHASE = "CompletePhase";
   public const string PP_ACTION_SET_VALUE = "SetValue";
   public const string PP_ACTION_INCREMENT_VALUE = "IncrementValue";
+  public const string PP_ACTION_TOGGLE_BOOL = "ToggleBool";
   public const string PP_ACTION_MAKE_INTERACTIBLE = "MakeInteractible";
   public const string PP_ACTION_REMOVE_INTERACTIBLE = "RemoveInteractible";
   public const string PP_ACTION_WAIT = "Wait";
+  public const string PP_ACTION_LEGACY_EVENT = "LegacyEvent";
  
   // Parameters
   public const string PP_PARAM_GLOBAL = "Global";
@@ -65,11 +69,14 @@ public static class PPS
   //public const string PP_PARAM_SOUND_LOCATION = "PlayAt";               // Sound
   public const string PP_PARAM_SOUND_ACTOR = "PlayFrom";                // Sound
   public const string PP_PARAM_CONDITION_REQUIREMENT = "ConditionReq";  // Condition
+  public const string PP_PARAM_PATH = "Path";
+  public const string PP_PARAM_WAIT_TIME = "Time";
 
   // Conditionals
   public const string PP_COND_GT = "GreaterThan";
   public const string PP_COND_LT = "LessThan";
   public const string PP_COND_ET = "EqualTo";
+  public const string PP_COND_NET = "NotEqualTo";
 
 
 
@@ -95,6 +102,7 @@ public static class PPS
       {PP_CUSTOM_EVENT_OPEN, PP_ACTION_INCREMENT_VALUE},
       {PP_CUSTOM_EVENT_OPEN, PP_ACTION_SET_VALUE},
       {PP_CUSTOM_EVENT_OPEN, PP_ACTION_WAIT},
+      {PP_CUSTOM_EVENT_OPEN, PP_ACTION_LEGACY_EVENT},
 
       // Sound Creation Mode
       {PP_OBJECT_SOUND, PP_PARAM_NAME},
@@ -149,6 +157,8 @@ public static class PPS
 
       // Wait Mode
       {PP_ACTION_WAIT, PP_PARAM_VALUE},
+
+      {PP_ACTION_LEGACY_EVENT, PP_PARAM_NAME},
 
       // Event Handling Mode
       {PP_EVENT_TIMER_COMPLETED, PP_PARAM_NAME},
@@ -237,12 +247,13 @@ public static class PPS
     {PP_PARAM_VALUE, "Value"},
     {PP_PARAM_DURATION, "Duration"},
     {PP_PARAM_REPEAT, "RepeatCount"},
-    {PP_PARAM_AUTOSTART, "AutoStart"},
+    {PP_PARAM_AUTOSTART, "IsRunning"},
     {PP_PARAM_DESTROY_ON_PHASE, "DestroyOnPhase"},
     {PP_PARAM_ACTION, "Action"},
     //{PP_PARAM_SOUND_LOCATION, "SoundLocation"},
     {PP_PARAM_SOUND_ACTOR, "Actor"},
-    {PP_PARAM_CONDITION_REQUIREMENT, "Condition"}
+    {PP_PARAM_CONDITION_REQUIREMENT, "Condition"},
+    {PP_PARAM_WAIT_TIME, "Value"}
   };
 
   public static bool IsValidForMode(string mode, string param)
@@ -271,6 +282,14 @@ public static class PPS
 
   public static string GetParameterLiteralName(string param)
   {
-    return ParameterLiterals[param];
+    if (ParameterLiterals.ContainsKey(param))
+      return ParameterLiterals[param];
+    else
+      return param;
+  }
+
+  public static string GetSpacedString(string parsed)
+  {
+    return parsed.Replace(PP_STRING_SPACER, " ");
   }
 }

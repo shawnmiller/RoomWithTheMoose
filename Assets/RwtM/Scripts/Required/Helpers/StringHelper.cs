@@ -2,7 +2,7 @@
 
 public static class StringHelper
 {
-  public static string[] SplitTextDelimited(string text, string delimiter)
+  public static string[] SplitTextDelimited(this string text, string delimiter)
   {
     return text.Split(new string[] { delimiter }, System.StringSplitOptions.RemoveEmptyEntries);
     //Regex lineSplitter = new Regex(delimiter);
@@ -39,5 +39,19 @@ public static class StringHelper
       split[1] = null;
     }
     return split;
+  }
+
+  public static string GetWord(this string text, int index, string delimiter)
+  {
+    try
+    {
+      return SplitTextDelimited(text, delimiter)[index];
+    }
+    catch (System.Exception e)
+    {
+      UnityEngine.Debug.Log("Error found in " + text);
+      UnityEngine.Debug.Log(e.Message);
+      return text;
+    }
   }
 }

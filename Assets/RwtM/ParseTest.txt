@@ -1,0 +1,40 @@
+Phase
+	Timer Name=Phase1Timer Duration=10 RepeatCount=0 AutoStart=True
+	OnTimerComplete Name=Phase1Timer Action=StartPhase2
+
+	BeginCustomEvent Name=StartPhase2
+		CompletePhase
+	EndCustomEvent
+EndPhase
+
+Phase
+	OnBeginPhase Action=Phase2Setup
+	OnTriggerEnter Name=TestTrigger1 Action=SetItemsInteractible
+	Variable Name=ItemsUsed Type=Integer Value=0
+
+	BeginCustomEvent Name=Phase2Setup
+		EnableTrigger Name=TestTrigger1
+	EndCustomEvent
+
+	BeginCustomEvent Name=SetItemsInteractible
+		DisableTrigger Name=TestTrigger1
+		MakeInteractible Name=Toothbrush
+		MakeInteractible Name=Clothing01
+		MakeInteractible Name=Clothing02
+	EndCustomEvent
+
+	OnPickUpItem Name=Toothbrush Action=AddItemToInventory
+
+	BeginCustomEvent Name=AddItemToInventory
+		IncrementValue Name=ItemsUsed Value=1
+	EndCustomEvent
+
+	OnCondition Name=ItemsUsed ConditionReq=EqualTo Value=3 Action=EndPhase2
+
+	BeginCustomEvent Name=EndPhase2
+		RemoveInteractible Name=Toothbrush
+		RemoveInteractible Name=Clothing01
+		RemoveInteractible Name=Clothing02
+		CompletePhase
+	EndCustomEvent
+EndPhase
