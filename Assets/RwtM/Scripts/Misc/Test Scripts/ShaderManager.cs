@@ -2,6 +2,7 @@
 
 public class ShaderManager : Singleton<ShaderManager>
 {
+  public Material TouchMaterial;
   Transform player;
 
   void Update()
