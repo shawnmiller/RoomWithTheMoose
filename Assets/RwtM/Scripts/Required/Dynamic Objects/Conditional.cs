@@ -1,17 +1,45 @@
 ﻿using UnityEngine;
 
-public class Conditional
+public class Conditional : DynamicObject
 {
-  public Variable Var { get; set; }
-  public ConditionalType Condition { get; set; }
+  public string Name { get; set; }
+  private Variable Var { get; set; } // cached version of the Variable
+  public string Value { get; set; }
+  private Variable Val { get; set; }
+
+  public string Condition { get; set; }
   public float Comparer { get; set; }
   public string Action { get; set; }
 
+  private bool runOnce = false;
+
   public bool ConditionMet()
   {
+    if (!runOnce)
+    {
+      CheckForValueOrName();
+      runOnce = true;
+    }
+
     if (!ValidateConditional())
     {
       return false;
+    }
+
+    if (Var == null)
+    {
+      Var = VariableManager.Get().GetVariable(Name);
+      if (Var == null)
+      {
+        Debug.Log("Can't find Variable \"" + Name + "\"");
+        return false;
+      }
+    }
+
+    object TestActual = Comparer;
+    if (Val != null)
+    {
+      TestActual = Val.Value;
     }
 
     // Normally I wouldn't do something like this, but since we're forcing the validation
@@ -20,13 +48,13 @@ public class Conditional
     switch (Condition)
     {
       case ConditionalType.LessThan:
-        return (float)Var.Value < Comparer;
+        return (float)Var.Value < (float)TestActual;
       case ConditionalType.EqualTo:
-        return (float)Var.Value == Comparer;
+        return (float)Var.Value == (float)TestActual;
       case ConditionalType.NotEqualTo:
-        return !((float)Var.Value == Comparer);
+        return !((float)Var.Value == (float)TestActual);
       case ConditionalType.GreaterThan:
-        return (float)Var.Value > Comparer;
+        return (float)Var.Value > (float)TestActual;
       default:
         return false;
     }
@@ -54,15 +82,20 @@ public class Conditional
       case "String":
         Debug.LogError("Conditionals currently do not support Strings. (" + Var.Name + ")");
         Debug.Break();
-        /*if (Condition != ConditionalType.EqualTo || Condition != ConditionalType.NotEqualTo)
-        {
-          Debug.LogError("Conditional attempted to compare a String (" + Var.Name + ") with LessThan or GreaterThan.");
-        }*/
         return false;
       case "Integer":
       case "Float":
       default:
         return true;
+    }
+  }
+
+  private void CheckForValueOrName()
+  {
+    Val = VariableManager.Get().GetVariable(Value);
+    if (Val == null)
+    {
+      Comparer = (float)TypeConversion.Convert(typeof(float), Value);
     }
   }
 }
