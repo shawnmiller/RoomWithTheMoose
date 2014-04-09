@@ -1,0 +1,142 @@
+While Walking player will hear footsteps
+
+When touching things player will hear a 'tap' sound
+
+- notes (sounds)
+          - bird chirping coming from most windows. 
+          - car driving by also heard periodically from front of house ( downstairs living room (opposite of dining room))
+
+
+Game Ends(Phase 4, but may invove all phases) 
+    -must be standing near door to activate finish    
+
+          - 20 minutes of play (bus Comes) Bus horn sound and then knock on door sound - Game Ends Finishing Congradualtions screen with stats (tba) 
+          - 25 minutes of play (friend arrives (only if phone was answered in Phase 3)) friend knocks on door and says Hey, I'm here! - Game Ends Congrats screen with stats (tba)
+          - 30 minutes of play (Mother Drives player to school whether all phasesare complete or not) Mother says (right next to player no matter player's location in house) I'm leaving for work now so we need to leave whether your ready or not. Game ends, No Congrats screen, Stat Screen (tba)
+
+Stats Screen
+
+Display:   Congrats(or not depending on time finished)
+
+                and
+
+           Total Play Time.
+          
+
+
+
+
+
+
+
+Phase One
+
+
+Player start game next to bed.
+
+after 3 seconds Alarm Sound is going off from Alarm on desk, next to playroom door.
+
+Player need to walk over to the alarm and shut off the sound (essantially). alarm model remains on desk even after alarm noise is removed (no item pick-up)
+
+3 - 4 seconds After Alarm noise is shut off There is a knock on the bedroom door and mother speaks from the other side
+                          - says the player will need to get dressed and gather school supplies together.
+                           - Clothing is on bed
+                           - Backpack
+                           - Recorder
+     - Mother's reminder of tasks can be heard by player every so often
+
+     - Phase ends after collecting all objects and turning off alarm.
+
+     
+-immediately begins phase 2
+
+
+
+
+     - optional notes for phase one AREA (bedroom and playroom)   (if time allows, mostly asthetic)
+             - turn on/off tv in bedroom, - play white noise or program sound/turn off sound on interact
+             - turn on and off radio - play music on interaction.
+             
+
+
+
+End of Phase one ( players procede to leave bedroom)
+
+
+
+
+Phase Two
+
+as player leaves bedroom, Mother (mother and voice is upstairs next to the stairs) tells player to use the bathroom upstairs and wash up for school. 
+                     - Mother moves to chair/couch next to stairs (downstairs) and proceeds to remind player every few minutes.
+                     - When coming down the stairs mother gives an additional reminder saying " Oh, and I think you left your shoes right here next to the couch. Get them on too!"
+                     - after this reminder mother and voice move to kitchen.
+
+
+During Phase Two Player must:
+                     -Use toothbrush (upon interaction, sound will play of water running for a few seconds)
+                     - find and pick up shoes upon interaction (item Pickup)
+
+- OPTIONAL interaction for player but necessary to program: toilet interaction: sound will play of a toilet flushing upon interaction (no ItemPickup)
+
+      - sounds for Phase Two AREA(Upstairs Hallway/Bathroom/ Parents Bedroom) that havent been mentioned
+               - Bubble Water sound at fishtank (not upon interaction/ just when player is near it) 
+               
+      - optional notes for phase two AREA (Upstairs Hallway/Bathroom/ Parents Bedroom )   (if time allows, mostly asthetic)
+             - turn on/off tv in parents bedroom, - play white noise or program sound/turn off sound on interact
+             - turn on or off computer in parents bedroom - play music on interaction. on odd numbers of interactions produce "old" windows booting sound. ( this will count as on) on even number of interactions play a short bweeer "power off" sound
+
+
+Phase two ends immediately upon Shoe pickup.
+
+
+
+
+Phase 3
+
+
+after 3 - 5 seconds of phase start phone begins to ring. Mother (from kitchen) asks if player can grab it as she's busy readying breakfast.
+
+if player reaches it in time, sound from phone starts with friend saying "He will arrive shortly after the bus, just in case you need a ride."
+if player doesnt reach it in time, phone stops ringing and player does not recieve the ride from friend later in the game 
+
+after phone event mother says that breakfast is ready and tells the player to come in and eat.
+
+Player will go into kitchen and mother will say When your done eating and your all ready for school, make sure you stand by the front door and wait for the bus/ your friend. 
+
+Player will find the cereal on top of the table and will interact with it once ( a few times if possible) (this will act as an Item pickup (remove model))
+
+
+Phase three ends after cereal is finished.
+
+
+
+
+
+Proceed to Phase 4 (stated and described above)
+
+
+
+
+
+
+OTHER - 
+
+
+Consider a low background music
+
+Option to change in game shader color
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
