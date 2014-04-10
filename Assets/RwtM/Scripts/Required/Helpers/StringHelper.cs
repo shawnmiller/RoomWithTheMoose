@@ -54,4 +54,10 @@ public static class StringHelper
       return text;
     }
   }
+
+  public static string GetLastWord(this string text, string delimiter)
+  {
+    string[] words = SplitTextDelimited(text, delimiter);
+    return words[words.Length - 1];
+  }
 }

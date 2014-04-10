@@ -22,6 +22,13 @@ public class Phase
     {
       controller.AddObject(ObjectCategories.Sound, sound);
     }
+    foreach (Timer timer in Timers)
+    {
+      TimerManager.Get().RegisterTimer(timer);
+    }
+    Variables.Clear();
+    Sounds.Clear();
+    Timers.Clear();
   }
 
   public void Run()
@@ -42,6 +49,7 @@ public class Phase
     {
       if (e.GlobalEvent == eventName && e.Name == objectName)
       {
+        Debug.Log("Event Found: " + eventName + " For Instigator: " + e.Name + " Action: " + e.Action);
         RunPhaseEvent(e.Action);
       }
     }
@@ -52,7 +60,8 @@ public class Phase
     PhaseEvent evnt = Events.Find(x => x.Name == eventName);
     if (evnt != null)
     {
-      evnt.BeginEvent();
+      Debug.Log("Beginning Phase Event");
+      evnt.Run();
     }
     else
     {
