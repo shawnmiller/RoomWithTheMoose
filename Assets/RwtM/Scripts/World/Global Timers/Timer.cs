@@ -39,6 +39,10 @@ public class Timer : DynamicObject
 
     ElapsedTime += deltaTime;
     bool completed = IsComplete;
+    if (completed)
+    {
+      ElapsedTime = 0 - RemainingTime; // RemainingTime will be negative
+    }
 
     /*if (completed)
     {

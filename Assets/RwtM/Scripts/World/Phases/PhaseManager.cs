@@ -5,6 +5,7 @@ public class PhaseManager : Singleton<PhaseManager>
 {
   public TextAsset SceneFile;
   private GameState GState;
+  private Phase GlobalPhase;
   private List<Phase> Phases = new List<Phase>();
   private int CurrentPhaseIndex = 0;
 
@@ -13,18 +14,31 @@ public class PhaseManager : Singleton<PhaseManager>
     GState = GameState.Get();
     //SceneParser.BuildScene(SceneFile);
     SceneParserV2.ReadSceneFile(SceneFile);
+
+    Debug.Log("CurrentPhaseIndex is Null? " + (Phases[CurrentPhaseIndex] == null));
+    GlobalPhase.Init();
+    Phases[CurrentPhaseIndex].Init();
+    Phases[CurrentPhaseIndex].PushGlobalEvent(PPS.PP_EVENT_BEGIN_PHASE, "");
   }
 
   void FixedUpdate()
   {
+    //Debug.Log("Phase Count: " + Phases.Count);
     if (GState.State != StateType.In_Game || Phases.Count == 0)
     {
       return;
     }
+    GlobalPhase.Run();
+    Phases[CurrentPhaseIndex].Run();
   }
 
   public void PushGlobalEvent(string EventName, string EventInstigator)
   {
+    if (EventName == PPS.PP_ACTION_END_PHASE)
+    {
+      MoveToNextPhase();
+    }
+    GlobalPhase.AddPhaseEvent(EventName, EventInstigator);
     Phases[CurrentPhaseIndex].PushGlobalEvent(EventName, EventInstigator);
   }
 
@@ -48,13 +62,19 @@ public class PhaseManager : Singleton<PhaseManager>
     Phases.Add(phase);
   }
 
+  public void AddGlobalPhase(Phase phase)
+  {
+    GlobalPhase = phase;
+  }
+
   public int GetCurrentPhaseIndex()
   {
     return CurrentPhaseIndex;
   }
 
-  private void EndGame()
+  public void EndGame()
   {
-
+    CurrentPhaseIndex = Phases.Count;
+    Debug.Log("Game has ended");
   }
 }

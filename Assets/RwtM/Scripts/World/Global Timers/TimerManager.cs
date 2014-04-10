@@ -20,7 +20,7 @@ public class TimerManager : Singleton<TimerManager>
 
     foreach (Timer t in Timers)
     {
-      Debug.Log("Timer: " + t.Name + "  Duration: " + t.Duration + "  Remaining: " + t.RemainingTime);
+      //Debug.Log("Timer: " + t.Name + "  Duration: " + t.Duration + "  Remaining: " + t.RemainingTime);
       if (t.Update(Time.fixedDeltaTime))
       {
         Debug.Log(t.Name + " Completed");
@@ -59,6 +59,7 @@ public class TimerManager : Singleton<TimerManager>
 
   public void RegisterTimer(Timer timer)
   {
+    Debug.Log("Added new Timer \"" + timer.Name + "\" Duration: " + timer.Duration);
     Timers.Add(timer);
   }
 
