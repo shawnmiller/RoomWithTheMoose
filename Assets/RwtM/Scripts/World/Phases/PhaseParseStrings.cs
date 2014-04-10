@@ -17,6 +17,8 @@ public static class PPS
   // Building Phases
   public const string PP_PHASE_OPEN = "Phase";
   public const string PP_PHASE_CLOSE = "EndPhase";
+  public const string PP_GLOBAL_OPEN = "Global";
+  public const string PP_GLOBAL_CLOSE = "EndGlobal";
 
   // Custom Event Setup
   public const string PP_CUSTOM_EVENT_OPEN = "BeginCustomEvent";
@@ -43,6 +45,7 @@ public static class PPS
   public const string PP_EVENT_MATH_CONDITION = "OnCondition";
 
   // Actions
+  public const string PP_ACTION_END_GAME = "EndGame";
   public const string PP_ACTION_PLAY_SOUND = "PlaySound";
   public const string PP_ACTION_ENABLE_TRIGGER = "EnableTrigger";
   public const string PP_ACTION_DISABLE_TRIGGER = "DisableTrigger";
@@ -71,6 +74,7 @@ public static class PPS
   public const string PP_PARAM_CONDITION_REQUIREMENT = "ConditionReq";  // Condition
   public const string PP_PARAM_PATH = "Path";
   public const string PP_PARAM_WAIT_TIME = "Time";
+  public const string PP_PARAM_EVENT_REQ = "PreReqs";
 
   // Conditionals
   public const string PP_COND_GT = "GreaterThan";

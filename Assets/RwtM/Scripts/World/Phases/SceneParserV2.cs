@@ -60,16 +60,32 @@ public static class SceneParserV2
       }
       else
       {
-        switch (line.GetWord(0, " "))
+        switch (line.GetWord(0, " ")) 
         {
           case PPS.PP_PHASE_OPEN:
+          case PPS.PP_GLOBAL_OPEN:
             Debug.Log("Beginning New Phase");
             CurrentPhase = new Phase();
+            break;
+          case PPS.PP_GLOBAL_CLOSE:
+            Manager.AddGlobalPhase(CurrentPhase);
+            CurrentPhase = null;
             break;
           case PPS.PP_CUSTOM_EVENT_OPEN:
             string eName = line.GetWord(1, " ");
             eName = eName.SplitTextDelimited("=")[1];
-            CreateCustomEvent(ref fileReader, eName);
+
+            // Since Events can have prerequisite 
+            string preReqCheck = line.GetLastWord(" ");
+            if (preReqCheck.SplitTextDelimited("=")[1] == PPS.PP_PARAM_EVENT_REQ)
+            {
+              CreateCustomEvent(ref fileReader, eName, Int32.Parse(preReqCheck.SplitTextDelimited("=")[1]));
+            }
+            else
+            {
+              CreateCustomEvent(ref fileReader, eName);
+            }
+
             break;
           case PPS.PP_EVENT_BEGIN_PHASE:
           case PPS.PP_EVENT_ENTER_TRIGGER:
@@ -79,7 +95,7 @@ public static class SceneParserV2
             CreateEventWatcher(line);
             break;
           case PPS.PP_EVENT_MATH_CONDITION:
-            CreateConditional(line);
+            CurrentPhase.AddConditional(CreateConditional(line));
             break;
           case PPS.PP_OBJECT_TIMER:
           case PPS.PP_OBJECT_VARIABLE:
@@ -160,9 +176,8 @@ public static class SceneParserV2
     CurrentPhase.AddEventWatcher(eWatch);
   }
 
-  private static void CreateConditional(string line)
+  private static Conditional CreateConditional(string line)
   {
-    // TODO: this
     Conditional condition = new Conditional();
 
     List<KeyValuePair<string, string>> inputs = BreakLine(line);
@@ -179,16 +194,33 @@ public static class SceneParserV2
         SetProperty(condition, pair.Key, pair.Value);
       }
     }
+
+    return condition;
   }
 
-  private static void CreateCustomEvent(ref StreamReader fileReader, string name)
+  private static void CreateCustomEvent(ref StreamReader fileReader, string name, int preReqs=0)
   {
     Debug.Log("Creating Custom Event: " + name);
     PhaseEvent pEvent = new PhaseEvent();
     pEvent.Name = name;
-    do
+
+    // Get any prerequisites if they are present.
+    while (preReqs > 0)
+    {
+      string req = fileReader.ReadLine();
+      if(req.GetWord(0, " ") != PPS.PP_EVENT_MATH_CONDITION)
+      {
+        Debug.LogError("Found Actions before listed number of PreRequisites were added. Event Name: " + name);
+        Debug.Break();
+      }
+      pEvent.AddConditional(CreateConditional(req));
+      --preReqs;
+    }
+
+    while(true)
     {
       string line = fileReader.ReadLine();
+      line = line.Trim();
       ++CurrentLine;
       Debug.Log("Line #" + CurrentLine);
       if (line.GetWord(0, " ") == PPS.PP_CUSTOM_EVENT_CLOSE)
@@ -197,7 +229,15 @@ public static class SceneParserV2
         break;
       }
 
+      if (line.GetWord(0, " ") == PPS.PP_EVENT_MATH_CONDITION)
+      {
+        Debug.LogError("Found a condition where one should not be. Event Name: " + name);
+        Debug.Break();
+      }
+
       PhaseEventStep eStep = new PhaseEventStep();
+      eStep.Action = line.GetWord(0, " ");
+      Debug.Log("Set Action to " + eStep.Action);
 
       List<KeyValuePair<string, string>> values = BreakLine(line);
       foreach (KeyValuePair<string, string> pair in values)
@@ -205,7 +245,7 @@ public static class SceneParserV2
         SetProperty(eStep, pair.Key, pair.Value);
       }
       pEvent.AddStep(eStep);
-    } while (true);
+    }
     CurrentPhase.AddPhaseEvent(pEvent);
   }
 

@@ -11,6 +11,9 @@ public class PhaseEventStep
   {
     switch (Action)
     {
+      case PPS.PP_ACTION_END_GAME:
+        EndGame();
+        break;
       case PPS.PP_ACTION_DISABLE_TRIGGER:
         ToggleTrigger(false);
         break;
@@ -42,6 +45,7 @@ public class PhaseEventStep
         PlayLegacyEvent();
         break;
       case PPS.PP_ACTION_PLAY_SOUND:
+        Debug.Log("Playing Sound");
         PlaySound();
         break;
       case PPS.PP_ACTION_WAIT:
@@ -53,6 +57,11 @@ public class PhaseEventStep
     }
   }
 
+  private void EndGame()
+  {
+    PhaseManager.Get().EndGame();
+  }
+
   private void ToggleTrigger(bool toggle)
   {
     GameObject trigger = GetSceneObject();
@@ -61,7 +70,9 @@ public class PhaseEventStep
       Debug.Log("No trigger named \"" + Name + "\" found in the scene.");
       return;
     }
-    trigger.collider.enabled = toggle;
+
+    TriggerDispatch dispatch = trigger.GetComponent<TriggerDispatch>();
+    dispatch.Enabled = toggle;
   }
 
   private void BeginTimer()
@@ -92,8 +103,8 @@ public class PhaseEventStep
     GameObject item = GetSceneObject();
     if (toggle == true)
     {
-      if(item.GetComponent<InteractableItem>() == null)
-        item.AddComponent<InteractableItem>();
+      if(item.GetComponent<InteractibleItem>() == null)
+        item.AddComponent<InteractibleItem>();
     }
     else
     {
