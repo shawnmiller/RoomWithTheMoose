@@ -76,6 +76,9 @@ unity editor resources
 *.suo
 *.user
 *.sln.docstates
+*.sln
+*.csproj
+
 
 # Build results
 

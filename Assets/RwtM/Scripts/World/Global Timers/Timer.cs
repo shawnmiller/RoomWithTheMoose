@@ -2,7 +2,7 @@
 
 public class Timer : DynamicObject
 {
-  public string Name { get; set; }
+  //public string Name { get; set; }
   public float Duration { get; set; }
   private float ElapsedTime { get; set; }
   public float RemainingTime { get { return Duration - ElapsedTime; } }

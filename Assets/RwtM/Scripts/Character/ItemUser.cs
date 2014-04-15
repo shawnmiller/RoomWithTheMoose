@@ -2,8 +2,8 @@
 
 public class ItemUser : StateComponent
 {
-  public Transform camera;
-  public float maxDistance = 5f;
+  public Transform Camera;
+  public float MaxDistance = 5f;
 
   private bool isUsing;
 
@@ -20,7 +20,7 @@ public class ItemUser : StateComponent
     }
 
     RaycastHit hit;
-    if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance))
+    if (Physics.Raycast(Camera.position, Camera.forward, out hit, MaxDistance))
     {
       InteractibleItem item = hit.collider.gameObject.GetComponent<InteractibleItem>();
       if (item != null)

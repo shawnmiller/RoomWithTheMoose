@@ -2,7 +2,7 @@
 
 public class Conditional : DynamicObject
 {
-  public string Name { get; set; }
+  //public string Name { get; set; }
   private Variable Var { get; set; } // cached version of the Variable
   public string Value { get; set; }
   private Variable Val { get; set; }

@@ -83,7 +83,7 @@ public class CameraController : StateComponent
     currentX = ClampCircular (currentX);
     currentY += Input.GetAxis ("Mouse Y");
     currentY = ClampVertical (currentY);
-    Quaternion targetRotation = Quaternion.Euler (-currentY, currentX, 0);
+    //Quaternion targetRotation = Quaternion.Euler (-currentY, currentX, 0);
     transform.rotation = Quaternion.Euler (0, currentX, 0);
     neckJoint.localRotation = Quaternion.Euler (-currentY, 0, 0);
     //transform.rotation = Quaternion.Euler (0, currentX, 0);

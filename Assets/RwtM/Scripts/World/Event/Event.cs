@@ -18,7 +18,7 @@ public class Event : StateComponent
   //GameState state;
   TimeKeeper keeper;
 
-  void Start()
+  new void Start()
   {
     base.Start();
 
