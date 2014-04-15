@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class PhaseManager : Singleton<PhaseManager>
+public class PhaseManager : Singleton<PhaseManager>, IMessageReceiver
 {
   public TextAsset SceneFile;
   private GameState GState;
@@ -11,9 +11,11 @@ public class PhaseManager : Singleton<PhaseManager>
 
   void Start()
   {
+    MessageDispatch.RegisterReceiver(this);
+
     GState = GameState.Get();
     //SceneParser.BuildScene(SceneFile);
-    SceneParserV2.ReadSceneFile(SceneFile);
+    SceneParser.ReadSceneFile(SceneFile);
 
     Debug.Log("CurrentPhaseIndex is Null? " + (Phases[CurrentPhaseIndex] == null));
     GlobalPhase.Init();
@@ -32,19 +34,21 @@ public class PhaseManager : Singleton<PhaseManager>
     Phases[CurrentPhaseIndex].Run();
   }
 
-  public void PushGlobalEvent(string EventName, string EventInstigator)
+  void IMessageReceiver.PushGlobalEvent(string EventName, string Instigator)
   {
+    Debug.Log("PhaseManager received event: " + EventName + " Instigator: " + Instigator);
     if (EventName == PPS.PP_ACTION_END_PHASE)
     {
       MoveToNextPhase();
     }
-    GlobalPhase.AddPhaseEvent(EventName, EventInstigator);
-    Phases[CurrentPhaseIndex].PushGlobalEvent(EventName, EventInstigator);
+    GlobalPhase.PushGlobalEvent(EventName, Instigator);
+    Phases[CurrentPhaseIndex].PushGlobalEvent(EventName, Instigator);
   }
 
   public void MoveToNextPhase()
   {
     ++CurrentPhaseIndex;
+    Debug.Log("Phase Completed -> Moving to Phase " + CurrentPhaseIndex + " of " + Phases.Count);
     if (CurrentPhaseIndex > Phases.Count)
     {
       EndGame();
@@ -76,5 +80,6 @@ public class PhaseManager : Singleton<PhaseManager>
   {
     CurrentPhaseIndex = Phases.Count;
     Debug.Log("Game has ended");
+    Application.LoadLevel("GameOver");
   }
 }

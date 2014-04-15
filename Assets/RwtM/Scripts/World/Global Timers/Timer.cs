@@ -10,16 +10,17 @@ public class Timer : DynamicObject
   public bool IsRunning { get; set; }
   public bool Obsolete { 
     get {
-      switch (RepeatMode)
+      return RepeatCount <= -1;
+      /*switch (RepeatMode)
       {
         case TimerRepeatType.Count:
         case TimerRepeatType.Single:
-          return RepeatCount == 0;
+          return RepeatCount == -1;
         case TimerRepeatType.Loop:
           return false;
         default:
           return true;
-      }
+      }*/
     }
   }
   public TimerRepeatType RepeatMode { get; set; }
@@ -42,6 +43,8 @@ public class Timer : DynamicObject
     if (completed)
     {
       ElapsedTime = 0 - RemainingTime; // RemainingTime will be negative
+      --RepeatCount;
+      Debug.Log(Name + "  " + RepeatCount);
     }
 
     /*if (completed)

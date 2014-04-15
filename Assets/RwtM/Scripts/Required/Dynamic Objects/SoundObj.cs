@@ -10,7 +10,7 @@ public class SoundObj : DynamicObject
     set
     {
       Sound = Resources.LoadAssetAtPath(value, typeof(AudioClip)) as AudioClip;
-      Debug.Log("Sound Asset \"" + value + "\" Found: " + (Sound == null));
+      Debug.Log("Sound Asset \"" + value + "\" Found: " + (Sound != null));
     }
   }
 }

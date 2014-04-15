@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class VariableManager : Singleton<VariableManager>
+public class VariableManager : Singleton<VariableManager>, IMessageReceiver
 {
   List<Variable> Variables = new List<Variable>();
+
+  void Start()
+  {
+    MessageDispatch.RegisterReceiver(this);
+  }
 
   public void AddVariable(Variable var)
   {
@@ -18,9 +23,10 @@ public class VariableManager : Singleton<VariableManager>
     return Variables.Find(x => x.Name == name);
   }
 
-  public void PushGlobalEvent(string eventName, string objectName)
+  void IMessageReceiver.PushGlobalEvent(string EventName, string Instigator)
   {
-    if (eventName == PPS.PP_EVENT_BEGIN_PHASE)
+    Debug.Log("VariableManager received event: " + EventName + " Instigator: " + Instigator);
+    if (EventName == PPS.PP_EVENT_BEGIN_PHASE)
     {
       PurgeNonGlobals();
     }

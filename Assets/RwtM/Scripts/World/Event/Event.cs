@@ -22,6 +22,11 @@ public class Event : StateComponent
   {
     base.Start();
 
+    if (tempData.Count == 0)
+    {
+      Debug.LogWarning("Event is empty: " + gameObject.name);
+      return;
+    }
     foreach (EventStepData data in tempData)
     {
       eventData.Enqueue(data);
@@ -36,6 +41,7 @@ public class Event : StateComponent
   {
     if (!running || _state.State != StateType.In_Game) { return; }
     if (next == null && eventData.Count == 0) { Destroy(this); }
+    if (eventData.Count == 0) { return; }
 
     keeper.Tick();
 

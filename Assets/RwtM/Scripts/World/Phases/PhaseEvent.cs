@@ -17,10 +17,11 @@ public class PhaseEvent
         return;
     }
 
+    Queue<PhaseEventStep> TempQueue = new Queue<PhaseEventStep>(Steps);
     Debug.Log("Steps for PhaseEvent \"" + Name + "\": " + Steps.Count);
-    while (Steps.Count > 0)
+    while (TempQueue.Count > 0)
     {
-      PhaseEventStep step = Steps.Dequeue();
+      PhaseEventStep step = TempQueue.Dequeue();
       step.Run();
     }
   }

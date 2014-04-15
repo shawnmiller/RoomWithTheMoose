@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-public static class SceneParserV2
+public static class SceneParser
 {
   private const int CMD = 0;
   private const int VAL = 1;
@@ -77,12 +77,15 @@ public static class SceneParserV2
 
             // Since Events can have prerequisite 
             string preReqCheck = line.GetLastWord(" ");
-            if (preReqCheck.SplitTextDelimited("=")[1] == PPS.PP_PARAM_EVENT_REQ)
+            Debug.Log("PreReqs for " + eName + ": " + preReqCheck);
+            if (preReqCheck.SplitTextDelimited("=")[0] == PPS.PP_PARAM_EVENT_REQ)
             {
+              Debug.Log("PreReqs found");
               CreateCustomEvent(ref fileReader, eName, Int32.Parse(preReqCheck.SplitTextDelimited("=")[1]));
             }
             else
             {
+              Debug.Log("No PreReqs found, defaulting.");
               CreateCustomEvent(ref fileReader, eName);
             }
 
@@ -111,6 +114,8 @@ public static class SceneParserV2
         }
       }
     }
+
+    Debug.Log("Parse Successful");
   }
 
   // Note that this does not return the first value, which is always assumed to be the identifier.
@@ -159,7 +164,11 @@ public static class SceneParserV2
       }
 
       pInfo.SetValue(obj, val, null);
-      Debug.Log("Successfully set " + property + " for " + obj.GetType().ToString() + " as " + pInfo.GetValue(obj, null).ToString());
+      try
+      {
+        Debug.Log("Successfully set " + property + " for " + obj.GetType().ToString() + " as " + pInfo.GetValue(obj, null).ToString());
+      }
+      catch { Debug.LogWarning("If not \"Path\", report to programmer: " + pInfo.Name); } // SoundObjs should be the only thing to cause this
     }
   }
 
@@ -201,16 +210,25 @@ public static class SceneParserV2
   private static void CreateCustomEvent(ref StreamReader fileReader, string name, int preReqs=0)
   {
     Debug.Log("Creating Custom Event: " + name);
+    Debug.Log("PreReq Count: " + preReqs);
     PhaseEvent pEvent = new PhaseEvent();
     pEvent.Name = name;
 
     // Get any prerequisites if they are present.
     while (preReqs > 0)
     {
+      ++CurrentLine;
+      Debug.Log("Line #" + CurrentLine);
       string req = fileReader.ReadLine();
+
+      if (String.IsNullOrEmpty(req) || req.Trim().Length == 0)
+      {
+        Debug.Log("Skipping: Empty Line");
+        continue;
+      }
       if(req.GetWord(0, " ") != PPS.PP_EVENT_MATH_CONDITION)
       {
-        Debug.LogError("Found Actions before listed number of PreRequisites were added. Event Name: " + name);
+        Debug.LogError("Found Actions before listed number of Prerequisites were added. Event Name: " + name);
         Debug.Break();
       }
       pEvent.AddConditional(CreateConditional(req));
@@ -223,6 +241,12 @@ public static class SceneParserV2
       line = line.Trim();
       ++CurrentLine;
       Debug.Log("Line #" + CurrentLine);
+      if (String.IsNullOrEmpty(line) || line.Trim().Length == 0)
+      {
+        Debug.Log("Skipping: Empty Line");
+        continue;
+      }
+
       if (line.GetWord(0, " ") == PPS.PP_CUSTOM_EVENT_CLOSE)
       {
         Debug.Log("End of " + name + " event");
@@ -273,14 +297,14 @@ public static class SceneParserV2
     List<KeyValuePair<string, string>> inputs = BreakLine(line);
     foreach (KeyValuePair<string, string> pair in inputs)
     {
-      if (pair.Key == PPS.PP_PARAM_PATH)
+      /*if (pair.Key == PPS.PP_PARAM_PATH)
       {
         ((SoundObj)obj).Sound = Resources.LoadAssetAtPath(pair.Value, typeof(AudioClip)) as AudioClip;
       }
       else
-      {
+      {*/
         SetProperty(obj, pair.Key, pair.Value);
-      }
+      //}
     }
 
     switch (line.GetWord(0, " "))

@@ -20,6 +20,7 @@ public class Phase
     }
     foreach (SoundObj sound in Sounds)
     {
+      Debug.Log("Pushing " + sound.Name + " to ObjectController.");
       controller.AddObject(ObjectCategories.Sound, sound);
     }
     foreach (Timer timer in Timers)
@@ -35,9 +36,15 @@ public class Phase
   {
     foreach (Conditional c in Conditionals)
     {
+      //Debug.Log("Name: " + c.Name);
       if (c.ConditionMet())
       {
+        Debug.Log("Condition Met");
         RunPhaseEvent(c.Action);
+      }
+      else
+      {
+        //Debug.Log("Condition Not Met");
       }
     }
   }
@@ -50,6 +57,12 @@ public class Phase
       if (e.GlobalEvent == eventName && e.Name == objectName)
       {
         Debug.Log("Event Found: " + eventName + " For Instigator: " + e.Name + " Action: " + e.Action);
+        RunPhaseEvent(e.Action);
+      }
+      // Special case for OnBeginPhase
+      if (eventName == PPS.PP_EVENT_BEGIN_PHASE && e.GlobalEvent == eventName)
+      {
+        Debug.Log("OnBeginPhase event was pushed, executing " + e.Action);
         RunPhaseEvent(e.Action);
       }
     }
@@ -79,6 +92,7 @@ public class Phase
 
   public void AddSound(SoundObj sound)
   {
+    Debug.Log("Adding: " + sound.Name);
     Sounds.Add(sound);
   }
 

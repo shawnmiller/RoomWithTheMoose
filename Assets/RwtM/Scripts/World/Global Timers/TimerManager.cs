@@ -18,6 +18,7 @@ public class TimerManager : Singleton<TimerManager>
       return;
     }
 
+    List<Timer> TimersToRemove = new List<Timer>();
     foreach (Timer t in Timers)
     {
       //Debug.Log("Timer: " + t.Name + "  Duration: " + t.Duration + "  Remaining: " + t.RemainingTime);
@@ -28,9 +29,14 @@ public class TimerManager : Singleton<TimerManager>
         if (t.Obsolete)
         {
           Debug.Log(t.Name + " Obsolete");
-          Timers.Remove(t);
+          TimersToRemove.Add(t);
+          //Timers.Remove(t);
         }
       }
+    }
+    foreach (Timer r in TimersToRemove)
+    {
+      Timers.Remove(r);
     }
   }
 
@@ -97,17 +103,22 @@ public class TimerManager : Singleton<TimerManager>
 
   private void PurgeTimers()
   {
+    List<Timer> TimersToRemove = new List<Timer>();
     foreach (Timer timer in Timers)
     {
       if (!timer.Global)
       {
-        Timers.Remove(timer);
+        TimersToRemove.Add(timer);
       }
+    }
+    foreach (Timer r in TimersToRemove)
+    {
+      Timers.Remove(r);
     }
   }
 
   private void ReportCompletedTimer(Timer timer)
   {
-    PhaseManager.Get().PushGlobalEvent(PPS.PP_EVENT_TIMER_COMPLETED, timer.Name);
+    MessageDispatch.Send(PPS.PP_EVENT_TIMER_COMPLETED, timer.Name);
   }
 }

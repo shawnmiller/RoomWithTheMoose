@@ -243,6 +243,7 @@ public static class PPS
     //{PP_PARAM_SOUND_LOCATION, typeof(string)},
     {PP_PARAM_SOUND_ACTOR, typeof(string)},
     {PP_PARAM_CONDITION_REQUIREMENT, typeof(string)},
+    {PP_PARAM_PATH, typeof(string)},
   };
 
   private static Dictionary<string, string> ParameterLiterals = new Dictionary<string, string>() {

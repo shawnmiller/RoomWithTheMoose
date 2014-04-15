@@ -17,8 +17,10 @@ public class Conditional : DynamicObject
   {
     if (!runOnce)
     {
+      Debug.Log("Running Variable Fetch: " + Name);
       CheckForValueOrName();
       runOnce = true;
+      Debug.Log("Variable Found: " + (Var != null || Val != null));
     }
 
     if (!ValidateConditional())
@@ -62,19 +64,20 @@ public class Conditional : DynamicObject
 
   private bool ValidateConditional()
   {
-    if(Var != null)
+    if(Var == null)
     {
       Debug.LogError("Attempted to compare a Variable which was not created.");
       Debug.Break();
     }
-    
+    //Debug.Log("Var Type " + Var.Type.ToString());
     // This is going to look ugly...
     switch (Var.Type)
     {
       case "Bool":
-        if (Condition != ConditionalType.EqualTo || Condition != ConditionalType.NotEqualTo)
+        if (Condition != ConditionalType.EqualTo && Condition != ConditionalType.NotEqualTo)
         {
           Debug.LogError("Conditional attempted to compare a Bool (" + Var.Name + ") with LessThan or GreaterThan.");
+          Debug.LogError(Condition);
           Debug.Break();
           return false;
         }
@@ -92,7 +95,7 @@ public class Conditional : DynamicObject
 
   private void CheckForValueOrName()
   {
-    Val = VariableManager.Get().GetVariable(Value);
+    Var = ObjectController.Get().GetObject<Variable>(ObjectCategories.Variable, Name);
     if (Val == null)
     {
       Comparer = (float)TypeConversion.Convert(typeof(float), Value);

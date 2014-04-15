@@ -52,7 +52,8 @@ public class PhaseEventStep
         Debug.Log("Action: Wait is NYI");
         break;
       default:
-        Debug.Log("Cannot find Action: " + Action);
+        Debug.LogError("Cannot find Action: " + Action);
+        Debug.Break();
         break;
     }
   }
@@ -67,7 +68,7 @@ public class PhaseEventStep
     GameObject trigger = GetSceneObject();
     if (trigger == null)
     {
-      Debug.Log("No trigger named \"" + Name + "\" found in the scene.");
+      Debug.LogError("No trigger named \"" + Name + "\" found in the scene.");
       return;
     }
 
@@ -84,18 +85,21 @@ public class PhaseEventStep
   {
     Variable var = ObjectController.Get().GetObject<Variable>(ObjectCategories.Variable, Name);
     var.Value = (float)var.Value + Value;
+    Debug.Log("Value Incremented: " + var.Name + " Value: " + var.Value.ToString());
   }
 
   private void SetValue()
   {
     Variable var = ObjectController.Get().GetObject<Variable>(ObjectCategories.Variable, Name);
     var.Value = Value;
+    Debug.Log("Value Set: " + var.Name + " Value: " + var.Value.ToString());
   }
 
   private void ToggleBool()
   {
     Variable var = ObjectController.Get().GetObject<Variable>(ObjectCategories.Variable, Name);
     var.Value = TypeConversion.Convert(typeof(bool), Value.ToString());
+    Debug.Log("Bool Toggled: " + var.Name + " Value: " + var.Value.ToString());
   }
 
   private void SetInteractible(bool toggle)
@@ -103,12 +107,16 @@ public class PhaseEventStep
     GameObject item = GetSceneObject();
     if (toggle == true)
     {
-      if(item.GetComponent<InteractibleItem>() == null)
+      if (item.GetComponent<InteractibleItem>() == null)
+      {
         item.AddComponent<InteractibleItem>();
+        Debug.Log("Item Given Interaction: " + item.name);
+      }
     }
     else
     {
       GameObject.Destroy(item.GetComponent<InteractableItem>());
+      Debug.Log("Item Interaction Removed: " + item.name);
     }
   }
 
@@ -118,14 +126,21 @@ public class PhaseEventStep
     GameObject actor = GameObject.Find(Actor);
     if (sound == null)
     {
-      Debug.Log("Cannot find sound: " + Name);
+      Debug.LogError("Cannot find sound: " + Name);
+      //Debug.Break();
     }
     if (actor == null)
     {
-      Debug.Log("Cannot find actor: " + Actor);
+      Debug.LogError("Cannot find actor: " + Actor);
+      //Debug.Break();
     }
 
-    actor.AddComponent<AudioSource>().PlayOneShot(sound.Sound);
+    try
+    {
+      Debug.Log("Within PlaySound try block");
+      actor.AddComponent<AudioSource>().PlayOneShot(sound.Sound);
+    }
+    catch { } // We already know what this could be, we don't care, dev will get the warning in console already.
   }
 
   private void PlayLegacyEvent()
@@ -133,6 +148,7 @@ public class PhaseEventStep
     GameObject eventObj = GetSceneObject();
     Event evnt = eventObj.GetComponent<Event>();
     evnt.Activate();
+    Debug.Log("Playing Legacy Event: " + eventObj.name);
   }
 
   private GameObject GetSceneObject()
@@ -140,7 +156,7 @@ public class PhaseEventStep
     GameObject obj = GameObject.Find(Name);
     if (obj == null)
     {
-      Debug.Log("No trigger named \"" + Name + "\" found in the scene.");
+      Debug.LogError("No object named \"" + Name + "\" found in the scene.");
       Debug.Break();
     }
     return obj;
