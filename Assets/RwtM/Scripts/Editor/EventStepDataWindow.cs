@@ -68,7 +68,7 @@ public class EventStepDataWindow : EditorWindow
         data.animation = EditorGUILayout.TextField("Animation", data.animation);
       }
 
-      if (context.Contains("AudioClip"))
+      if (context.Contains("SoundClip"))
       {
         data.sound = (AudioClip)(EditorGUILayout.ObjectField("Sound", data.sound, typeof(AudioClip)));
       }
