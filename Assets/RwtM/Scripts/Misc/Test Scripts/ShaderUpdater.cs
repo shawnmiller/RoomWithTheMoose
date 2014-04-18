@@ -18,6 +18,10 @@ public class ShaderUpdater : MonoBehaviour
 
   void Update()
   {
+		if(!renderer.enabled)
+		{
+			return;
+		}
     Vector4 position = manager.GetPosition();
     renderer.material.SetVector("_TempTouch", position);
   }
