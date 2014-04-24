@@ -75,8 +75,8 @@ Phase
 	//	SetValue Name=InventoryItems Value=3
 	//EndCustomEvent
 
-	Sound Name=MommyRe Path=Assets/RwtM/Audio/Level1/P1_Obj_Reminder.wav Global=False
-	Sound Name=AlarmSound Path=Assets/RwtM/Audio/Level1/AlarmRing.wav Global=False
+	Sound Name=MommyRe Path=Audio/Level1/P1_Obj_Reminder Global=False
+	Sound Name=AlarmSound Path=Audio/Level1/AlarmRing Global=False
 
 	// Phase 1 Setup
 	//-------------------------------------------------------
@@ -141,8 +141,8 @@ EndPhase
 Phase
 	Variable Name=InventoryItems Type=Integer Value=0 Global=False
 	Timer Name=Phase2Reminder Duration=50 RepeatCount=999 AutoStart=True Global=False
-	Sound Name=MommyReP2 Path=Assets/RwtM/Audio/Level1/P2_Obj_Reminder.wav Global=False
-	Sound Name=MommyReP2 Path=Assets/RwtM/Audio/Level1/P2_Obj_Reminder.wav Global=False
+	Sound Name=MommyReP2 Path=Audio/Level1/P2_Obj_Reminder Global=False
+	Sound Name=MommyReP2 Path=Audio/Level1/P2_Obj_Reminder Global=False
 	
 	//Phase 2 Setup
 	//-------------------------------------------------------
@@ -231,11 +231,11 @@ Phase
 
 	Variable Name=InventoryItems Type=Integer Value=0 Global=False
 	Timer Name=Phase1Reminder Duration=45 RepeatCount=999 AutoStart=True Global=False
-	Sound Name=MommyRe Path=Assets/RwtM/Audio/Level1/P1_Obj_Reminder.wav Global=False
+	Sound Name=MommyRe Path=Audio/Level1/P1_Obj_Reminder Global=False
 
 	Variable Name=InventoryItems Type=Integer Value=0 Global=False
 	Timer Name=Phase2Reminder Duration=50 RepeatCount=999 AutoStart=True Global=False
-	Sound Name=MommyRe2 Path=Assets/RwtM/Audio/Level1/P2_Obj_Reminder.wav Global=False
+	Sound Name=MommyRe2 Path=Audio/Level1/P2_Obj_Reminder Global=False
 
 
 	//Objective Reminder

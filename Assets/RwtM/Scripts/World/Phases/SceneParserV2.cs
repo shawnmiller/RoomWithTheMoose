@@ -29,11 +29,11 @@ public static class SceneParser
     regex = new Regex(Environment.NewLine + @"{2,}");
     temp = regex.Replace(temp, "");
 
-    StreamWriter newFile = new StreamWriter(@"C:\Users\Shawn\Desktop\Testing.txt");
+    StreamWriter newFile = new StreamWriter(Application.dataPath + @"\ParseFix.txt");
     newFile.Write(temp);
     newFile.Close();
 
-    StreamReader fileReader = new StreamReader(@"C:\Users\Shawn\Desktop\Testing.txt");
+    StreamReader fileReader = new StreamReader(Application.dataPath + @"\ParseFix.txt");
     
     while (!fileReader.EndOfStream)
     {
@@ -115,6 +115,8 @@ public static class SceneParser
       }
     }
 
+    fileReader.Close();
+    File.Delete(Application.dataPath + @"\ParseFix.txt");
     Debug.Log("Parse Successful");
   }
 
