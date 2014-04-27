@@ -1789,6 +1789,80 @@ ModelImporter:
     401780: rt_legWeightJnt_grp
     401782: rt_legWtCtrlJnt_grp
     401784: weightSpine_grp
+    2300000: hair:loftedSurface10
+    2300002: hair:loftedSurface11
+    2300004: hair:loftedSurface12
+    2300006: hair:loftedSurface13
+    2300008: hair:loftedSurface14
+    2300010: hair:loftedSurface15
+    2300012: hair:loftedSurface16
+    2300014: hair:loftedSurface17
+    2300016: hair:loftedSurface18
+    2300018: hair:loftedSurface19
+    2300020: hair:loftedSurface2
+    2300022: hair:loftedSurface20
+    2300024: hair:loftedSurface21
+    2300026: hair:loftedSurface22
+    2300028: hair:loftedSurface23
+    2300030: hair:loftedSurface24
+    2300032: hair:loftedSurface25
+    2300034: hair:loftedSurface26
+    2300036: hair:loftedSurface27
+    2300038: hair:loftedSurface28
+    2300040: hair:loftedSurface29
+    2300042: hair:loftedSurface3
+    2300044: hair:loftedSurface30
+    2300046: hair:loftedSurface31
+    2300048: hair:loftedSurface4
+    2300050: hair:loftedSurface6
+    2300052: hair:loftedSurface7
+    2300054: hair:loftedSurface8
+    2300056: hair:loftedSurface9
+    2300058: loftedSurface10
+    2300060: loftedSurface11
+    2300062: loftedSurface13
+    2300064: loftedSurface14
+    2300066: loftedSurface15
+    2300068: obj_R_Eye
+    2300070: obj_R_Eye1
+    2300072: polySurface63
+    3300000: hair:loftedSurface10
+    3300002: hair:loftedSurface11
+    3300004: hair:loftedSurface12
+    3300006: hair:loftedSurface13
+    3300008: hair:loftedSurface14
+    3300010: hair:loftedSurface15
+    3300012: hair:loftedSurface16
+    3300014: hair:loftedSurface17
+    3300016: hair:loftedSurface18
+    3300018: hair:loftedSurface19
+    3300020: hair:loftedSurface2
+    3300022: hair:loftedSurface20
+    3300024: hair:loftedSurface21
+    3300026: hair:loftedSurface22
+    3300028: hair:loftedSurface23
+    3300030: hair:loftedSurface24
+    3300032: hair:loftedSurface25
+    3300034: hair:loftedSurface26
+    3300036: hair:loftedSurface27
+    3300038: hair:loftedSurface28
+    3300040: hair:loftedSurface29
+    3300042: hair:loftedSurface3
+    3300044: hair:loftedSurface30
+    3300046: hair:loftedSurface31
+    3300048: hair:loftedSurface4
+    3300050: hair:loftedSurface6
+    3300052: hair:loftedSurface7
+    3300054: hair:loftedSurface8
+    3300056: hair:loftedSurface9
+    3300058: loftedSurface10
+    3300060: loftedSurface11
+    3300062: loftedSurface13
+    3300064: loftedSurface14
+    3300066: loftedSurface15
+    3300068: obj_R_Eye
+    3300070: obj_R_Eye1
+    3300072: polySurface63
     4300000: obj_R_Eye
     4300002: loftedSurface15
     4300004: loftedSurface14
@@ -1915,5 +1989,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   additionalBone: 1
-  animationType: 2
+  animationType: 0
   userData: 
