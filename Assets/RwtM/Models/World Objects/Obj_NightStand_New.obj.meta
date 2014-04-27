@@ -1,0 +1,95 @@
+fileFormatVersion: 2
+guid: 89003690351f2a8498871672ac423ea3
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Nightsand_OBJ:Legpost1_Nightsand_OBJ:Nightstand Obj_Nightstand
+    100002: Nightsand_OBJ:Legpost2_Nightsand_OBJ:Nightstand Obj_Nightstand
+    100004: Nightsand_OBJ:Legpost3_Nightsand_OBJ:Nightstand Obj_Nightstand
+    100006: Nightsand_OBJ:Legpost4_Nightsand_OBJ:Nightstand Obj_Nightstand
+    100008: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Body Obj_Nightstand
+    100010: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Lower_Drawer Obj_Nightstand
+    100012: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Upper_Drawer Obj_Nightstand
+    100014: //RootNode
+    400000: Nightsand_OBJ:Legpost1_Nightsand_OBJ:Nightstand Obj_Nightstand
+    400002: Nightsand_OBJ:Legpost2_Nightsand_OBJ:Nightstand Obj_Nightstand
+    400004: Nightsand_OBJ:Legpost3_Nightsand_OBJ:Nightstand Obj_Nightstand
+    400006: Nightsand_OBJ:Legpost4_Nightsand_OBJ:Nightstand Obj_Nightstand
+    400008: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Body Obj_Nightstand
+    400010: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Lower_Drawer Obj_Nightstand
+    400012: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Upper_Drawer Obj_Nightstand
+    400014: //RootNode
+    2300000: Nightsand_OBJ:Legpost1_Nightsand_OBJ:Nightstand Obj_Nightstand
+    2300002: Nightsand_OBJ:Legpost2_Nightsand_OBJ:Nightstand Obj_Nightstand
+    2300004: Nightsand_OBJ:Legpost3_Nightsand_OBJ:Nightstand Obj_Nightstand
+    2300006: Nightsand_OBJ:Legpost4_Nightsand_OBJ:Nightstand Obj_Nightstand
+    2300008: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Body Obj_Nightstand
+    2300010: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Lower_Drawer Obj_Nightstand
+    2300012: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Upper_Drawer Obj_Nightstand
+    3300000: Nightsand_OBJ:Legpost1_Nightsand_OBJ:Nightstand Obj_Nightstand
+    3300002: Nightsand_OBJ:Legpost2_Nightsand_OBJ:Nightstand Obj_Nightstand
+    3300004: Nightsand_OBJ:Legpost3_Nightsand_OBJ:Nightstand Obj_Nightstand
+    3300006: Nightsand_OBJ:Legpost4_Nightsand_OBJ:Nightstand Obj_Nightstand
+    3300008: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Body Obj_Nightstand
+    3300010: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Lower_Drawer Obj_Nightstand
+    3300012: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Upper_Drawer Obj_Nightstand
+    4300000: Nightsand_OBJ:Legpost1_Nightsand_OBJ:Nightstand Obj_Nightstand
+    4300002: Nightsand_OBJ:Legpost2_Nightsand_OBJ:Nightstand Obj_Nightstand
+    4300004: Nightsand_OBJ:Legpost3_Nightsand_OBJ:Nightstand Obj_Nightstand
+    4300006: Nightsand_OBJ:Legpost4_Nightsand_OBJ:Nightstand Obj_Nightstand
+    4300008: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Body Obj_Nightstand
+    4300010: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Lower_Drawer Obj_Nightstand
+    4300012: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Upper_Drawer Obj_Nightstand
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

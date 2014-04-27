@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: 2c8c629788c0ae5409dcac93d722a12b
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: tea:pCylinder1_tea:pPlane1 Obj_Teapot
+    100004: tea:pCylinder2_tea:pPlane1 Obj_Teapot
+    100006: tea:pCylinder3_tea:pPlane1 Obj_Teapot
+    100008: tea:pCylinder5_tea:pPlane1 Obj_Teapot
+    100010: tea:pPlane1_tea:polySurface2 Obj_Teapot
+    100012: tea:pPlane1_tea:polySurface3 Obj_Teapot
+    100014: tea:pPlane1_tea:polySurface4 Obj_Teapot
+    100016: tea:pPlane1_tea:pSphere4 Obj_Teapot
+    100018: tea:Sugar_Cubes1_tea:pCube1 Obj_Teapot
+    100020: tea:Sugar_Cubes1_tea:pCube10 Obj_Teapot
+    100022: tea:Sugar_Cubes1_tea:pCube11 Obj_Teapot
+    100024: tea:Sugar_Cubes1_tea:pCube12 Obj_Teapot
+    100026: tea:Sugar_Cubes1_tea:pCube13 Obj_Teapot
+    100028: tea:Sugar_Cubes1_tea:pCube14 Obj_Teapot
+    100030: tea:Sugar_Cubes1_tea:pCube2 Obj_Teapot
+    100032: tea:Sugar_Cubes1_tea:pCube3 Obj_Teapot
+    100034: tea:Sugar_Cubes1_tea:pCube4 Obj_Teapot
+    100036: tea:Sugar_Cubes1_tea:pCube5 Obj_Teapot
+    100038: tea:Sugar_Cubes1_tea:pCube6 Obj_Teapot
+    100040: tea:Sugar_Cubes1_tea:pCube7 Obj_Teapot
+    100042: tea:Sugar_Cubes1_tea:pCube8 Obj_Teapot
+    100044: tea:Sugar_Cubes1_tea:pCube9 Obj_Teapot
+    400000: //RootNode
+    400002: tea:pCylinder1_tea:pPlane1 Obj_Teapot
+    400004: tea:pCylinder2_tea:pPlane1 Obj_Teapot
+    400006: tea:pCylinder3_tea:pPlane1 Obj_Teapot
+    400008: tea:pCylinder5_tea:pPlane1 Obj_Teapot
+    400010: tea:pPlane1_tea:polySurface2 Obj_Teapot
+    400012: tea:pPlane1_tea:polySurface3 Obj_Teapot
+    400014: tea:pPlane1_tea:polySurface4 Obj_Teapot
+    400016: tea:pPlane1_tea:pSphere4 Obj_Teapot
+    400018: tea:Sugar_Cubes1_tea:pCube1 Obj_Teapot
+    400020: tea:Sugar_Cubes1_tea:pCube10 Obj_Teapot
+    400022: tea:Sugar_Cubes1_tea:pCube11 Obj_Teapot
+    400024: tea:Sugar_Cubes1_tea:pCube12 Obj_Teapot
+    400026: tea:Sugar_Cubes1_tea:pCube13 Obj_Teapot
+    400028: tea:Sugar_Cubes1_tea:pCube14 Obj_Teapot
+    400030: tea:Sugar_Cubes1_tea:pCube2 Obj_Teapot
+    400032: tea:Sugar_Cubes1_tea:pCube3 Obj_Teapot
+    400034: tea:Sugar_Cubes1_tea:pCube4 Obj_Teapot
+    400036: tea:Sugar_Cubes1_tea:pCube5 Obj_Teapot
+    400038: tea:Sugar_Cubes1_tea:pCube6 Obj_Teapot
+    400040: tea:Sugar_Cubes1_tea:pCube7 Obj_Teapot
+    400042: tea:Sugar_Cubes1_tea:pCube8 Obj_Teapot
+    400044: tea:Sugar_Cubes1_tea:pCube9 Obj_Teapot
+    2300000: tea:pCylinder1_tea:pPlane1 Obj_Teapot
+    2300002: tea:pCylinder2_tea:pPlane1 Obj_Teapot
+    2300004: tea:pCylinder3_tea:pPlane1 Obj_Teapot
+    2300006: tea:pCylinder5_tea:pPlane1 Obj_Teapot
+    2300008: tea:pPlane1_tea:polySurface2 Obj_Teapot
+    2300010: tea:pPlane1_tea:polySurface3 Obj_Teapot
+    2300012: tea:pPlane1_tea:polySurface4 Obj_Teapot
+    2300014: tea:pPlane1_tea:pSphere4 Obj_Teapot
+    2300016: tea:Sugar_Cubes1_tea:pCube1 Obj_Teapot
+    2300018: tea:Sugar_Cubes1_tea:pCube10 Obj_Teapot
+    2300020: tea:Sugar_Cubes1_tea:pCube11 Obj_Teapot
+    2300022: tea:Sugar_Cubes1_tea:pCube12 Obj_Teapot
+    2300024: tea:Sugar_Cubes1_tea:pCube13 Obj_Teapot
+    2300026: tea:Sugar_Cubes1_tea:pCube14 Obj_Teapot
+    2300028: tea:Sugar_Cubes1_tea:pCube2 Obj_Teapot
+    2300030: tea:Sugar_Cubes1_tea:pCube3 Obj_Teapot
+    2300032: tea:Sugar_Cubes1_tea:pCube4 Obj_Teapot
+    2300034: tea:Sugar_Cubes1_tea:pCube5 Obj_Teapot
+    2300036: tea:Sugar_Cubes1_tea:pCube6 Obj_Teapot
+    2300038: tea:Sugar_Cubes1_tea:pCube7 Obj_Teapot
+    2300040: tea:Sugar_Cubes1_tea:pCube8 Obj_Teapot
+    2300042: tea:Sugar_Cubes1_tea:pCube9 Obj_Teapot
+    3300000: tea:pCylinder1_tea:pPlane1 Obj_Teapot
+    3300002: tea:pCylinder2_tea:pPlane1 Obj_Teapot
+    3300004: tea:pCylinder3_tea:pPlane1 Obj_Teapot
+    3300006: tea:pCylinder5_tea:pPlane1 Obj_Teapot
+    3300008: tea:pPlane1_tea:polySurface2 Obj_Teapot
+    3300010: tea:pPlane1_tea:polySurface3 Obj_Teapot
+    3300012: tea:pPlane1_tea:polySurface4 Obj_Teapot
+    3300014: tea:pPlane1_tea:pSphere4 Obj_Teapot
+    3300016: tea:Sugar_Cubes1_tea:pCube1 Obj_Teapot
+    3300018: tea:Sugar_Cubes1_tea:pCube10 Obj_Teapot
+    3300020: tea:Sugar_Cubes1_tea:pCube11 Obj_Teapot
+    3300022: tea:Sugar_Cubes1_tea:pCube12 Obj_Teapot
+    3300024: tea:Sugar_Cubes1_tea:pCube13 Obj_Teapot
+    3300026: tea:Sugar_Cubes1_tea:pCube14 Obj_Teapot
+    3300028: tea:Sugar_Cubes1_tea:pCube2 Obj_Teapot
+    3300030: tea:Sugar_Cubes1_tea:pCube3 Obj_Teapot
+    3300032: tea:Sugar_Cubes1_tea:pCube4 Obj_Teapot
+    3300034: tea:Sugar_Cubes1_tea:pCube5 Obj_Teapot
+    3300036: tea:Sugar_Cubes1_tea:pCube6 Obj_Teapot
+    3300038: tea:Sugar_Cubes1_tea:pCube7 Obj_Teapot
+    3300040: tea:Sugar_Cubes1_tea:pCube8 Obj_Teapot
+    3300042: tea:Sugar_Cubes1_tea:pCube9 Obj_Teapot
+    4300000: tea:pCylinder1_tea:pPlane1 Obj_Teapot
+    4300002: tea:pCylinder2_tea:pPlane1 Obj_Teapot
+    4300004: tea:pCylinder3_tea:pPlane1 Obj_Teapot
+    4300006: tea:pCylinder5_tea:pPlane1 Obj_Teapot
+    4300008: tea:pPlane1_tea:polySurface2 Obj_Teapot
+    4300010: tea:pPlane1_tea:polySurface3 Obj_Teapot
+    4300012: tea:pPlane1_tea:polySurface4 Obj_Teapot
+    4300014: tea:pPlane1_tea:pSphere4 Obj_Teapot
+    4300016: tea:Sugar_Cubes1_tea:pCube1 Obj_Teapot
+    4300018: tea:Sugar_Cubes1_tea:pCube10 Obj_Teapot
+    4300020: tea:Sugar_Cubes1_tea:pCube11 Obj_Teapot
+    4300022: tea:Sugar_Cubes1_tea:pCube12 Obj_Teapot
+    4300024: tea:Sugar_Cubes1_tea:pCube13 Obj_Teapot
+    4300026: tea:Sugar_Cubes1_tea:pCube14 Obj_Teapot
+    4300028: tea:Sugar_Cubes1_tea:pCube2 Obj_Teapot
+    4300030: tea:Sugar_Cubes1_tea:pCube3 Obj_Teapot
+    4300032: tea:Sugar_Cubes1_tea:pCube4 Obj_Teapot
+    4300034: tea:Sugar_Cubes1_tea:pCube5 Obj_Teapot
+    4300036: tea:Sugar_Cubes1_tea:pCube6 Obj_Teapot
+    4300038: tea:Sugar_Cubes1_tea:pCube7 Obj_Teapot
+    4300040: tea:Sugar_Cubes1_tea:pCube8 Obj_Teapot
+    4300042: tea:Sugar_Cubes1_tea:pCube9 Obj_Teapot
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

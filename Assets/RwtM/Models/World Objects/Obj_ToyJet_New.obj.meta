@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: e4f237c1e0bac5146bd9c3385f34b871
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontaxis Obj_ToyJet
+    100004: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontThing Obj_ToyJet
+    100006: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    100008: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    100010: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontaxis Obj_ToyJet
+    100012: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontThing Obj_ToyJet
+    100014: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    100016: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    100018: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftaxis Obj_ToyJet
+    100020: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftThing Obj_ToyJet
+    100022: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel01 Obj_ToyJet
+    100024: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel02 Obj_ToyJet
+    100026: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftaxis Obj_ToyJet
+    100028: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftThing Obj_ToyJet
+    100030: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel01 Obj_ToyJet
+    100032: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel02 Obj_ToyJet
+    100034: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightaxis Obj_ToyJet
+    100036: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightThing Obj_ToyJet
+    100038: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    100040: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    100042: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightaxis Obj_ToyJet
+    100044: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightThing Obj_ToyJet
+    100046: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    100048: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    100050: ToyJet:grp_ToyJet1_ToyJet:obj_Jet01 Obj_ToyJet
+    100052: ToyJet:grp_ToyJet1_ToyJet:obj_Jet02 Obj_ToyJet
+    100054: ToyJet:grp_ToyJet1_ToyJet:obj_Jet03 Obj_ToyJet
+    100056: ToyJet:grp_ToyJet1_ToyJet:obj_Jet04 Obj_ToyJet
+    100058: ToyJet:grp_ToyJet1_ToyJet:obj_ToyJet Obj_ToyJet
+    100060: ToyJet:grp_ToyJet_ToyJet:obj_Jet01 Obj_ToyJet
+    100062: ToyJet:grp_ToyJet_ToyJet:obj_Jet02 Obj_ToyJet
+    100064: ToyJet:grp_ToyJet_ToyJet:obj_Jet03 Obj_ToyJet
+    100066: ToyJet:grp_ToyJet_ToyJet:obj_Jet04 Obj_ToyJet
+    100068: ToyJet:grp_ToyJet_ToyJet:obj_ToyJet Obj_ToyJet
+    400000: //RootNode
+    400002: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontaxis Obj_ToyJet
+    400004: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontThing Obj_ToyJet
+    400006: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    400008: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    400010: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontaxis Obj_ToyJet
+    400012: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontThing Obj_ToyJet
+    400014: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    400016: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    400018: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftaxis Obj_ToyJet
+    400020: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftThing Obj_ToyJet
+    400022: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel01 Obj_ToyJet
+    400024: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel02 Obj_ToyJet
+    400026: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftaxis Obj_ToyJet
+    400028: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftThing Obj_ToyJet
+    400030: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel01 Obj_ToyJet
+    400032: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel02 Obj_ToyJet
+    400034: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightaxis Obj_ToyJet
+    400036: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightThing Obj_ToyJet
+    400038: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    400040: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    400042: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightaxis Obj_ToyJet
+    400044: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightThing Obj_ToyJet
+    400046: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    400048: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    400050: ToyJet:grp_ToyJet1_ToyJet:obj_Jet01 Obj_ToyJet
+    400052: ToyJet:grp_ToyJet1_ToyJet:obj_Jet02 Obj_ToyJet
+    400054: ToyJet:grp_ToyJet1_ToyJet:obj_Jet03 Obj_ToyJet
+    400056: ToyJet:grp_ToyJet1_ToyJet:obj_Jet04 Obj_ToyJet
+    400058: ToyJet:grp_ToyJet1_ToyJet:obj_ToyJet Obj_ToyJet
+    400060: ToyJet:grp_ToyJet_ToyJet:obj_Jet01 Obj_ToyJet
+    400062: ToyJet:grp_ToyJet_ToyJet:obj_Jet02 Obj_ToyJet
+    400064: ToyJet:grp_ToyJet_ToyJet:obj_Jet03 Obj_ToyJet
+    400066: ToyJet:grp_ToyJet_ToyJet:obj_Jet04 Obj_ToyJet
+    400068: ToyJet:grp_ToyJet_ToyJet:obj_ToyJet Obj_ToyJet
+    2300000: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontaxis Obj_ToyJet
+    2300002: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontThing Obj_ToyJet
+    2300004: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    2300006: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    2300008: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontaxis Obj_ToyJet
+    2300010: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontThing
+      Obj_ToyJet
+    2300012: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    2300014: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    2300016: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftaxis Obj_ToyJet
+    2300018: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftThing Obj_ToyJet
+    2300020: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel01 Obj_ToyJet
+    2300022: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel02 Obj_ToyJet
+    2300024: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftaxis Obj_ToyJet
+    2300026: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftThing Obj_ToyJet
+    2300028: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel01
+      Obj_ToyJet
+    2300030: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel02
+      Obj_ToyJet
+    2300032: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightaxis Obj_ToyJet
+    2300034: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightThing Obj_ToyJet
+    2300036: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    2300038: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    2300040: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightaxis Obj_ToyJet
+    2300042: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightThing
+      Obj_ToyJet
+    2300044: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    2300046: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    2300048: ToyJet:grp_ToyJet1_ToyJet:obj_Jet01 Obj_ToyJet
+    2300050: ToyJet:grp_ToyJet1_ToyJet:obj_Jet02 Obj_ToyJet
+    2300052: ToyJet:grp_ToyJet1_ToyJet:obj_Jet03 Obj_ToyJet
+    2300054: ToyJet:grp_ToyJet1_ToyJet:obj_Jet04 Obj_ToyJet
+    2300056: ToyJet:grp_ToyJet1_ToyJet:obj_ToyJet Obj_ToyJet
+    2300058: ToyJet:grp_ToyJet_ToyJet:obj_Jet01 Obj_ToyJet
+    2300060: ToyJet:grp_ToyJet_ToyJet:obj_Jet02 Obj_ToyJet
+    2300062: ToyJet:grp_ToyJet_ToyJet:obj_Jet03 Obj_ToyJet
+    2300064: ToyJet:grp_ToyJet_ToyJet:obj_Jet04 Obj_ToyJet
+    2300066: ToyJet:grp_ToyJet_ToyJet:obj_ToyJet Obj_ToyJet
+    3300000: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontaxis Obj_ToyJet
+    3300002: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontThing Obj_ToyJet
+    3300004: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    3300006: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    3300008: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontaxis Obj_ToyJet
+    3300010: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontThing
+      Obj_ToyJet
+    3300012: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    3300014: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    3300016: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftaxis Obj_ToyJet
+    3300018: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftThing Obj_ToyJet
+    3300020: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel01 Obj_ToyJet
+    3300022: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel02 Obj_ToyJet
+    3300024: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftaxis Obj_ToyJet
+    3300026: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftThing Obj_ToyJet
+    3300028: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel01
+      Obj_ToyJet
+    3300030: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel02
+      Obj_ToyJet
+    3300032: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightaxis Obj_ToyJet
+    3300034: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightThing Obj_ToyJet
+    3300036: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    3300038: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    3300040: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightaxis Obj_ToyJet
+    3300042: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightThing
+      Obj_ToyJet
+    3300044: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    3300046: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    3300048: ToyJet:grp_ToyJet1_ToyJet:obj_Jet01 Obj_ToyJet
+    3300050: ToyJet:grp_ToyJet1_ToyJet:obj_Jet02 Obj_ToyJet
+    3300052: ToyJet:grp_ToyJet1_ToyJet:obj_Jet03 Obj_ToyJet
+    3300054: ToyJet:grp_ToyJet1_ToyJet:obj_Jet04 Obj_ToyJet
+    3300056: ToyJet:grp_ToyJet1_ToyJet:obj_ToyJet Obj_ToyJet
+    3300058: ToyJet:grp_ToyJet_ToyJet:obj_Jet01 Obj_ToyJet
+    3300060: ToyJet:grp_ToyJet_ToyJet:obj_Jet02 Obj_ToyJet
+    3300062: ToyJet:grp_ToyJet_ToyJet:obj_Jet03 Obj_ToyJet
+    3300064: ToyJet:grp_ToyJet_ToyJet:obj_Jet04 Obj_ToyJet
+    3300066: ToyJet:grp_ToyJet_ToyJet:obj_ToyJet Obj_ToyJet
+    4300000: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontaxis Obj_ToyJet
+    4300002: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontThing Obj_ToyJet
+    4300004: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    4300006: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    4300008: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontaxis Obj_ToyJet
+    4300010: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontThing
+      Obj_ToyJet
+    4300012: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel01
+      Obj_ToyJet
+    4300014: ToyJet:grp_LandingGearFront_ToyJet:grp_ToyJet1 ToyJet:obj_frontwheel02
+      Obj_ToyJet
+    4300016: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftaxis Obj_ToyJet
+    4300018: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftThing Obj_ToyJet
+    4300020: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel01 Obj_ToyJet
+    4300022: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet ToyJet:obj_leftwheel02 Obj_ToyJet
+    4300024: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftaxis Obj_ToyJet
+    4300026: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftThing Obj_ToyJet
+    4300028: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel01
+      Obj_ToyJet
+    4300030: ToyJet:grp_LandingGearLeft_ToyJet:grp_ToyJet1 ToyJet:obj_leftwheel02
+      Obj_ToyJet
+    4300032: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightaxis Obj_ToyJet
+    4300034: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightThing Obj_ToyJet
+    4300036: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    4300038: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    4300040: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightaxis Obj_ToyJet
+    4300042: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightThing
+      Obj_ToyJet
+    4300044: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel01
+      Obj_ToyJet
+    4300046: ToyJet:grp_LandingGearRight_ToyJet:grp_ToyJet1 ToyJet:obj_rightwheel02
+      Obj_ToyJet
+    4300048: ToyJet:grp_ToyJet1_ToyJet:obj_Jet01 Obj_ToyJet
+    4300050: ToyJet:grp_ToyJet1_ToyJet:obj_Jet02 Obj_ToyJet
+    4300052: ToyJet:grp_ToyJet1_ToyJet:obj_Jet03 Obj_ToyJet
+    4300054: ToyJet:grp_ToyJet1_ToyJet:obj_Jet04 Obj_ToyJet
+    4300056: ToyJet:grp_ToyJet1_ToyJet:obj_ToyJet Obj_ToyJet
+    4300058: ToyJet:grp_ToyJet_ToyJet:obj_Jet01 Obj_ToyJet
+    4300060: ToyJet:grp_ToyJet_ToyJet:obj_Jet02 Obj_ToyJet
+    4300062: ToyJet:grp_ToyJet_ToyJet:obj_Jet03 Obj_ToyJet
+    4300064: ToyJet:grp_ToyJet_ToyJet:obj_Jet04 Obj_ToyJet
+    4300066: ToyJet:grp_ToyJet_ToyJet:obj_ToyJet Obj_ToyJet
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

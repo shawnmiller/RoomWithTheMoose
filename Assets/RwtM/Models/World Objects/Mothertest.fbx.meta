@@ -1,0 +1,1919 @@
+fileFormatVersion: 2
+guid: ac13d56f79dd0e24f814675f73ad9fef
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: abRTLine_Mom_lf_elbow_line_loc
+    100002: abRTLine_Mom_lf_knee_line_loc
+    100004: abRTLine_Mom_rt_elbow_line_loc
+    100006: abRTLine_Mom_rt_knee_line_loc
+    100008: body
+    100010: follicle1
+    100012: follicle2
+    100014: follicle3
+    100016: follicle4
+    100018: follicle5
+    100020: follicle6
+    100022: Grp_Hair
+    100024: hair:loftedSurface10
+    100026: hair:loftedSurface11
+    100028: hair:loftedSurface12
+    100030: hair:loftedSurface13
+    100032: hair:loftedSurface14
+    100034: hair:loftedSurface15
+    100036: hair:loftedSurface16
+    100038: hair:loftedSurface17
+    100040: hair:loftedSurface18
+    100042: hair:loftedSurface19
+    100044: hair:loftedSurface2
+    100046: hair:loftedSurface20
+    100048: hair:loftedSurface21
+    100050: hair:loftedSurface22
+    100052: hair:loftedSurface23
+    100054: hair:loftedSurface24
+    100056: hair:loftedSurface25
+    100058: hair:loftedSurface26
+    100060: hair:loftedSurface27
+    100062: hair:loftedSurface28
+    100064: hair:loftedSurface29
+    100066: hair:loftedSurface3
+    100068: hair:loftedSurface30
+    100070: hair:loftedSurface31
+    100072: hair:loftedSurface4
+    100074: hair:loftedSurface6
+    100076: hair:loftedSurface7
+    100078: hair:loftedSurface8
+    100080: hair:loftedSurface9
+    100082: lf_armWeightJnt_grp
+    100084: lf_armWtCtrlJnt_grp
+    100086: lf_legWeightJnt_grp
+    100088: lf_legWtCtrlJnt_grp
+    100090: loftedSurface10
+    100092: loftedSurface11
+    100094: loftedSurface13
+    100096: loftedSurface14
+    100098: loftedSurface15
+    100100: Mom_charVars
+    100102: Mom_cog_ctrl
+    100104: Mom_cog_ctrl_frzGrp
+    100106: Mom_cog_ctrl_frzGrp 1
+    100108: Mom_cogCtrl_space_switch_grp
+    100110: Mom_ctrlSpine_b_jnt
+    100112: Mom_ctrlSpine_b_jnt_frzGrp
+    100114: Mom_ctrlSpine_c_jnt
+    100116: Mom_ctrlSpine_c_jnt_frzGrp
+    100118: Mom_ctrlSpine_d_jnt
+    100120: Mom_ctrlSpine_d_jnt_frzGrp
+    100122: Mom_ctrlSpine_e_jnt
+    100124: Mom_ctrlSpine_e_jnt_frzGrp
+    100126: Mom_ctrlSpine_f_jnt
+    100128: Mom_ctrlSpine_f_jnt_frzGrp
+    100130: Mom_ctrlSpine_g_jnt
+    100132: Mom_ctrlSpine_g_jnt_frzGrp
+    100134: Mom_ctrlSpine_rig_grp
+    100136: Mom_eyeFrzGrp_space_grp
+    100138: Mom_eyeMaster_ctrl
+    100140: Mom_eyeMaster_ctrl_frzGrp
+    100142: Mom_head_a_jnt
+    100144: Mom_head_b_jnt
+    100146: Mom_head_ctrl
+    100148: Mom_head_ctrl_frzGrp
+    100150: Mom_head_fk_ctrl_Grp
+    100152: Mom_head_rig_grp
+    100154: Mom_headAlignFalse_Grp
+    100156: Mom_headAlignTrue_Grp
+    100158: Mom_headAutoAlign_Grp
+    100160: Mom_headCtrl_space_switch_grp
+    100162: Mom_hip_ctrl
+    100164: Mom_hip_ctrl_frzGrp
+    100166: Mom_hip_ctrl_frzGrp 1
+    100168: Mom_hip_jnt
+    100170: Mom_hipCtrl_space_switch_grp
+    100172: Mom_hiSpineCtrl_space_switch_grp
+    100174: Mom_ikSpline_crv
+    100176: Mom_jaw_a_jnt
+    100178: Mom_jaw_b_jnt
+    100180: Mom_jaw_c_jnt
+    100182: Mom_jaw_ctrl
+    100184: Mom_jaw_ctrl_frzGrp
+    100186: Mom_lf_ankle_fk_ctrl
+    100188: Mom_lf_ankle_fk_ctrl_frzGrp
+    100190: Mom_lf_ankle_fk_ctrl_frzGrp 1
+    100192: Mom_lf_ankle_fk_jnt
+    100194: Mom_lf_ankle_ik_jnt
+    100196: Mom_lf_ankle_jnt
+    100198: Mom_lf_ankle_rev_rig_jnt
+    100200: Mom_lf_ankle_sec_fk_ctrl
+    100202: Mom_lf_ankle_upJntFkCtrl_grp
+    100204: Mom_lf_ankleBallReader_Ankle_jnt
+    100206: Mom_lf_ankleBallReader_Ball_jnt
+    100208: Mom_lf_ankleBallReader_Knee_jnt
+    100210: Mom_lf_ankleBallReader_UpLeg_jnt
+    100212: Mom_lf_ankleCtrl_jnt
+    100214: Mom_lf_ankleWeight_jnt
+    100216: Mom_lf_arm_ik_ctrl
+    100218: Mom_lf_arm_ik_ctrl_frzGrp
+    100220: Mom_lf_arm_ikHandle
+    100222: Mom_lf_arm_rig_grp
+    100224: Mom_lf_armFK_Grp
+    100226: Mom_lf_armIK_Grp
+    100228: Mom_lf_armIkCtrl_space_grp
+    100230: Mom_lf_armPvCtrlGrp_space_grp
+    100232: Mom_lf_armPvIkCtrl_dist
+    100234: Mom_lf_armPvIkCtrl_dist_ep
+    100236: Mom_lf_armPvIkCtrl_dist_sp
+    100238: Mom_lf_armStrDist_dist
+    100240: Mom_lf_armStrDist_dist_ep
+    100242: Mom_lf_armStrDist_dist_sp
+    100244: Mom_lf_ball_fk_ctrl
+    100246: Mom_lf_ball_fk_ctrl_frzGrp
+    100248: Mom_lf_ball_fk_ctrl_frzGrp 1
+    100250: Mom_lf_ball_fk_jnt
+    100252: Mom_lf_ball_ik_jnt
+    100254: Mom_lf_ball_jnt
+    100256: Mom_lf_ball_rev_rig_jnt
+    100258: Mom_lf_ball_upJntFkCtrl_grp
+    100260: Mom_lf_ballToePar_ik_jnt
+    100262: Mom_lf_clavicle_ctrl
+    100264: Mom_lf_clavicle_ctrl_frzGrp
+    100266: Mom_lf_clavicle_ctrl_frzGrp 1
+    100268: Mom_lf_clavicle_jnt
+    100270: Mom_lf_clavicleTrans_ctrl
+    100272: Mom_lf_clavicleTrans_ctrl_frzGrp
+    100274: Mom_lf_elbow_fk_ctrl
+    100276: Mom_lf_elbow_fk_ctrl_frzGrp
+    100278: Mom_lf_elbow_fk_ctrl_frzGrp 1
+    100280: Mom_lf_elbow_fk_jnt
+    100282: Mom_lf_elbow_ik_jnt
+    100284: Mom_lf_elbow_jnt
+    100286: Mom_lf_elbow_jnt1
+    100288: Mom_lf_elbow_line_loc
+    100290: Mom_lf_elbow_pv_ctrl
+    100292: Mom_lf_elbow_pv_ctrl_annLoc
+    100294: Mom_lf_elbow_pv_ctrl_frzGrp
+    100296: Mom_lf_elbow_upJntFkCtrl_grp
+    100298: Mom_lf_elbowCtrl_jnt
+    100300: Mom_lf_elbowCtrlSplit_1_jnt
+    100302: Mom_lf_elbowCtrlSplit_2_jnt
+    100304: Mom_lf_elbowWeight_jnt
+    100306: Mom_lf_elbowWeightSplit_1_jnt
+    100308: Mom_lf_elbowWeightSplit_2_jnt
+    100310: Mom_lf_eye_ctrl
+    100312: Mom_lf_eye_ctrl_frzGrp
+    100314: Mom_lf_eye_ctrl_frzGrp 1
+    100316: Mom_lf_eye_jnt
+    100318: Mom_lf_foot_ctrl
+    100320: Mom_lf_forearmdnTwistReader_jnt
+    100322: Mom_lf_forearmPvTwistReader_loc
+    100324: Mom_lf_forearmPvTwistReader_loc_frzGrp
+    100326: Mom_lf_forearmPvTwistReader_loc_frzGrp 1
+    100328: Mom_lf_forearmTwist_ctrl
+    100330: Mom_lf_forearmTwist_ctrl_frzGrp
+    100332: Mom_lf_forearmTwist_ikHandle
+    100334: Mom_lf_forearmTwist_loc
+    100336: Mom_lf_forearmTwist_loc_frzGrp
+    100338: Mom_lf_forearmTwistTarget_loc
+    100340: Mom_lf_forearmTwistTarget_loc_frzGrp
+    100342: Mom_lf_forearmUpTwistReader_jnt
+    100344: Mom_lf_forearmUpTwistReader_jnt_frzGrp
+    100346: Mom_lf_hand_ctrl
+    100348: Mom_lf_hand_ctrl_frzGrp
+    100350: Mom_lf_hand_ctrl_frzGrp 1
+    100352: Mom_lf_hand_jnt
+    100354: Mom_lf_hand_rig_grp
+    100356: Mom_lf_handCtrl_grp
+    100358: Mom_lf_heel_ik_ctrl
+    100360: Mom_lf_heel_ik_ctrl_frzGrp
+    100362: Mom_lf_heel_rev_rig_jnt
+    100364: Mom_lf_hip_ctrl
+    100366: Mom_lf_hip_ctrl_frzGrp
+    100368: Mom_lf_ikCtrlCrvOrientOffset_loc
+    100370: Mom_lf_ikCtrlCrvOrientOffset_loc_frzGrp
+    100372: Mom_lf_index_a_jnt
+    100374: Mom_lf_index_b_jnt
+    100376: Mom_lf_index_c_jnt
+    100378: Mom_lf_index_d_jnt
+    100380: Mom_lf_index_ik_ctrl
+    100382: Mom_lf_index_ik_ctrl_frzGrp
+    100384: Mom_lf_index_ikHandle
+    100386: Mom_lf_indexBase_fk_ctrl
+    100388: Mom_lf_indexBase_fk_ctrl_frzGrp
+    100390: Mom_lf_indexBase_fk_ctrl_frzGrp 1
+    100392: Mom_lf_indexBase_fk_ctrl_frzGrp 2
+    100394: Mom_lf_indexCtrl_space_grp
+    100396: Mom_lf_indexIkStretch_dist
+    100398: Mom_lf_indexIkStretch_dist_ep
+    100400: Mom_lf_indexIkStretch_dist_sp
+    100402: Mom_lf_indexMid_fk_ctrl
+    100404: Mom_lf_indexMid_fk_ctrl_frzGrp
+    100406: Mom_lf_indexMid_fk_ctrl_frzGrp 1
+    100408: Mom_lf_indexMid_fk_ctrl_frzGrp 2
+    100410: Mom_lf_indexTip_fk_ctrl
+    100412: Mom_lf_indexTip_fk_ctrl_frzGrp
+    100414: Mom_lf_indexTip_fk_ctrl_frzGrp 1
+    100416: Mom_lf_indexTip_fk_ctrl_frzGrp 2
+    100418: Mom_lf_knee_fk_ctrl
+    100420: Mom_lf_knee_fk_ctrl_frzGrp
+    100422: Mom_lf_knee_fk_ctrl_frzGrp 1
+    100424: Mom_lf_knee_fk_jnt
+    100426: Mom_lf_knee_ik_jnt
+    100428: Mom_lf_knee_jnt
+    100430: Mom_lf_knee_jnt1
+    100432: Mom_lf_knee_line_loc
+    100434: Mom_lf_knee_pv_ctrl
+    100436: Mom_lf_knee_pv_ctrl_annLoc
+    100438: Mom_lf_knee_pv_ctrl_frzGrp
+    100440: Mom_lf_knee_upJntFkCtrl_grp
+    100442: Mom_lf_kneeCtrl_jnt
+    100444: Mom_lf_kneeCtrlSplit_1_jnt
+    100446: Mom_lf_kneeWeight_jnt
+    100448: Mom_lf_kneeWeightSplit_1_jnt
+    100450: Mom_lf_leg_ikHandle
+    100452: Mom_lf_leg_rig_grp
+    100454: Mom_lf_legFK_Grp
+    100456: Mom_lf_legIK_Grp
+    100458: Mom_lf_legIkCtrl_space_grp
+    100460: Mom_lf_legPvCtrlGrp_space_grp
+    100462: Mom_lf_legPvIkCtrl_dist
+    100464: Mom_lf_legPvIkCtrl_dist_ep
+    100466: Mom_lf_legPvIkCtrl_dist_sp
+    100468: Mom_lf_legStrDist_dist
+    100470: Mom_lf_legStrDist_dist_ep
+    100472: Mom_lf_legStrDist_dist_sp
+    100474: Mom_lf_lowLegdnTwistReader_jnt
+    100476: Mom_lf_lowLegPvTwistReader_loc
+    100478: Mom_lf_lowLegPvTwistReader_loc_frzGrp
+    100480: Mom_lf_lowLegTwist_ctrl
+    100482: Mom_lf_lowLegTwist_ctrl_frzGrp
+    100484: Mom_lf_lowLegTwist_ikHandle
+    100486: Mom_lf_lowLegTwist_loc
+    100488: Mom_lf_lowLegTwist_loc_frzGrp
+    100490: Mom_lf_lowLegTwistTarget_loc
+    100492: Mom_lf_lowLegTwistTarget_loc_frzGrp
+    100494: Mom_lf_lowLegUpTwistReader_jnt
+    100496: Mom_lf_lowLegUpTwistReader_jnt_frzGrp
+    100498: Mom_lf_masterIndex_ctrl
+    100500: Mom_lf_masterIndex_ctrl_frzGrp
+    100502: Mom_lf_masterMiddle_ctrl
+    100504: Mom_lf_masterMiddle_ctrl_frzGrp
+    100506: Mom_lf_masterPinky_ctrl
+    100508: Mom_lf_masterPinky_ctrl_frzGrp
+    100510: Mom_lf_masterRing_ctrl
+    100512: Mom_lf_masterRing_ctrl_frzGrp
+    100514: Mom_lf_masterThumb_ctrl
+    100516: Mom_lf_masterThumb_ctrl_frzGrp
+    100518: Mom_lf_middle_a_jnt
+    100520: Mom_lf_middle_b_jnt
+    100522: Mom_lf_middle_c_jnt
+    100524: Mom_lf_middle_d_jnt
+    100526: Mom_lf_middle_ik_ctrl
+    100528: Mom_lf_middle_ik_ctrl_frzGrp
+    100530: Mom_lf_middle_ikHandle
+    100532: Mom_lf_middleBase_fk_ctrl
+    100534: Mom_lf_middleBase_fk_ctrl_frzGrp
+    100536: Mom_lf_middleBase_fk_ctrl_frzGrp 1
+    100538: Mom_lf_middleBase_fk_ctrl_frzGrp 2
+    100540: Mom_lf_middleCtrl_space_grp
+    100542: Mom_lf_middleIkStretch_dist
+    100544: Mom_lf_middleIkStretch_dist_ep
+    100546: Mom_lf_middleIkStretch_dist_sp
+    100548: Mom_lf_middleMid_fk_ctrl
+    100550: Mom_lf_middleMid_fk_ctrl_frzGrp
+    100552: Mom_lf_middleMid_fk_ctrl_frzGrp 1
+    100554: Mom_lf_middleMid_fk_ctrl_frzGrp 2
+    100556: Mom_lf_middleTip_fk_ctrl
+    100558: Mom_lf_middleTip_fk_ctrl_frzGrp
+    100560: Mom_lf_middleTip_fk_ctrl_frzGrp 1
+    100562: Mom_lf_middleTip_fk_ctrl_frzGrp 2
+    100564: Mom_lf_pinky_a_jnt
+    100566: Mom_lf_pinky_b_jnt
+    100568: Mom_lf_pinky_c_jnt
+    100570: Mom_lf_pinky_d_jnt
+    100572: Mom_lf_pinky_ik_ctrl
+    100574: Mom_lf_pinky_ik_ctrl_frzGrp
+    100576: Mom_lf_pinky_ikHandle
+    100578: Mom_lf_pinkyBase_fk_ctrl
+    100580: Mom_lf_pinkyBase_fk_ctrl_frzGrp
+    100582: Mom_lf_pinkyBase_fk_ctrl_frzGrp 1
+    100584: Mom_lf_pinkyBase_fk_ctrl_frzGrp 2
+    100586: Mom_lf_pinkyCtrl_space_grp
+    100588: Mom_lf_pinkyCup_jnt
+    100590: Mom_lf_pinkyIkStretch_dist
+    100592: Mom_lf_pinkyIkStretch_dist_ep
+    100594: Mom_lf_pinkyIkStretch_dist_sp
+    100596: Mom_lf_pinkyMid_fk_ctrl
+    100598: Mom_lf_pinkyMid_fk_ctrl_frzGrp
+    100600: Mom_lf_pinkyMid_fk_ctrl_frzGrp 1
+    100602: Mom_lf_pinkyMid_fk_ctrl_frzGrp 2
+    100604: Mom_lf_pinkyTip_fk_ctrl
+    100606: Mom_lf_pinkyTip_fk_ctrl_frzGrp
+    100608: Mom_lf_pinkyTip_fk_ctrl_frzGrp 1
+    100610: Mom_lf_pinkyTip_fk_ctrl_frzGrp 2
+    100612: Mom_lf_reverseFoot_rig_grp
+    100614: Mom_lf_ring_a_jnt
+    100616: Mom_lf_ring_b_jnt
+    100618: Mom_lf_ring_c_jnt
+    100620: Mom_lf_ring_d_jnt
+    100622: Mom_lf_ring_ik_ctrl
+    100624: Mom_lf_ring_ik_ctrl_frzGrp
+    100626: Mom_lf_ring_ikHandle
+    100628: Mom_lf_ringBase_fk_ctrl
+    100630: Mom_lf_ringBase_fk_ctrl_frzGrp
+    100632: Mom_lf_ringBase_fk_ctrl_frzGrp 1
+    100634: Mom_lf_ringBase_fk_ctrl_frzGrp 2
+    100636: Mom_lf_ringCtrl_space_grp
+    100638: Mom_lf_ringCup_jnt
+    100640: Mom_lf_ringIkStretch_dist
+    100642: Mom_lf_ringIkStretch_dist_ep
+    100644: Mom_lf_ringIkStretch_dist_sp
+    100646: Mom_lf_ringMid_fk_ctrl
+    100648: Mom_lf_ringMid_fk_ctrl_frzGrp
+    100650: Mom_lf_ringMid_fk_ctrl_frzGrp 1
+    100652: Mom_lf_ringMid_fk_ctrl_frzGrp 2
+    100654: Mom_lf_ringTip_fk_ctrl
+    100656: Mom_lf_ringTip_fk_ctrl_frzGrp
+    100658: Mom_lf_ringTip_fk_ctrl_frzGrp 1
+    100660: Mom_lf_ringTip_fk_ctrl_frzGrp 2
+    100662: Mom_lf_shoulder_ctrl
+    100664: Mom_lf_shoulder_ctrl_frzGrp
+    100666: Mom_lf_thumb_a_jnt
+    100668: Mom_lf_thumb_b_jnt
+    100670: Mom_lf_thumb_c_jnt
+    100672: Mom_lf_thumb_d_jnt
+    100674: Mom_lf_thumb_ik_ctrl
+    100676: Mom_lf_thumb_ik_ctrl_frzGrp
+    100678: Mom_lf_thumb_ikHandle
+    100680: Mom_lf_thumbBase_fk_ctrl
+    100682: Mom_lf_thumbBase_fk_ctrl_frzGrp
+    100684: Mom_lf_thumbBase_fk_ctrl_frzGrp 1
+    100686: Mom_lf_thumbBase_fk_ctrl_frzGrp 2
+    100688: Mom_lf_thumbCtrl_space_grp
+    100690: Mom_lf_thumbIkStretch_dist
+    100692: Mom_lf_thumbIkStretch_dist_ep
+    100694: Mom_lf_thumbIkStretch_dist_sp
+    100696: Mom_lf_thumbMid_fk_ctrl
+    100698: Mom_lf_thumbMid_fk_ctrl_frzGrp
+    100700: Mom_lf_thumbMid_fk_ctrl_frzGrp 1
+    100702: Mom_lf_thumbMid_fk_ctrl_frzGrp 2
+    100704: Mom_lf_thumbTip_fk_ctrl
+    100706: Mom_lf_thumbTip_fk_ctrl_frzGrp
+    100708: Mom_lf_thumbTip_fk_ctrl_frzGrp 1
+    100710: Mom_lf_thumbTip_fk_ctrl_frzGrp 2
+    100712: Mom_lf_toe_fk_jnt
+    100714: Mom_lf_toe_ik_jnt
+    100716: Mom_lf_toe_jnt
+    100718: Mom_lf_toe_rev_rig_jnt
+    100720: Mom_lf_upArm_alignFalse_grp
+    100722: Mom_lf_upArm_alignFalse_grp_frzGrp
+    100724: Mom_lf_upArm_alignTrue_grp
+    100726: Mom_lf_upArm_alignTrueLocTarg_grp
+    100728: Mom_lf_upArm_alignTrueLocTarg_grp_frzGrp
+    100730: Mom_lf_upArm_alignTrueLocTarg_grp_frzGrp 1
+    100732: Mom_lf_upArm_alignTrueWrldTarg_grp
+    100734: Mom_lf_upArm_autoAlign_rig_grp
+    100736: Mom_lf_upArm_autoAlign_rig_grp_frzGrp
+    100738: Mom_lf_upArm_fk_ctrl
+    100740: Mom_lf_upArm_fk_ctrl_frzGrp
+    100742: Mom_lf_upArm_fk_ctrl_frzGrp 1
+    100744: Mom_lf_upArm_fk_jnt
+    100746: Mom_lf_upArm_ik_jnt
+    100748: Mom_lf_upArm_jnt
+    100750: Mom_lf_upArm_sec_fk_ctrl
+    100752: Mom_lf_upArm_upJntFkCtrlAlign_grp
+    100754: Mom_lf_upArmCtrl_jnt
+    100756: Mom_lf_upArmCtrl_jnt_frzGrp
+    100758: Mom_lf_upArmCtrlSplit_1_jnt
+    100760: Mom_lf_upArmdnJntFollow_jnt
+    100762: Mom_lf_upArmDnSplitCtrlParent_jnt
+    100764: Mom_lf_upArmMidJntRzReader_loc
+    100766: Mom_lf_upArmMidJntRzReader_loc_frzGrp
+    100768: Mom_lf_upArmPvCtrl_dist
+    100770: Mom_lf_upArmPvCtrl_dist_ep
+    100772: Mom_lf_upArmPvCtrl_dist_sp
+    100774: Mom_lf_upArmRotReaderParent_jnt
+    100776: Mom_lf_upArmRotReaderParent_jnt_frzGrp
+    100778: Mom_lf_upArmRotReaderParent_jnt_frzGrp 1
+    100780: Mom_lf_upArmtwistJntReaderFollow_grp
+    100782: Mom_lf_upArmTwistReader_ikHandle
+    100784: Mom_lf_upArmTwistReader_loc
+    100786: Mom_lf_upArmupJntFollow_jnt
+    100788: Mom_lf_upArmupParJntFollow_jnt
+    100790: Mom_lf_upArmUpSplitCtrlParent_jnt
+    100792: Mom_lf_upArmUpSplitCtrlParent_jnt_frzGrp
+    100794: Mom_lf_upArmWeight_jnt
+    100796: Mom_lf_upArmWeightSplit_1_jnt
+    100798: Mom_lf_upLeg_alignFalse_grp
+    100800: Mom_lf_upLeg_alignFalse_grp_frzGrp
+    100802: Mom_lf_upLeg_alignTrue_grp
+    100804: Mom_lf_upLeg_alignTrueLocTarg_grp
+    100806: Mom_lf_upLeg_alignTrueLocTarg_grp_frzGrp
+    100808: Mom_lf_upLeg_alignTrueLocTarg_grp_frzGrp 1
+    100810: Mom_lf_upLeg_alignTrueWrldTarg_grp
+    100812: Mom_lf_upLeg_autoAlign_rig_grp
+    100814: Mom_lf_upLeg_autoAlign_rig_grp_frzGrp
+    100816: Mom_lf_upLeg_fk_ctrl
+    100818: Mom_lf_upLeg_fk_ctrl_frzGrp
+    100820: Mom_lf_upLeg_fk_ctrl_frzGrp 1
+    100822: Mom_lf_upLeg_fk_jnt
+    100824: Mom_lf_upLeg_ik_jnt
+    100826: Mom_lf_upLeg_jnt
+    100828: Mom_lf_upLeg_sec_fk_ctrl
+    100830: Mom_lf_upLeg_upJntFkCtrlAlign_grp
+    100832: Mom_lf_upLegCtrl_jnt
+    100834: Mom_lf_upLegCtrl_jnt_frzGrp
+    100836: Mom_lf_upLegCtrlSplit_1_jnt
+    100838: Mom_lf_upLegdnJntFollow_jnt
+    100840: Mom_lf_upLegDnSplitCtrlParent_jnt
+    100842: Mom_lf_upLegMidJntRzReader_loc
+    100844: Mom_lf_upLegMidJntRzReader_loc_frzGrp
+    100846: Mom_lf_upLegPvCtrl_dist
+    100848: Mom_lf_upLegPvCtrl_dist_ep
+    100850: Mom_lf_upLegPvCtrl_dist_sp
+    100852: Mom_lf_upLegRotReaderParent_jnt
+    100854: Mom_lf_upLegRotReaderParent_jnt_frzGrp
+    100856: Mom_lf_upLegRotReaderParent_jnt_frzGrp 1
+    100858: Mom_lf_upLegtwistJntReaderFollow_grp
+    100860: Mom_lf_upLegTwistReader_ikHandle
+    100862: Mom_lf_upLegTwistReader_loc
+    100864: Mom_lf_upLegupJntFollow_jnt
+    100866: Mom_lf_upLegupParJntFollow_jnt
+    100868: Mom_lf_upLegUpSplitCtrlParent_jnt
+    100870: Mom_lf_upLegUpSplitCtrlParent_jnt_frzGrp
+    100872: Mom_lf_upLegWeight_jnt
+    100874: Mom_lf_upLegWeightSplit_1_jnt
+    100876: Mom_lf_wrist_alignFalse_grp
+    100878: Mom_lf_wrist_alignFalse_grp_frzGrp
+    100880: Mom_lf_wrist_alignTrue_grp
+    100882: Mom_lf_wrist_alignTrueLocTarg_grp
+    100884: Mom_lf_wrist_alignTrueLocTarg_grp_frzGrp
+    100886: Mom_lf_wrist_alignTrueLocTarg_grp_frzGrp 1
+    100888: Mom_lf_wrist_alignTrueWrldTarg_grp
+    100890: Mom_lf_wrist_autoAlign_rig_grp
+    100892: Mom_lf_wrist_autoAlign_rig_grp_frzGrp
+    100894: Mom_lf_wrist_fk_ctrl
+    100896: Mom_lf_wrist_fk_ctrl_frzGrp
+    100898: Mom_lf_wrist_fk_ctrl_frzGrp 1
+    100900: Mom_lf_wrist_fk_jnt
+    100902: Mom_lf_wrist_ik_jnt
+    100904: Mom_lf_wrist_jnt
+    100906: Mom_lf_wrist_sec_fk_ctrl
+    100908: Mom_lf_wrist_upJntFkCtrlAlign_grp
+    100910: Mom_lf_wristCtrl_jnt
+    100912: Mom_lf_wristOrientTarget_loc
+    100914: Mom_lf_wristWeight_jnt
+    100916: Mom_lfArmIkCtrl_space_switch_grp
+    100918: Mom_lfHandCtrl_space_switch_grp
+    100920: Mom_lfLegIkCtrl_space_switch_grp
+    100922: Mom_lowSpineCtrl_space_switch_grp
+    100924: Mom_lTipJntindex_ikHandle
+    100926: Mom_lTipJntmiddle_ikHandle
+    100928: Mom_lTipJntpinky_ikHandle
+    100930: Mom_lTipJntring_ikHandle
+    100932: Mom_lTipJntthumb_ikHandle
+    100934: Mom_master_ctrl
+    100936: Mom_master_ctrl_frzGrp
+    100938: Mom_masterSpine_ctrl
+    100940: Mom_masterSpine_ctrl_frzGrp
+    100942: Mom_masterSpineCtrl_space_switch_grp
+    100944: Mom_neck_ctrl
+    100946: Mom_neck_ctrl_frzGrp
+    100948: Mom_neck_ctrl_frzGrp 1
+    100950: Mom_neck_fk_ctrl_Grp
+    100952: Mom_neck_jnt
+    100954: Mom_neckAlignFalse_Grp
+    100956: Mom_neckAlignTrue_Grp
+    100958: Mom_neckAutoAlign_Grp
+    100960: Mom_rig_grp
+    100962: Mom_rigSettings_ctrl
+    100964: Mom_root_ctrl
+    100966: Mom_root_ctrl_frzGrp
+    100968: Mom_rootCtrl_space_switch_grp
+    100970: Mom_rt_ankle_fk_ctrl
+    100972: Mom_rt_ankle_fk_ctrl_frzGrp
+    100974: Mom_rt_ankle_fk_ctrl_frzGrp 1
+    100976: Mom_rt_ankle_fk_jnt
+    100978: Mom_rt_ankle_ik_jnt
+    100980: Mom_rt_ankle_jnt
+    100982: Mom_rt_ankle_rev_rig_jnt
+    100984: Mom_rt_ankle_sec_fk_ctrl
+    100986: Mom_rt_ankle_upJntFkCtrl_grp
+    100988: Mom_rt_ankleBallReader_Ankle_jnt
+    100990: Mom_rt_ankleBallReader_Ball_jnt
+    100992: Mom_rt_ankleBallReader_Knee_jnt
+    100994: Mom_rt_ankleBallReader_UpLeg_jnt
+    100996: Mom_rt_ankleCtrl_jnt
+    100998: Mom_rt_ankleWeight_jnt
+    101000: Mom_rt_arm_ik_ctrl
+    101002: Mom_rt_arm_ik_ctrl_frzGrp
+    101004: Mom_rt_arm_ikHandle
+    101006: Mom_rt_arm_rig_grp
+    101008: Mom_rt_armFK_Grp
+    101010: Mom_rt_armIK_Grp
+    101012: Mom_rt_armIkCtrl_space_grp
+    101014: Mom_rt_armPvCtrlGrp_space_grp
+    101016: Mom_rt_armPvIkCtrl_dist
+    101018: Mom_rt_armPvIkCtrl_dist_ep
+    101020: Mom_rt_armPvIkCtrl_dist_sp
+    101022: Mom_rt_armStrDist_dist
+    101024: Mom_rt_armStrDist_dist_ep
+    101026: Mom_rt_armStrDist_dist_sp
+    101028: Mom_rt_ball_fk_ctrl
+    101030: Mom_rt_ball_fk_ctrl_frzGrp
+    101032: Mom_rt_ball_fk_ctrl_frzGrp 1
+    101034: Mom_rt_ball_fk_jnt
+    101036: Mom_rt_ball_ik_jnt
+    101038: Mom_rt_ball_jnt
+    101040: Mom_rt_ball_rev_rig_jnt
+    101042: Mom_rt_ball_upJntFkCtrl_grp
+    101044: Mom_rt_ballToePar_ik_jnt
+    101046: Mom_rt_clavicle_ctrl
+    101048: Mom_rt_clavicle_ctrl_frzGrp
+    101050: Mom_rt_clavicle_ctrl_frzGrp 1
+    101052: Mom_rt_clavicle_jnt
+    101054: Mom_rt_clavicleTrans_ctrl
+    101056: Mom_rt_clavicleTrans_ctrl_frzGrp
+    101058: Mom_rt_elbow_fk_ctrl
+    101060: Mom_rt_elbow_fk_ctrl_frzGrp
+    101062: Mom_rt_elbow_fk_ctrl_frzGrp 1
+    101064: Mom_rt_elbow_fk_jnt
+    101066: Mom_rt_elbow_ik_jnt
+    101068: Mom_rt_elbow_jnt
+    101070: Mom_rt_elbow_jnt1
+    101072: Mom_rt_elbow_line_loc
+    101074: Mom_rt_elbow_pv_ctrl
+    101076: Mom_rt_elbow_pv_ctrl_annLoc
+    101078: Mom_rt_elbow_pv_ctrl_frzGrp
+    101080: Mom_rt_elbow_upJntFkCtrl_grp
+    101082: Mom_rt_elbowCtrl_jnt
+    101084: Mom_rt_elbowCtrlSplit_1_jnt
+    101086: Mom_rt_elbowCtrlSplit_2_jnt
+    101088: Mom_rt_elbowWeight_jnt
+    101090: Mom_rt_elbowWeightSplit_1_jnt
+    101092: Mom_rt_elbowWeightSplit_2_jnt
+    101094: Mom_rt_eye_ctrl
+    101096: Mom_rt_eye_ctrl_frzGrp
+    101098: Mom_rt_eye_ctrl_frzGrp 1
+    101100: Mom_rt_eye_jnt
+    101102: Mom_rt_foot_ctrl
+    101104: Mom_rt_forearmdnTwistReader_jnt
+    101106: Mom_rt_forearmPvTwistReader_loc
+    101108: Mom_rt_forearmPvTwistReader_loc_frzGrp
+    101110: Mom_rt_forearmPvTwistReader_loc_frzGrp 1
+    101112: Mom_rt_forearmTwist_ctrl
+    101114: Mom_rt_forearmTwist_ctrl_frzGrp
+    101116: Mom_rt_forearmTwist_ikHandle
+    101118: Mom_rt_forearmTwist_loc
+    101120: Mom_rt_forearmTwist_loc_frzGrp
+    101122: Mom_rt_forearmTwistTarget_loc
+    101124: Mom_rt_forearmTwistTarget_loc_frzGrp
+    101126: Mom_rt_forearmUpTwistReader_jnt
+    101128: Mom_rt_forearmUpTwistReader_jnt_frzGrp
+    101130: Mom_rt_hand_ctrl
+    101132: Mom_rt_hand_ctrl_frzGrp
+    101134: Mom_rt_hand_ctrl_frzGrp 1
+    101136: Mom_rt_hand_jnt
+    101138: Mom_rt_hand_rig_grp
+    101140: Mom_rt_handCtrl_grp
+    101142: Mom_rt_heel_ik_ctrl
+    101144: Mom_rt_heel_ik_ctrl_frzGrp
+    101146: Mom_rt_heel_rev_rig_jnt
+    101148: Mom_rt_hip_ctrl
+    101150: Mom_rt_hip_ctrl_frzGrp
+    101152: Mom_rt_ikCtrlCrvOrientOffset_loc
+    101154: Mom_rt_ikCtrlCrvOrientOffset_loc_frzGrp
+    101156: Mom_rt_index_a_jnt
+    101158: Mom_rt_index_b_jnt
+    101160: Mom_rt_index_c_jnt
+    101162: Mom_rt_index_d_jnt
+    101164: Mom_rt_index_ik_ctrl
+    101166: Mom_rt_index_ik_ctrl_frzGrp
+    101168: Mom_rt_index_ikHandle
+    101170: Mom_rt_indexBase_fk_ctrl
+    101172: Mom_rt_indexBase_fk_ctrl_frzGrp
+    101174: Mom_rt_indexBase_fk_ctrl_frzGrp 1
+    101176: Mom_rt_indexBase_fk_ctrl_frzGrp 2
+    101178: Mom_rt_indexCtrl_space_grp
+    101180: Mom_rt_indexIkStretch_dist
+    101182: Mom_rt_indexIkStretch_dist_ep
+    101184: Mom_rt_indexIkStretch_dist_sp
+    101186: Mom_rt_indexMid_fk_ctrl
+    101188: Mom_rt_indexMid_fk_ctrl_frzGrp
+    101190: Mom_rt_indexMid_fk_ctrl_frzGrp 1
+    101192: Mom_rt_indexMid_fk_ctrl_frzGrp 2
+    101194: Mom_rt_indexTip_fk_ctrl
+    101196: Mom_rt_indexTip_fk_ctrl_frzGrp
+    101198: Mom_rt_indexTip_fk_ctrl_frzGrp 1
+    101200: Mom_rt_indexTip_fk_ctrl_frzGrp 2
+    101202: Mom_rt_knee_fk_ctrl
+    101204: Mom_rt_knee_fk_ctrl_frzGrp
+    101206: Mom_rt_knee_fk_ctrl_frzGrp 1
+    101208: Mom_rt_knee_fk_jnt
+    101210: Mom_rt_knee_ik_jnt
+    101212: Mom_rt_knee_jnt
+    101214: Mom_rt_knee_jnt1
+    101216: Mom_rt_knee_line_loc
+    101218: Mom_rt_knee_pv_ctrl
+    101220: Mom_rt_knee_pv_ctrl_annLoc
+    101222: Mom_rt_knee_pv_ctrl_frzGrp
+    101224: Mom_rt_knee_upJntFkCtrl_grp
+    101226: Mom_rt_kneeCtrl_jnt
+    101228: Mom_rt_kneeCtrlSplit_1_jnt
+    101230: Mom_rt_kneeWeight_jnt
+    101232: Mom_rt_kneeWeightSplit_1_jnt
+    101234: Mom_rt_leg_ikHandle
+    101236: Mom_rt_leg_rig_grp
+    101238: Mom_rt_legFK_Grp
+    101240: Mom_rt_legIK_Grp
+    101242: Mom_rt_legIkCtrl_space_grp
+    101244: Mom_rt_legPvCtrlGrp_space_grp
+    101246: Mom_rt_legPvIkCtrl_dist
+    101248: Mom_rt_legPvIkCtrl_dist_ep
+    101250: Mom_rt_legPvIkCtrl_dist_sp
+    101252: Mom_rt_legStrDist_dist
+    101254: Mom_rt_legStrDist_dist_ep
+    101256: Mom_rt_legStrDist_dist_sp
+    101258: Mom_rt_lowLegdnTwistReader_jnt
+    101260: Mom_rt_lowLegPvTwistReader_loc
+    101262: Mom_rt_lowLegPvTwistReader_loc_frzGrp
+    101264: Mom_rt_lowLegTwist_ctrl
+    101266: Mom_rt_lowLegTwist_ctrl_frzGrp
+    101268: Mom_rt_lowLegTwist_ikHandle
+    101270: Mom_rt_lowLegTwist_loc
+    101272: Mom_rt_lowLegTwist_loc_frzGrp
+    101274: Mom_rt_lowLegTwistTarget_loc
+    101276: Mom_rt_lowLegTwistTarget_loc_frzGrp
+    101278: Mom_rt_lowLegUpTwistReader_jnt
+    101280: Mom_rt_lowLegUpTwistReader_jnt_frzGrp
+    101282: Mom_rt_masterIndex_ctrl
+    101284: Mom_rt_masterIndex_ctrl_frzGrp
+    101286: Mom_rt_masterMiddle_ctrl
+    101288: Mom_rt_masterMiddle_ctrl_frzGrp
+    101290: Mom_rt_masterPinky_ctrl
+    101292: Mom_rt_masterPinky_ctrl_frzGrp
+    101294: Mom_rt_masterRing_ctrl
+    101296: Mom_rt_masterRing_ctrl_frzGrp
+    101298: Mom_rt_masterThumb_ctrl
+    101300: Mom_rt_masterThumb_ctrl_frzGrp
+    101302: Mom_rt_middle_a_jnt
+    101304: Mom_rt_middle_b_jnt
+    101306: Mom_rt_middle_c_jnt
+    101308: Mom_rt_middle_d_jnt
+    101310: Mom_rt_middle_ik_ctrl
+    101312: Mom_rt_middle_ik_ctrl_frzGrp
+    101314: Mom_rt_middle_ikHandle
+    101316: Mom_rt_middleBase_fk_ctrl
+    101318: Mom_rt_middleBase_fk_ctrl_frzGrp
+    101320: Mom_rt_middleBase_fk_ctrl_frzGrp 1
+    101322: Mom_rt_middleBase_fk_ctrl_frzGrp 2
+    101324: Mom_rt_middleCtrl_space_grp
+    101326: Mom_rt_middleIkStretch_dist
+    101328: Mom_rt_middleIkStretch_dist_ep
+    101330: Mom_rt_middleIkStretch_dist_sp
+    101332: Mom_rt_middleMid_fk_ctrl
+    101334: Mom_rt_middleMid_fk_ctrl_frzGrp
+    101336: Mom_rt_middleMid_fk_ctrl_frzGrp 1
+    101338: Mom_rt_middleMid_fk_ctrl_frzGrp 2
+    101340: Mom_rt_middleTip_fk_ctrl
+    101342: Mom_rt_middleTip_fk_ctrl_frzGrp
+    101344: Mom_rt_middleTip_fk_ctrl_frzGrp 1
+    101346: Mom_rt_middleTip_fk_ctrl_frzGrp 2
+    101348: Mom_rt_pinky_a_jnt
+    101350: Mom_rt_pinky_b_jnt
+    101352: Mom_rt_pinky_c_jnt
+    101354: Mom_rt_pinky_d_jnt
+    101356: Mom_rt_pinky_ik_ctrl
+    101358: Mom_rt_pinky_ik_ctrl_frzGrp
+    101360: Mom_rt_pinky_ikHandle
+    101362: Mom_rt_pinkyBase_fk_ctrl
+    101364: Mom_rt_pinkyBase_fk_ctrl_frzGrp
+    101366: Mom_rt_pinkyBase_fk_ctrl_frzGrp 1
+    101368: Mom_rt_pinkyBase_fk_ctrl_frzGrp 2
+    101370: Mom_rt_pinkyCtrl_space_grp
+    101372: Mom_rt_pinkyCup_jnt
+    101374: Mom_rt_pinkyIkStretch_dist
+    101376: Mom_rt_pinkyIkStretch_dist_ep
+    101378: Mom_rt_pinkyIkStretch_dist_sp
+    101380: Mom_rt_pinkyMid_fk_ctrl
+    101382: Mom_rt_pinkyMid_fk_ctrl_frzGrp
+    101384: Mom_rt_pinkyMid_fk_ctrl_frzGrp 1
+    101386: Mom_rt_pinkyMid_fk_ctrl_frzGrp 2
+    101388: Mom_rt_pinkyTip_fk_ctrl
+    101390: Mom_rt_pinkyTip_fk_ctrl_frzGrp
+    101392: Mom_rt_pinkyTip_fk_ctrl_frzGrp 1
+    101394: Mom_rt_pinkyTip_fk_ctrl_frzGrp 2
+    101396: Mom_rt_reverseFoot_rig_grp
+    101398: Mom_rt_ring_a_jnt
+    101400: Mom_rt_ring_b_jnt
+    101402: Mom_rt_ring_c_jnt
+    101404: Mom_rt_ring_d_jnt
+    101406: Mom_rt_ring_ik_ctrl
+    101408: Mom_rt_ring_ik_ctrl_frzGrp
+    101410: Mom_rt_ring_ikHandle
+    101412: Mom_rt_ringBase_fk_ctrl
+    101414: Mom_rt_ringBase_fk_ctrl_frzGrp
+    101416: Mom_rt_ringBase_fk_ctrl_frzGrp 1
+    101418: Mom_rt_ringBase_fk_ctrl_frzGrp 2
+    101420: Mom_rt_ringCtrl_space_grp
+    101422: Mom_rt_ringCup_jnt
+    101424: Mom_rt_ringIkStretch_dist
+    101426: Mom_rt_ringIkStretch_dist_ep
+    101428: Mom_rt_ringIkStretch_dist_sp
+    101430: Mom_rt_ringMid_fk_ctrl
+    101432: Mom_rt_ringMid_fk_ctrl_frzGrp
+    101434: Mom_rt_ringMid_fk_ctrl_frzGrp 1
+    101436: Mom_rt_ringMid_fk_ctrl_frzGrp 2
+    101438: Mom_rt_ringTip_fk_ctrl
+    101440: Mom_rt_ringTip_fk_ctrl_frzGrp
+    101442: Mom_rt_ringTip_fk_ctrl_frzGrp 1
+    101444: Mom_rt_ringTip_fk_ctrl_frzGrp 2
+    101446: Mom_rt_shoulder_ctrl
+    101448: Mom_rt_shoulder_ctrl_frzGrp
+    101450: Mom_rt_thumb_a_jnt
+    101452: Mom_rt_thumb_b_jnt
+    101454: Mom_rt_thumb_c_jnt
+    101456: Mom_rt_thumb_d_jnt
+    101458: Mom_rt_thumb_ik_ctrl
+    101460: Mom_rt_thumb_ik_ctrl_frzGrp
+    101462: Mom_rt_thumb_ikHandle
+    101464: Mom_rt_thumbBase_fk_ctrl
+    101466: Mom_rt_thumbBase_fk_ctrl_frzGrp
+    101468: Mom_rt_thumbBase_fk_ctrl_frzGrp 1
+    101470: Mom_rt_thumbBase_fk_ctrl_frzGrp 2
+    101472: Mom_rt_thumbCtrl_space_grp
+    101474: Mom_rt_thumbIkStretch_dist
+    101476: Mom_rt_thumbIkStretch_dist_ep
+    101478: Mom_rt_thumbIkStretch_dist_sp
+    101480: Mom_rt_thumbMid_fk_ctrl
+    101482: Mom_rt_thumbMid_fk_ctrl_frzGrp
+    101484: Mom_rt_thumbMid_fk_ctrl_frzGrp 1
+    101486: Mom_rt_thumbMid_fk_ctrl_frzGrp 2
+    101488: Mom_rt_thumbTip_fk_ctrl
+    101490: Mom_rt_thumbTip_fk_ctrl_frzGrp
+    101492: Mom_rt_thumbTip_fk_ctrl_frzGrp 1
+    101494: Mom_rt_thumbTip_fk_ctrl_frzGrp 2
+    101496: Mom_rt_toe_fk_jnt
+    101498: Mom_rt_toe_ik_jnt
+    101500: Mom_rt_toe_jnt
+    101502: Mom_rt_toe_rev_rig_jnt
+    101504: Mom_rt_upArm_alignFalse_grp
+    101506: Mom_rt_upArm_alignFalse_grp_frzGrp
+    101508: Mom_rt_upArm_alignTrue_grp
+    101510: Mom_rt_upArm_alignTrueLocTarg_grp
+    101512: Mom_rt_upArm_alignTrueLocTarg_grp_frzGrp
+    101514: Mom_rt_upArm_alignTrueLocTarg_grp_frzGrp 1
+    101516: Mom_rt_upArm_alignTrueWrldTarg_grp
+    101518: Mom_rt_upArm_autoAlign_rig_grp
+    101520: Mom_rt_upArm_autoAlign_rig_grp_frzGrp
+    101522: Mom_rt_upArm_fk_ctrl
+    101524: Mom_rt_upArm_fk_ctrl_frzGrp
+    101526: Mom_rt_upArm_fk_ctrl_frzGrp 1
+    101528: Mom_rt_upArm_fk_jnt
+    101530: Mom_rt_upArm_ik_jnt
+    101532: Mom_rt_upArm_jnt
+    101534: Mom_rt_upArm_sec_fk_ctrl
+    101536: Mom_rt_upArm_upJntFkCtrlAlign_grp
+    101538: Mom_rt_upArmCtrl_jnt
+    101540: Mom_rt_upArmCtrl_jnt_frzGrp
+    101542: Mom_rt_upArmCtrlSplit_1_jnt
+    101544: Mom_rt_upArmdnJntFollow_jnt
+    101546: Mom_rt_upArmDnSplitCtrlParent_jnt
+    101548: Mom_rt_upArmMidJntRzReader_loc
+    101550: Mom_rt_upArmMidJntRzReader_loc_frzGrp
+    101552: Mom_rt_upArmPvCtrl_dist
+    101554: Mom_rt_upArmPvCtrl_dist_ep
+    101556: Mom_rt_upArmPvCtrl_dist_sp
+    101558: Mom_rt_upArmRotReaderParent_jnt
+    101560: Mom_rt_upArmRotReaderParent_jnt_frzGrp
+    101562: Mom_rt_upArmRotReaderParent_jnt_frzGrp 1
+    101564: Mom_rt_upArmtwistJntReaderFollow_grp
+    101566: Mom_rt_upArmTwistReader_ikHandle
+    101568: Mom_rt_upArmTwistReader_loc
+    101570: Mom_rt_upArmupJntFollow_jnt
+    101572: Mom_rt_upArmupParJntFollow_jnt
+    101574: Mom_rt_upArmUpSplitCtrlParent_jnt
+    101576: Mom_rt_upArmUpSplitCtrlParent_jnt_frzGrp
+    101578: Mom_rt_upArmWeight_jnt
+    101580: Mom_rt_upArmWeightSplit_1_jnt
+    101582: Mom_rt_upLeg_alignFalse_grp
+    101584: Mom_rt_upLeg_alignFalse_grp_frzGrp
+    101586: Mom_rt_upLeg_alignTrue_grp
+    101588: Mom_rt_upLeg_alignTrueLocTarg_grp
+    101590: Mom_rt_upLeg_alignTrueLocTarg_grp_frzGrp
+    101592: Mom_rt_upLeg_alignTrueLocTarg_grp_frzGrp 1
+    101594: Mom_rt_upLeg_alignTrueWrldTarg_grp
+    101596: Mom_rt_upLeg_autoAlign_rig_grp
+    101598: Mom_rt_upLeg_autoAlign_rig_grp_frzGrp
+    101600: Mom_rt_upLeg_fk_ctrl
+    101602: Mom_rt_upLeg_fk_ctrl_frzGrp
+    101604: Mom_rt_upLeg_fk_ctrl_frzGrp 1
+    101606: Mom_rt_upLeg_fk_jnt
+    101608: Mom_rt_upLeg_ik_jnt
+    101610: Mom_rt_upLeg_jnt
+    101612: Mom_rt_upLeg_sec_fk_ctrl
+    101614: Mom_rt_upLeg_upJntFkCtrlAlign_grp
+    101616: Mom_rt_upLegCtrl_jnt
+    101618: Mom_rt_upLegCtrl_jnt_frzGrp
+    101620: Mom_rt_upLegCtrlSplit_1_jnt
+    101622: Mom_rt_upLegdnJntFollow_jnt
+    101624: Mom_rt_upLegDnSplitCtrlParent_jnt
+    101626: Mom_rt_upLegMidJntRzReader_loc
+    101628: Mom_rt_upLegMidJntRzReader_loc_frzGrp
+    101630: Mom_rt_upLegPvCtrl_dist
+    101632: Mom_rt_upLegPvCtrl_dist_ep
+    101634: Mom_rt_upLegPvCtrl_dist_sp
+    101636: Mom_rt_upLegRotReaderParent_jnt
+    101638: Mom_rt_upLegRotReaderParent_jnt_frzGrp
+    101640: Mom_rt_upLegRotReaderParent_jnt_frzGrp 1
+    101642: Mom_rt_upLegtwistJntReaderFollow_grp
+    101644: Mom_rt_upLegTwistReader_ikHandle
+    101646: Mom_rt_upLegTwistReader_loc
+    101648: Mom_rt_upLegupJntFollow_jnt
+    101650: Mom_rt_upLegupParJntFollow_jnt
+    101652: Mom_rt_upLegUpSplitCtrlParent_jnt
+    101654: Mom_rt_upLegUpSplitCtrlParent_jnt_frzGrp
+    101656: Mom_rt_upLegWeight_jnt
+    101658: Mom_rt_upLegWeightSplit_1_jnt
+    101660: Mom_rt_wrist_alignFalse_grp
+    101662: Mom_rt_wrist_alignFalse_grp_frzGrp
+    101664: Mom_rt_wrist_alignTrue_grp
+    101666: Mom_rt_wrist_alignTrueLocTarg_grp
+    101668: Mom_rt_wrist_alignTrueLocTarg_grp_frzGrp
+    101670: Mom_rt_wrist_alignTrueLocTarg_grp_frzGrp 1
+    101672: Mom_rt_wrist_alignTrueWrldTarg_grp
+    101674: Mom_rt_wrist_autoAlign_rig_grp
+    101676: Mom_rt_wrist_autoAlign_rig_grp_frzGrp
+    101678: Mom_rt_wrist_fk_ctrl
+    101680: Mom_rt_wrist_fk_ctrl_frzGrp
+    101682: Mom_rt_wrist_fk_ctrl_frzGrp 1
+    101684: Mom_rt_wrist_fk_jnt
+    101686: Mom_rt_wrist_ik_jnt
+    101688: Mom_rt_wrist_jnt
+    101690: Mom_rt_wrist_sec_fk_ctrl
+    101692: Mom_rt_wrist_upJntFkCtrlAlign_grp
+    101694: Mom_rt_wristCtrl_jnt
+    101696: Mom_rt_wristOrientTarget_loc
+    101698: Mom_rt_wristWeight_jnt
+    101700: Mom_rtArmIkCtrl_space_switch_grp
+    101702: Mom_rtHandCtrl_space_switch_grp
+    101704: Mom_rTipJntindex_ikHandle
+    101706: Mom_rTipJntmiddle_ikHandle
+    101708: Mom_rTipJntpinky_ikHandle
+    101710: Mom_rTipJntring_ikHandle
+    101712: Mom_rTipJntthumb_ikHandle
+    101714: Mom_rtLegIkCtrl_space_switch_grp
+    101716: Mom_Skeleton_grp
+    101718: Mom_spine_end_jnt
+    101720: Mom_spine_hi_jnt
+    101722: Mom_spine_low_jnt
+    101724: Mom_spine_mid_jnt
+    101726: Mom_spine_ribbon_surf
+    101728: Mom_spine_rig_grp
+    101730: Mom_spineHigh_ctrl
+    101732: Mom_spineHigh_ctrl_frzGrp
+    101734: Mom_spineHigh_ctrl_frzGrp 1
+    101736: Mom_spineLow_ctrl
+    101738: Mom_spineLow_ctrl_frzGrp
+    101740: Mom_spineLow_ctrl_frzGrp 1
+    101742: Mom_spineMid_1_ctrl
+    101744: Mom_spineMid_1_ctrl_frzGrp
+    101746: Mom_spineMid_1_ctrl_frzGrp 1
+    101748: Mom_spineNoScale_rig_grp
+    101750: Mom_spineRhFollicles_grp
+    101752: Mom_subMaster_ctrl
+    101754: Mom_subMaster_ctrl_frzGrp
+    101756: Mom_weightSpine_b_jnt
+    101758: Mom_weightSpine_c_jnt
+    101760: Mom_weightSpine_d_jnt
+    101762: Mom_weightSpine_e_jnt
+    101764: Mom_weightSpine_f_jnt
+    101766: Mom_weightSpine_g_jnt
+    101768: //RootNode
+    101770: obj_R_Eye
+    101772: obj_R_Eye1
+    101774: polySurface63
+    101776: rt_armWeightJnt_grp
+    101778: rt_armWtCtrlJnt_grp
+    101780: rt_legWeightJnt_grp
+    101782: rt_legWtCtrlJnt_grp
+    101784: weightSpine_grp
+    400000: abRTLine_Mom_lf_elbow_line_loc
+    400002: abRTLine_Mom_lf_knee_line_loc
+    400004: abRTLine_Mom_rt_elbow_line_loc
+    400006: abRTLine_Mom_rt_knee_line_loc
+    400008: body
+    400010: follicle1
+    400012: follicle2
+    400014: follicle3
+    400016: follicle4
+    400018: follicle5
+    400020: follicle6
+    400022: Grp_Hair
+    400024: hair:loftedSurface10
+    400026: hair:loftedSurface11
+    400028: hair:loftedSurface12
+    400030: hair:loftedSurface13
+    400032: hair:loftedSurface14
+    400034: hair:loftedSurface15
+    400036: hair:loftedSurface16
+    400038: hair:loftedSurface17
+    400040: hair:loftedSurface18
+    400042: hair:loftedSurface19
+    400044: hair:loftedSurface2
+    400046: hair:loftedSurface20
+    400048: hair:loftedSurface21
+    400050: hair:loftedSurface22
+    400052: hair:loftedSurface23
+    400054: hair:loftedSurface24
+    400056: hair:loftedSurface25
+    400058: hair:loftedSurface26
+    400060: hair:loftedSurface27
+    400062: hair:loftedSurface28
+    400064: hair:loftedSurface29
+    400066: hair:loftedSurface3
+    400068: hair:loftedSurface30
+    400070: hair:loftedSurface31
+    400072: hair:loftedSurface4
+    400074: hair:loftedSurface6
+    400076: hair:loftedSurface7
+    400078: hair:loftedSurface8
+    400080: hair:loftedSurface9
+    400082: lf_armWeightJnt_grp
+    400084: lf_armWtCtrlJnt_grp
+    400086: lf_legWeightJnt_grp
+    400088: lf_legWtCtrlJnt_grp
+    400090: loftedSurface10
+    400092: loftedSurface11
+    400094: loftedSurface13
+    400096: loftedSurface14
+    400098: loftedSurface15
+    400100: Mom_charVars
+    400102: Mom_cog_ctrl
+    400104: Mom_cog_ctrl_frzGrp
+    400106: Mom_cog_ctrl_frzGrp 1
+    400108: Mom_cogCtrl_space_switch_grp
+    400110: Mom_ctrlSpine_b_jnt
+    400112: Mom_ctrlSpine_b_jnt_frzGrp
+    400114: Mom_ctrlSpine_c_jnt
+    400116: Mom_ctrlSpine_c_jnt_frzGrp
+    400118: Mom_ctrlSpine_d_jnt
+    400120: Mom_ctrlSpine_d_jnt_frzGrp
+    400122: Mom_ctrlSpine_e_jnt
+    400124: Mom_ctrlSpine_e_jnt_frzGrp
+    400126: Mom_ctrlSpine_f_jnt
+    400128: Mom_ctrlSpine_f_jnt_frzGrp
+    400130: Mom_ctrlSpine_g_jnt
+    400132: Mom_ctrlSpine_g_jnt_frzGrp
+    400134: Mom_ctrlSpine_rig_grp
+    400136: Mom_eyeFrzGrp_space_grp
+    400138: Mom_eyeMaster_ctrl
+    400140: Mom_eyeMaster_ctrl_frzGrp
+    400142: Mom_head_a_jnt
+    400144: Mom_head_b_jnt
+    400146: Mom_head_ctrl
+    400148: Mom_head_ctrl_frzGrp
+    400150: Mom_head_fk_ctrl_Grp
+    400152: Mom_head_rig_grp
+    400154: Mom_headAlignFalse_Grp
+    400156: Mom_headAlignTrue_Grp
+    400158: Mom_headAutoAlign_Grp
+    400160: Mom_headCtrl_space_switch_grp
+    400162: Mom_hip_ctrl
+    400164: Mom_hip_ctrl_frzGrp
+    400166: Mom_hip_ctrl_frzGrp 1
+    400168: Mom_hip_jnt
+    400170: Mom_hipCtrl_space_switch_grp
+    400172: Mom_hiSpineCtrl_space_switch_grp
+    400174: Mom_ikSpline_crv
+    400176: Mom_jaw_a_jnt
+    400178: Mom_jaw_b_jnt
+    400180: Mom_jaw_c_jnt
+    400182: Mom_jaw_ctrl
+    400184: Mom_jaw_ctrl_frzGrp
+    400186: Mom_lf_ankle_fk_ctrl
+    400188: Mom_lf_ankle_fk_ctrl_frzGrp
+    400190: Mom_lf_ankle_fk_ctrl_frzGrp 1
+    400192: Mom_lf_ankle_fk_jnt
+    400194: Mom_lf_ankle_ik_jnt
+    400196: Mom_lf_ankle_jnt
+    400198: Mom_lf_ankle_rev_rig_jnt
+    400200: Mom_lf_ankle_sec_fk_ctrl
+    400202: Mom_lf_ankle_upJntFkCtrl_grp
+    400204: Mom_lf_ankleBallReader_Ankle_jnt
+    400206: Mom_lf_ankleBallReader_Ball_jnt
+    400208: Mom_lf_ankleBallReader_Knee_jnt
+    400210: Mom_lf_ankleBallReader_UpLeg_jnt
+    400212: Mom_lf_ankleCtrl_jnt
+    400214: Mom_lf_ankleWeight_jnt
+    400216: Mom_lf_arm_ik_ctrl
+    400218: Mom_lf_arm_ik_ctrl_frzGrp
+    400220: Mom_lf_arm_ikHandle
+    400222: Mom_lf_arm_rig_grp
+    400224: Mom_lf_armFK_Grp
+    400226: Mom_lf_armIK_Grp
+    400228: Mom_lf_armIkCtrl_space_grp
+    400230: Mom_lf_armPvCtrlGrp_space_grp
+    400232: Mom_lf_armPvIkCtrl_dist
+    400234: Mom_lf_armPvIkCtrl_dist_ep
+    400236: Mom_lf_armPvIkCtrl_dist_sp
+    400238: Mom_lf_armStrDist_dist
+    400240: Mom_lf_armStrDist_dist_ep
+    400242: Mom_lf_armStrDist_dist_sp
+    400244: Mom_lf_ball_fk_ctrl
+    400246: Mom_lf_ball_fk_ctrl_frzGrp
+    400248: Mom_lf_ball_fk_ctrl_frzGrp 1
+    400250: Mom_lf_ball_fk_jnt
+    400252: Mom_lf_ball_ik_jnt
+    400254: Mom_lf_ball_jnt
+    400256: Mom_lf_ball_rev_rig_jnt
+    400258: Mom_lf_ball_upJntFkCtrl_grp
+    400260: Mom_lf_ballToePar_ik_jnt
+    400262: Mom_lf_clavicle_ctrl
+    400264: Mom_lf_clavicle_ctrl_frzGrp
+    400266: Mom_lf_clavicle_ctrl_frzGrp 1
+    400268: Mom_lf_clavicle_jnt
+    400270: Mom_lf_clavicleTrans_ctrl
+    400272: Mom_lf_clavicleTrans_ctrl_frzGrp
+    400274: Mom_lf_elbow_fk_ctrl
+    400276: Mom_lf_elbow_fk_ctrl_frzGrp
+    400278: Mom_lf_elbow_fk_ctrl_frzGrp 1
+    400280: Mom_lf_elbow_fk_jnt
+    400282: Mom_lf_elbow_ik_jnt
+    400284: Mom_lf_elbow_jnt
+    400286: Mom_lf_elbow_jnt1
+    400288: Mom_lf_elbow_line_loc
+    400290: Mom_lf_elbow_pv_ctrl
+    400292: Mom_lf_elbow_pv_ctrl_annLoc
+    400294: Mom_lf_elbow_pv_ctrl_frzGrp
+    400296: Mom_lf_elbow_upJntFkCtrl_grp
+    400298: Mom_lf_elbowCtrl_jnt
+    400300: Mom_lf_elbowCtrlSplit_1_jnt
+    400302: Mom_lf_elbowCtrlSplit_2_jnt
+    400304: Mom_lf_elbowWeight_jnt
+    400306: Mom_lf_elbowWeightSplit_1_jnt
+    400308: Mom_lf_elbowWeightSplit_2_jnt
+    400310: Mom_lf_eye_ctrl
+    400312: Mom_lf_eye_ctrl_frzGrp
+    400314: Mom_lf_eye_ctrl_frzGrp 1
+    400316: Mom_lf_eye_jnt
+    400318: Mom_lf_foot_ctrl
+    400320: Mom_lf_forearmdnTwistReader_jnt
+    400322: Mom_lf_forearmPvTwistReader_loc
+    400324: Mom_lf_forearmPvTwistReader_loc_frzGrp
+    400326: Mom_lf_forearmPvTwistReader_loc_frzGrp 1
+    400328: Mom_lf_forearmTwist_ctrl
+    400330: Mom_lf_forearmTwist_ctrl_frzGrp
+    400332: Mom_lf_forearmTwist_ikHandle
+    400334: Mom_lf_forearmTwist_loc
+    400336: Mom_lf_forearmTwist_loc_frzGrp
+    400338: Mom_lf_forearmTwistTarget_loc
+    400340: Mom_lf_forearmTwistTarget_loc_frzGrp
+    400342: Mom_lf_forearmUpTwistReader_jnt
+    400344: Mom_lf_forearmUpTwistReader_jnt_frzGrp
+    400346: Mom_lf_hand_ctrl
+    400348: Mom_lf_hand_ctrl_frzGrp
+    400350: Mom_lf_hand_ctrl_frzGrp 1
+    400352: Mom_lf_hand_jnt
+    400354: Mom_lf_hand_rig_grp
+    400356: Mom_lf_handCtrl_grp
+    400358: Mom_lf_heel_ik_ctrl
+    400360: Mom_lf_heel_ik_ctrl_frzGrp
+    400362: Mom_lf_heel_rev_rig_jnt
+    400364: Mom_lf_hip_ctrl
+    400366: Mom_lf_hip_ctrl_frzGrp
+    400368: Mom_lf_ikCtrlCrvOrientOffset_loc
+    400370: Mom_lf_ikCtrlCrvOrientOffset_loc_frzGrp
+    400372: Mom_lf_index_a_jnt
+    400374: Mom_lf_index_b_jnt
+    400376: Mom_lf_index_c_jnt
+    400378: Mom_lf_index_d_jnt
+    400380: Mom_lf_index_ik_ctrl
+    400382: Mom_lf_index_ik_ctrl_frzGrp
+    400384: Mom_lf_index_ikHandle
+    400386: Mom_lf_indexBase_fk_ctrl
+    400388: Mom_lf_indexBase_fk_ctrl_frzGrp
+    400390: Mom_lf_indexBase_fk_ctrl_frzGrp 1
+    400392: Mom_lf_indexBase_fk_ctrl_frzGrp 2
+    400394: Mom_lf_indexCtrl_space_grp
+    400396: Mom_lf_indexIkStretch_dist
+    400398: Mom_lf_indexIkStretch_dist_ep
+    400400: Mom_lf_indexIkStretch_dist_sp
+    400402: Mom_lf_indexMid_fk_ctrl
+    400404: Mom_lf_indexMid_fk_ctrl_frzGrp
+    400406: Mom_lf_indexMid_fk_ctrl_frzGrp 1
+    400408: Mom_lf_indexMid_fk_ctrl_frzGrp 2
+    400410: Mom_lf_indexTip_fk_ctrl
+    400412: Mom_lf_indexTip_fk_ctrl_frzGrp
+    400414: Mom_lf_indexTip_fk_ctrl_frzGrp 1
+    400416: Mom_lf_indexTip_fk_ctrl_frzGrp 2
+    400418: Mom_lf_knee_fk_ctrl
+    400420: Mom_lf_knee_fk_ctrl_frzGrp
+    400422: Mom_lf_knee_fk_ctrl_frzGrp 1
+    400424: Mom_lf_knee_fk_jnt
+    400426: Mom_lf_knee_ik_jnt
+    400428: Mom_lf_knee_jnt
+    400430: Mom_lf_knee_jnt1
+    400432: Mom_lf_knee_line_loc
+    400434: Mom_lf_knee_pv_ctrl
+    400436: Mom_lf_knee_pv_ctrl_annLoc
+    400438: Mom_lf_knee_pv_ctrl_frzGrp
+    400440: Mom_lf_knee_upJntFkCtrl_grp
+    400442: Mom_lf_kneeCtrl_jnt
+    400444: Mom_lf_kneeCtrlSplit_1_jnt
+    400446: Mom_lf_kneeWeight_jnt
+    400448: Mom_lf_kneeWeightSplit_1_jnt
+    400450: Mom_lf_leg_ikHandle
+    400452: Mom_lf_leg_rig_grp
+    400454: Mom_lf_legFK_Grp
+    400456: Mom_lf_legIK_Grp
+    400458: Mom_lf_legIkCtrl_space_grp
+    400460: Mom_lf_legPvCtrlGrp_space_grp
+    400462: Mom_lf_legPvIkCtrl_dist
+    400464: Mom_lf_legPvIkCtrl_dist_ep
+    400466: Mom_lf_legPvIkCtrl_dist_sp
+    400468: Mom_lf_legStrDist_dist
+    400470: Mom_lf_legStrDist_dist_ep
+    400472: Mom_lf_legStrDist_dist_sp
+    400474: Mom_lf_lowLegdnTwistReader_jnt
+    400476: Mom_lf_lowLegPvTwistReader_loc
+    400478: Mom_lf_lowLegPvTwistReader_loc_frzGrp
+    400480: Mom_lf_lowLegTwist_ctrl
+    400482: Mom_lf_lowLegTwist_ctrl_frzGrp
+    400484: Mom_lf_lowLegTwist_ikHandle
+    400486: Mom_lf_lowLegTwist_loc
+    400488: Mom_lf_lowLegTwist_loc_frzGrp
+    400490: Mom_lf_lowLegTwistTarget_loc
+    400492: Mom_lf_lowLegTwistTarget_loc_frzGrp
+    400494: Mom_lf_lowLegUpTwistReader_jnt
+    400496: Mom_lf_lowLegUpTwistReader_jnt_frzGrp
+    400498: Mom_lf_masterIndex_ctrl
+    400500: Mom_lf_masterIndex_ctrl_frzGrp
+    400502: Mom_lf_masterMiddle_ctrl
+    400504: Mom_lf_masterMiddle_ctrl_frzGrp
+    400506: Mom_lf_masterPinky_ctrl
+    400508: Mom_lf_masterPinky_ctrl_frzGrp
+    400510: Mom_lf_masterRing_ctrl
+    400512: Mom_lf_masterRing_ctrl_frzGrp
+    400514: Mom_lf_masterThumb_ctrl
+    400516: Mom_lf_masterThumb_ctrl_frzGrp
+    400518: Mom_lf_middle_a_jnt
+    400520: Mom_lf_middle_b_jnt
+    400522: Mom_lf_middle_c_jnt
+    400524: Mom_lf_middle_d_jnt
+    400526: Mom_lf_middle_ik_ctrl
+    400528: Mom_lf_middle_ik_ctrl_frzGrp
+    400530: Mom_lf_middle_ikHandle
+    400532: Mom_lf_middleBase_fk_ctrl
+    400534: Mom_lf_middleBase_fk_ctrl_frzGrp
+    400536: Mom_lf_middleBase_fk_ctrl_frzGrp 1
+    400538: Mom_lf_middleBase_fk_ctrl_frzGrp 2
+    400540: Mom_lf_middleCtrl_space_grp
+    400542: Mom_lf_middleIkStretch_dist
+    400544: Mom_lf_middleIkStretch_dist_ep
+    400546: Mom_lf_middleIkStretch_dist_sp
+    400548: Mom_lf_middleMid_fk_ctrl
+    400550: Mom_lf_middleMid_fk_ctrl_frzGrp
+    400552: Mom_lf_middleMid_fk_ctrl_frzGrp 1
+    400554: Mom_lf_middleMid_fk_ctrl_frzGrp 2
+    400556: Mom_lf_middleTip_fk_ctrl
+    400558: Mom_lf_middleTip_fk_ctrl_frzGrp
+    400560: Mom_lf_middleTip_fk_ctrl_frzGrp 1
+    400562: Mom_lf_middleTip_fk_ctrl_frzGrp 2
+    400564: Mom_lf_pinky_a_jnt
+    400566: Mom_lf_pinky_b_jnt
+    400568: Mom_lf_pinky_c_jnt
+    400570: Mom_lf_pinky_d_jnt
+    400572: Mom_lf_pinky_ik_ctrl
+    400574: Mom_lf_pinky_ik_ctrl_frzGrp
+    400576: Mom_lf_pinky_ikHandle
+    400578: Mom_lf_pinkyBase_fk_ctrl
+    400580: Mom_lf_pinkyBase_fk_ctrl_frzGrp
+    400582: Mom_lf_pinkyBase_fk_ctrl_frzGrp 1
+    400584: Mom_lf_pinkyBase_fk_ctrl_frzGrp 2
+    400586: Mom_lf_pinkyCtrl_space_grp
+    400588: Mom_lf_pinkyCup_jnt
+    400590: Mom_lf_pinkyIkStretch_dist
+    400592: Mom_lf_pinkyIkStretch_dist_ep
+    400594: Mom_lf_pinkyIkStretch_dist_sp
+    400596: Mom_lf_pinkyMid_fk_ctrl
+    400598: Mom_lf_pinkyMid_fk_ctrl_frzGrp
+    400600: Mom_lf_pinkyMid_fk_ctrl_frzGrp 1
+    400602: Mom_lf_pinkyMid_fk_ctrl_frzGrp 2
+    400604: Mom_lf_pinkyTip_fk_ctrl
+    400606: Mom_lf_pinkyTip_fk_ctrl_frzGrp
+    400608: Mom_lf_pinkyTip_fk_ctrl_frzGrp 1
+    400610: Mom_lf_pinkyTip_fk_ctrl_frzGrp 2
+    400612: Mom_lf_reverseFoot_rig_grp
+    400614: Mom_lf_ring_a_jnt
+    400616: Mom_lf_ring_b_jnt
+    400618: Mom_lf_ring_c_jnt
+    400620: Mom_lf_ring_d_jnt
+    400622: Mom_lf_ring_ik_ctrl
+    400624: Mom_lf_ring_ik_ctrl_frzGrp
+    400626: Mom_lf_ring_ikHandle
+    400628: Mom_lf_ringBase_fk_ctrl
+    400630: Mom_lf_ringBase_fk_ctrl_frzGrp
+    400632: Mom_lf_ringBase_fk_ctrl_frzGrp 1
+    400634: Mom_lf_ringBase_fk_ctrl_frzGrp 2
+    400636: Mom_lf_ringCtrl_space_grp
+    400638: Mom_lf_ringCup_jnt
+    400640: Mom_lf_ringIkStretch_dist
+    400642: Mom_lf_ringIkStretch_dist_ep
+    400644: Mom_lf_ringIkStretch_dist_sp
+    400646: Mom_lf_ringMid_fk_ctrl
+    400648: Mom_lf_ringMid_fk_ctrl_frzGrp
+    400650: Mom_lf_ringMid_fk_ctrl_frzGrp 1
+    400652: Mom_lf_ringMid_fk_ctrl_frzGrp 2
+    400654: Mom_lf_ringTip_fk_ctrl
+    400656: Mom_lf_ringTip_fk_ctrl_frzGrp
+    400658: Mom_lf_ringTip_fk_ctrl_frzGrp 1
+    400660: Mom_lf_ringTip_fk_ctrl_frzGrp 2
+    400662: Mom_lf_shoulder_ctrl
+    400664: Mom_lf_shoulder_ctrl_frzGrp
+    400666: Mom_lf_thumb_a_jnt
+    400668: Mom_lf_thumb_b_jnt
+    400670: Mom_lf_thumb_c_jnt
+    400672: Mom_lf_thumb_d_jnt
+    400674: Mom_lf_thumb_ik_ctrl
+    400676: Mom_lf_thumb_ik_ctrl_frzGrp
+    400678: Mom_lf_thumb_ikHandle
+    400680: Mom_lf_thumbBase_fk_ctrl
+    400682: Mom_lf_thumbBase_fk_ctrl_frzGrp
+    400684: Mom_lf_thumbBase_fk_ctrl_frzGrp 1
+    400686: Mom_lf_thumbBase_fk_ctrl_frzGrp 2
+    400688: Mom_lf_thumbCtrl_space_grp
+    400690: Mom_lf_thumbIkStretch_dist
+    400692: Mom_lf_thumbIkStretch_dist_ep
+    400694: Mom_lf_thumbIkStretch_dist_sp
+    400696: Mom_lf_thumbMid_fk_ctrl
+    400698: Mom_lf_thumbMid_fk_ctrl_frzGrp
+    400700: Mom_lf_thumbMid_fk_ctrl_frzGrp 1
+    400702: Mom_lf_thumbMid_fk_ctrl_frzGrp 2
+    400704: Mom_lf_thumbTip_fk_ctrl
+    400706: Mom_lf_thumbTip_fk_ctrl_frzGrp
+    400708: Mom_lf_thumbTip_fk_ctrl_frzGrp 1
+    400710: Mom_lf_thumbTip_fk_ctrl_frzGrp 2
+    400712: Mom_lf_toe_fk_jnt
+    400714: Mom_lf_toe_ik_jnt
+    400716: Mom_lf_toe_jnt
+    400718: Mom_lf_toe_rev_rig_jnt
+    400720: Mom_lf_upArm_alignFalse_grp
+    400722: Mom_lf_upArm_alignFalse_grp_frzGrp
+    400724: Mom_lf_upArm_alignTrue_grp
+    400726: Mom_lf_upArm_alignTrueLocTarg_grp
+    400728: Mom_lf_upArm_alignTrueLocTarg_grp_frzGrp
+    400730: Mom_lf_upArm_alignTrueLocTarg_grp_frzGrp 1
+    400732: Mom_lf_upArm_alignTrueWrldTarg_grp
+    400734: Mom_lf_upArm_autoAlign_rig_grp
+    400736: Mom_lf_upArm_autoAlign_rig_grp_frzGrp
+    400738: Mom_lf_upArm_fk_ctrl
+    400740: Mom_lf_upArm_fk_ctrl_frzGrp
+    400742: Mom_lf_upArm_fk_ctrl_frzGrp 1
+    400744: Mom_lf_upArm_fk_jnt
+    400746: Mom_lf_upArm_ik_jnt
+    400748: Mom_lf_upArm_jnt
+    400750: Mom_lf_upArm_sec_fk_ctrl
+    400752: Mom_lf_upArm_upJntFkCtrlAlign_grp
+    400754: Mom_lf_upArmCtrl_jnt
+    400756: Mom_lf_upArmCtrl_jnt_frzGrp
+    400758: Mom_lf_upArmCtrlSplit_1_jnt
+    400760: Mom_lf_upArmdnJntFollow_jnt
+    400762: Mom_lf_upArmDnSplitCtrlParent_jnt
+    400764: Mom_lf_upArmMidJntRzReader_loc
+    400766: Mom_lf_upArmMidJntRzReader_loc_frzGrp
+    400768: Mom_lf_upArmPvCtrl_dist
+    400770: Mom_lf_upArmPvCtrl_dist_ep
+    400772: Mom_lf_upArmPvCtrl_dist_sp
+    400774: Mom_lf_upArmRotReaderParent_jnt
+    400776: Mom_lf_upArmRotReaderParent_jnt_frzGrp
+    400778: Mom_lf_upArmRotReaderParent_jnt_frzGrp 1
+    400780: Mom_lf_upArmtwistJntReaderFollow_grp
+    400782: Mom_lf_upArmTwistReader_ikHandle
+    400784: Mom_lf_upArmTwistReader_loc
+    400786: Mom_lf_upArmupJntFollow_jnt
+    400788: Mom_lf_upArmupParJntFollow_jnt
+    400790: Mom_lf_upArmUpSplitCtrlParent_jnt
+    400792: Mom_lf_upArmUpSplitCtrlParent_jnt_frzGrp
+    400794: Mom_lf_upArmWeight_jnt
+    400796: Mom_lf_upArmWeightSplit_1_jnt
+    400798: Mom_lf_upLeg_alignFalse_grp
+    400800: Mom_lf_upLeg_alignFalse_grp_frzGrp
+    400802: Mom_lf_upLeg_alignTrue_grp
+    400804: Mom_lf_upLeg_alignTrueLocTarg_grp
+    400806: Mom_lf_upLeg_alignTrueLocTarg_grp_frzGrp
+    400808: Mom_lf_upLeg_alignTrueLocTarg_grp_frzGrp 1
+    400810: Mom_lf_upLeg_alignTrueWrldTarg_grp
+    400812: Mom_lf_upLeg_autoAlign_rig_grp
+    400814: Mom_lf_upLeg_autoAlign_rig_grp_frzGrp
+    400816: Mom_lf_upLeg_fk_ctrl
+    400818: Mom_lf_upLeg_fk_ctrl_frzGrp
+    400820: Mom_lf_upLeg_fk_ctrl_frzGrp 1
+    400822: Mom_lf_upLeg_fk_jnt
+    400824: Mom_lf_upLeg_ik_jnt
+    400826: Mom_lf_upLeg_jnt
+    400828: Mom_lf_upLeg_sec_fk_ctrl
+    400830: Mom_lf_upLeg_upJntFkCtrlAlign_grp
+    400832: Mom_lf_upLegCtrl_jnt
+    400834: Mom_lf_upLegCtrl_jnt_frzGrp
+    400836: Mom_lf_upLegCtrlSplit_1_jnt
+    400838: Mom_lf_upLegdnJntFollow_jnt
+    400840: Mom_lf_upLegDnSplitCtrlParent_jnt
+    400842: Mom_lf_upLegMidJntRzReader_loc
+    400844: Mom_lf_upLegMidJntRzReader_loc_frzGrp
+    400846: Mom_lf_upLegPvCtrl_dist
+    400848: Mom_lf_upLegPvCtrl_dist_ep
+    400850: Mom_lf_upLegPvCtrl_dist_sp
+    400852: Mom_lf_upLegRotReaderParent_jnt
+    400854: Mom_lf_upLegRotReaderParent_jnt_frzGrp
+    400856: Mom_lf_upLegRotReaderParent_jnt_frzGrp 1
+    400858: Mom_lf_upLegtwistJntReaderFollow_grp
+    400860: Mom_lf_upLegTwistReader_ikHandle
+    400862: Mom_lf_upLegTwistReader_loc
+    400864: Mom_lf_upLegupJntFollow_jnt
+    400866: Mom_lf_upLegupParJntFollow_jnt
+    400868: Mom_lf_upLegUpSplitCtrlParent_jnt
+    400870: Mom_lf_upLegUpSplitCtrlParent_jnt_frzGrp
+    400872: Mom_lf_upLegWeight_jnt
+    400874: Mom_lf_upLegWeightSplit_1_jnt
+    400876: Mom_lf_wrist_alignFalse_grp
+    400878: Mom_lf_wrist_alignFalse_grp_frzGrp
+    400880: Mom_lf_wrist_alignTrue_grp
+    400882: Mom_lf_wrist_alignTrueLocTarg_grp
+    400884: Mom_lf_wrist_alignTrueLocTarg_grp_frzGrp
+    400886: Mom_lf_wrist_alignTrueLocTarg_grp_frzGrp 1
+    400888: Mom_lf_wrist_alignTrueWrldTarg_grp
+    400890: Mom_lf_wrist_autoAlign_rig_grp
+    400892: Mom_lf_wrist_autoAlign_rig_grp_frzGrp
+    400894: Mom_lf_wrist_fk_ctrl
+    400896: Mom_lf_wrist_fk_ctrl_frzGrp
+    400898: Mom_lf_wrist_fk_ctrl_frzGrp 1
+    400900: Mom_lf_wrist_fk_jnt
+    400902: Mom_lf_wrist_ik_jnt
+    400904: Mom_lf_wrist_jnt
+    400906: Mom_lf_wrist_sec_fk_ctrl
+    400908: Mom_lf_wrist_upJntFkCtrlAlign_grp
+    400910: Mom_lf_wristCtrl_jnt
+    400912: Mom_lf_wristOrientTarget_loc
+    400914: Mom_lf_wristWeight_jnt
+    400916: Mom_lfArmIkCtrl_space_switch_grp
+    400918: Mom_lfHandCtrl_space_switch_grp
+    400920: Mom_lfLegIkCtrl_space_switch_grp
+    400922: Mom_lowSpineCtrl_space_switch_grp
+    400924: Mom_lTipJntindex_ikHandle
+    400926: Mom_lTipJntmiddle_ikHandle
+    400928: Mom_lTipJntpinky_ikHandle
+    400930: Mom_lTipJntring_ikHandle
+    400932: Mom_lTipJntthumb_ikHandle
+    400934: Mom_master_ctrl
+    400936: Mom_master_ctrl_frzGrp
+    400938: Mom_masterSpine_ctrl
+    400940: Mom_masterSpine_ctrl_frzGrp
+    400942: Mom_masterSpineCtrl_space_switch_grp
+    400944: Mom_neck_ctrl
+    400946: Mom_neck_ctrl_frzGrp
+    400948: Mom_neck_ctrl_frzGrp 1
+    400950: Mom_neck_fk_ctrl_Grp
+    400952: Mom_neck_jnt
+    400954: Mom_neckAlignFalse_Grp
+    400956: Mom_neckAlignTrue_Grp
+    400958: Mom_neckAutoAlign_Grp
+    400960: Mom_rig_grp
+    400962: Mom_rigSettings_ctrl
+    400964: Mom_root_ctrl
+    400966: Mom_root_ctrl_frzGrp
+    400968: Mom_rootCtrl_space_switch_grp
+    400970: Mom_rt_ankle_fk_ctrl
+    400972: Mom_rt_ankle_fk_ctrl_frzGrp
+    400974: Mom_rt_ankle_fk_ctrl_frzGrp 1
+    400976: Mom_rt_ankle_fk_jnt
+    400978: Mom_rt_ankle_ik_jnt
+    400980: Mom_rt_ankle_jnt
+    400982: Mom_rt_ankle_rev_rig_jnt
+    400984: Mom_rt_ankle_sec_fk_ctrl
+    400986: Mom_rt_ankle_upJntFkCtrl_grp
+    400988: Mom_rt_ankleBallReader_Ankle_jnt
+    400990: Mom_rt_ankleBallReader_Ball_jnt
+    400992: Mom_rt_ankleBallReader_Knee_jnt
+    400994: Mom_rt_ankleBallReader_UpLeg_jnt
+    400996: Mom_rt_ankleCtrl_jnt
+    400998: Mom_rt_ankleWeight_jnt
+    401000: Mom_rt_arm_ik_ctrl
+    401002: Mom_rt_arm_ik_ctrl_frzGrp
+    401004: Mom_rt_arm_ikHandle
+    401006: Mom_rt_arm_rig_grp
+    401008: Mom_rt_armFK_Grp
+    401010: Mom_rt_armIK_Grp
+    401012: Mom_rt_armIkCtrl_space_grp
+    401014: Mom_rt_armPvCtrlGrp_space_grp
+    401016: Mom_rt_armPvIkCtrl_dist
+    401018: Mom_rt_armPvIkCtrl_dist_ep
+    401020: Mom_rt_armPvIkCtrl_dist_sp
+    401022: Mom_rt_armStrDist_dist
+    401024: Mom_rt_armStrDist_dist_ep
+    401026: Mom_rt_armStrDist_dist_sp
+    401028: Mom_rt_ball_fk_ctrl
+    401030: Mom_rt_ball_fk_ctrl_frzGrp
+    401032: Mom_rt_ball_fk_ctrl_frzGrp 1
+    401034: Mom_rt_ball_fk_jnt
+    401036: Mom_rt_ball_ik_jnt
+    401038: Mom_rt_ball_jnt
+    401040: Mom_rt_ball_rev_rig_jnt
+    401042: Mom_rt_ball_upJntFkCtrl_grp
+    401044: Mom_rt_ballToePar_ik_jnt
+    401046: Mom_rt_clavicle_ctrl
+    401048: Mom_rt_clavicle_ctrl_frzGrp
+    401050: Mom_rt_clavicle_ctrl_frzGrp 1
+    401052: Mom_rt_clavicle_jnt
+    401054: Mom_rt_clavicleTrans_ctrl
+    401056: Mom_rt_clavicleTrans_ctrl_frzGrp
+    401058: Mom_rt_elbow_fk_ctrl
+    401060: Mom_rt_elbow_fk_ctrl_frzGrp
+    401062: Mom_rt_elbow_fk_ctrl_frzGrp 1
+    401064: Mom_rt_elbow_fk_jnt
+    401066: Mom_rt_elbow_ik_jnt
+    401068: Mom_rt_elbow_jnt
+    401070: Mom_rt_elbow_jnt1
+    401072: Mom_rt_elbow_line_loc
+    401074: Mom_rt_elbow_pv_ctrl
+    401076: Mom_rt_elbow_pv_ctrl_annLoc
+    401078: Mom_rt_elbow_pv_ctrl_frzGrp
+    401080: Mom_rt_elbow_upJntFkCtrl_grp
+    401082: Mom_rt_elbowCtrl_jnt
+    401084: Mom_rt_elbowCtrlSplit_1_jnt
+    401086: Mom_rt_elbowCtrlSplit_2_jnt
+    401088: Mom_rt_elbowWeight_jnt
+    401090: Mom_rt_elbowWeightSplit_1_jnt
+    401092: Mom_rt_elbowWeightSplit_2_jnt
+    401094: Mom_rt_eye_ctrl
+    401096: Mom_rt_eye_ctrl_frzGrp
+    401098: Mom_rt_eye_ctrl_frzGrp 1
+    401100: Mom_rt_eye_jnt
+    401102: Mom_rt_foot_ctrl
+    401104: Mom_rt_forearmdnTwistReader_jnt
+    401106: Mom_rt_forearmPvTwistReader_loc
+    401108: Mom_rt_forearmPvTwistReader_loc_frzGrp
+    401110: Mom_rt_forearmPvTwistReader_loc_frzGrp 1
+    401112: Mom_rt_forearmTwist_ctrl
+    401114: Mom_rt_forearmTwist_ctrl_frzGrp
+    401116: Mom_rt_forearmTwist_ikHandle
+    401118: Mom_rt_forearmTwist_loc
+    401120: Mom_rt_forearmTwist_loc_frzGrp
+    401122: Mom_rt_forearmTwistTarget_loc
+    401124: Mom_rt_forearmTwistTarget_loc_frzGrp
+    401126: Mom_rt_forearmUpTwistReader_jnt
+    401128: Mom_rt_forearmUpTwistReader_jnt_frzGrp
+    401130: Mom_rt_hand_ctrl
+    401132: Mom_rt_hand_ctrl_frzGrp
+    401134: Mom_rt_hand_ctrl_frzGrp 1
+    401136: Mom_rt_hand_jnt
+    401138: Mom_rt_hand_rig_grp
+    401140: Mom_rt_handCtrl_grp
+    401142: Mom_rt_heel_ik_ctrl
+    401144: Mom_rt_heel_ik_ctrl_frzGrp
+    401146: Mom_rt_heel_rev_rig_jnt
+    401148: Mom_rt_hip_ctrl
+    401150: Mom_rt_hip_ctrl_frzGrp
+    401152: Mom_rt_ikCtrlCrvOrientOffset_loc
+    401154: Mom_rt_ikCtrlCrvOrientOffset_loc_frzGrp
+    401156: Mom_rt_index_a_jnt
+    401158: Mom_rt_index_b_jnt
+    401160: Mom_rt_index_c_jnt
+    401162: Mom_rt_index_d_jnt
+    401164: Mom_rt_index_ik_ctrl
+    401166: Mom_rt_index_ik_ctrl_frzGrp
+    401168: Mom_rt_index_ikHandle
+    401170: Mom_rt_indexBase_fk_ctrl
+    401172: Mom_rt_indexBase_fk_ctrl_frzGrp
+    401174: Mom_rt_indexBase_fk_ctrl_frzGrp 1
+    401176: Mom_rt_indexBase_fk_ctrl_frzGrp 2
+    401178: Mom_rt_indexCtrl_space_grp
+    401180: Mom_rt_indexIkStretch_dist
+    401182: Mom_rt_indexIkStretch_dist_ep
+    401184: Mom_rt_indexIkStretch_dist_sp
+    401186: Mom_rt_indexMid_fk_ctrl
+    401188: Mom_rt_indexMid_fk_ctrl_frzGrp
+    401190: Mom_rt_indexMid_fk_ctrl_frzGrp 1
+    401192: Mom_rt_indexMid_fk_ctrl_frzGrp 2
+    401194: Mom_rt_indexTip_fk_ctrl
+    401196: Mom_rt_indexTip_fk_ctrl_frzGrp
+    401198: Mom_rt_indexTip_fk_ctrl_frzGrp 1
+    401200: Mom_rt_indexTip_fk_ctrl_frzGrp 2
+    401202: Mom_rt_knee_fk_ctrl
+    401204: Mom_rt_knee_fk_ctrl_frzGrp
+    401206: Mom_rt_knee_fk_ctrl_frzGrp 1
+    401208: Mom_rt_knee_fk_jnt
+    401210: Mom_rt_knee_ik_jnt
+    401212: Mom_rt_knee_jnt
+    401214: Mom_rt_knee_jnt1
+    401216: Mom_rt_knee_line_loc
+    401218: Mom_rt_knee_pv_ctrl
+    401220: Mom_rt_knee_pv_ctrl_annLoc
+    401222: Mom_rt_knee_pv_ctrl_frzGrp
+    401224: Mom_rt_knee_upJntFkCtrl_grp
+    401226: Mom_rt_kneeCtrl_jnt
+    401228: Mom_rt_kneeCtrlSplit_1_jnt
+    401230: Mom_rt_kneeWeight_jnt
+    401232: Mom_rt_kneeWeightSplit_1_jnt
+    401234: Mom_rt_leg_ikHandle
+    401236: Mom_rt_leg_rig_grp
+    401238: Mom_rt_legFK_Grp
+    401240: Mom_rt_legIK_Grp
+    401242: Mom_rt_legIkCtrl_space_grp
+    401244: Mom_rt_legPvCtrlGrp_space_grp
+    401246: Mom_rt_legPvIkCtrl_dist
+    401248: Mom_rt_legPvIkCtrl_dist_ep
+    401250: Mom_rt_legPvIkCtrl_dist_sp
+    401252: Mom_rt_legStrDist_dist
+    401254: Mom_rt_legStrDist_dist_ep
+    401256: Mom_rt_legStrDist_dist_sp
+    401258: Mom_rt_lowLegdnTwistReader_jnt
+    401260: Mom_rt_lowLegPvTwistReader_loc
+    401262: Mom_rt_lowLegPvTwistReader_loc_frzGrp
+    401264: Mom_rt_lowLegTwist_ctrl
+    401266: Mom_rt_lowLegTwist_ctrl_frzGrp
+    401268: Mom_rt_lowLegTwist_ikHandle
+    401270: Mom_rt_lowLegTwist_loc
+    401272: Mom_rt_lowLegTwist_loc_frzGrp
+    401274: Mom_rt_lowLegTwistTarget_loc
+    401276: Mom_rt_lowLegTwistTarget_loc_frzGrp
+    401278: Mom_rt_lowLegUpTwistReader_jnt
+    401280: Mom_rt_lowLegUpTwistReader_jnt_frzGrp
+    401282: Mom_rt_masterIndex_ctrl
+    401284: Mom_rt_masterIndex_ctrl_frzGrp
+    401286: Mom_rt_masterMiddle_ctrl
+    401288: Mom_rt_masterMiddle_ctrl_frzGrp
+    401290: Mom_rt_masterPinky_ctrl
+    401292: Mom_rt_masterPinky_ctrl_frzGrp
+    401294: Mom_rt_masterRing_ctrl
+    401296: Mom_rt_masterRing_ctrl_frzGrp
+    401298: Mom_rt_masterThumb_ctrl
+    401300: Mom_rt_masterThumb_ctrl_frzGrp
+    401302: Mom_rt_middle_a_jnt
+    401304: Mom_rt_middle_b_jnt
+    401306: Mom_rt_middle_c_jnt
+    401308: Mom_rt_middle_d_jnt
+    401310: Mom_rt_middle_ik_ctrl
+    401312: Mom_rt_middle_ik_ctrl_frzGrp
+    401314: Mom_rt_middle_ikHandle
+    401316: Mom_rt_middleBase_fk_ctrl
+    401318: Mom_rt_middleBase_fk_ctrl_frzGrp
+    401320: Mom_rt_middleBase_fk_ctrl_frzGrp 1
+    401322: Mom_rt_middleBase_fk_ctrl_frzGrp 2
+    401324: Mom_rt_middleCtrl_space_grp
+    401326: Mom_rt_middleIkStretch_dist
+    401328: Mom_rt_middleIkStretch_dist_ep
+    401330: Mom_rt_middleIkStretch_dist_sp
+    401332: Mom_rt_middleMid_fk_ctrl
+    401334: Mom_rt_middleMid_fk_ctrl_frzGrp
+    401336: Mom_rt_middleMid_fk_ctrl_frzGrp 1
+    401338: Mom_rt_middleMid_fk_ctrl_frzGrp 2
+    401340: Mom_rt_middleTip_fk_ctrl
+    401342: Mom_rt_middleTip_fk_ctrl_frzGrp
+    401344: Mom_rt_middleTip_fk_ctrl_frzGrp 1
+    401346: Mom_rt_middleTip_fk_ctrl_frzGrp 2
+    401348: Mom_rt_pinky_a_jnt
+    401350: Mom_rt_pinky_b_jnt
+    401352: Mom_rt_pinky_c_jnt
+    401354: Mom_rt_pinky_d_jnt
+    401356: Mom_rt_pinky_ik_ctrl
+    401358: Mom_rt_pinky_ik_ctrl_frzGrp
+    401360: Mom_rt_pinky_ikHandle
+    401362: Mom_rt_pinkyBase_fk_ctrl
+    401364: Mom_rt_pinkyBase_fk_ctrl_frzGrp
+    401366: Mom_rt_pinkyBase_fk_ctrl_frzGrp 1
+    401368: Mom_rt_pinkyBase_fk_ctrl_frzGrp 2
+    401370: Mom_rt_pinkyCtrl_space_grp
+    401372: Mom_rt_pinkyCup_jnt
+    401374: Mom_rt_pinkyIkStretch_dist
+    401376: Mom_rt_pinkyIkStretch_dist_ep
+    401378: Mom_rt_pinkyIkStretch_dist_sp
+    401380: Mom_rt_pinkyMid_fk_ctrl
+    401382: Mom_rt_pinkyMid_fk_ctrl_frzGrp
+    401384: Mom_rt_pinkyMid_fk_ctrl_frzGrp 1
+    401386: Mom_rt_pinkyMid_fk_ctrl_frzGrp 2
+    401388: Mom_rt_pinkyTip_fk_ctrl
+    401390: Mom_rt_pinkyTip_fk_ctrl_frzGrp
+    401392: Mom_rt_pinkyTip_fk_ctrl_frzGrp 1
+    401394: Mom_rt_pinkyTip_fk_ctrl_frzGrp 2
+    401396: Mom_rt_reverseFoot_rig_grp
+    401398: Mom_rt_ring_a_jnt
+    401400: Mom_rt_ring_b_jnt
+    401402: Mom_rt_ring_c_jnt
+    401404: Mom_rt_ring_d_jnt
+    401406: Mom_rt_ring_ik_ctrl
+    401408: Mom_rt_ring_ik_ctrl_frzGrp
+    401410: Mom_rt_ring_ikHandle
+    401412: Mom_rt_ringBase_fk_ctrl
+    401414: Mom_rt_ringBase_fk_ctrl_frzGrp
+    401416: Mom_rt_ringBase_fk_ctrl_frzGrp 1
+    401418: Mom_rt_ringBase_fk_ctrl_frzGrp 2
+    401420: Mom_rt_ringCtrl_space_grp
+    401422: Mom_rt_ringCup_jnt
+    401424: Mom_rt_ringIkStretch_dist
+    401426: Mom_rt_ringIkStretch_dist_ep
+    401428: Mom_rt_ringIkStretch_dist_sp
+    401430: Mom_rt_ringMid_fk_ctrl
+    401432: Mom_rt_ringMid_fk_ctrl_frzGrp
+    401434: Mom_rt_ringMid_fk_ctrl_frzGrp 1
+    401436: Mom_rt_ringMid_fk_ctrl_frzGrp 2
+    401438: Mom_rt_ringTip_fk_ctrl
+    401440: Mom_rt_ringTip_fk_ctrl_frzGrp
+    401442: Mom_rt_ringTip_fk_ctrl_frzGrp 1
+    401444: Mom_rt_ringTip_fk_ctrl_frzGrp 2
+    401446: Mom_rt_shoulder_ctrl
+    401448: Mom_rt_shoulder_ctrl_frzGrp
+    401450: Mom_rt_thumb_a_jnt
+    401452: Mom_rt_thumb_b_jnt
+    401454: Mom_rt_thumb_c_jnt
+    401456: Mom_rt_thumb_d_jnt
+    401458: Mom_rt_thumb_ik_ctrl
+    401460: Mom_rt_thumb_ik_ctrl_frzGrp
+    401462: Mom_rt_thumb_ikHandle
+    401464: Mom_rt_thumbBase_fk_ctrl
+    401466: Mom_rt_thumbBase_fk_ctrl_frzGrp
+    401468: Mom_rt_thumbBase_fk_ctrl_frzGrp 1
+    401470: Mom_rt_thumbBase_fk_ctrl_frzGrp 2
+    401472: Mom_rt_thumbCtrl_space_grp
+    401474: Mom_rt_thumbIkStretch_dist
+    401476: Mom_rt_thumbIkStretch_dist_ep
+    401478: Mom_rt_thumbIkStretch_dist_sp
+    401480: Mom_rt_thumbMid_fk_ctrl
+    401482: Mom_rt_thumbMid_fk_ctrl_frzGrp
+    401484: Mom_rt_thumbMid_fk_ctrl_frzGrp 1
+    401486: Mom_rt_thumbMid_fk_ctrl_frzGrp 2
+    401488: Mom_rt_thumbTip_fk_ctrl
+    401490: Mom_rt_thumbTip_fk_ctrl_frzGrp
+    401492: Mom_rt_thumbTip_fk_ctrl_frzGrp 1
+    401494: Mom_rt_thumbTip_fk_ctrl_frzGrp 2
+    401496: Mom_rt_toe_fk_jnt
+    401498: Mom_rt_toe_ik_jnt
+    401500: Mom_rt_toe_jnt
+    401502: Mom_rt_toe_rev_rig_jnt
+    401504: Mom_rt_upArm_alignFalse_grp
+    401506: Mom_rt_upArm_alignFalse_grp_frzGrp
+    401508: Mom_rt_upArm_alignTrue_grp
+    401510: Mom_rt_upArm_alignTrueLocTarg_grp
+    401512: Mom_rt_upArm_alignTrueLocTarg_grp_frzGrp
+    401514: Mom_rt_upArm_alignTrueLocTarg_grp_frzGrp 1
+    401516: Mom_rt_upArm_alignTrueWrldTarg_grp
+    401518: Mom_rt_upArm_autoAlign_rig_grp
+    401520: Mom_rt_upArm_autoAlign_rig_grp_frzGrp
+    401522: Mom_rt_upArm_fk_ctrl
+    401524: Mom_rt_upArm_fk_ctrl_frzGrp
+    401526: Mom_rt_upArm_fk_ctrl_frzGrp 1
+    401528: Mom_rt_upArm_fk_jnt
+    401530: Mom_rt_upArm_ik_jnt
+    401532: Mom_rt_upArm_jnt
+    401534: Mom_rt_upArm_sec_fk_ctrl
+    401536: Mom_rt_upArm_upJntFkCtrlAlign_grp
+    401538: Mom_rt_upArmCtrl_jnt
+    401540: Mom_rt_upArmCtrl_jnt_frzGrp
+    401542: Mom_rt_upArmCtrlSplit_1_jnt
+    401544: Mom_rt_upArmdnJntFollow_jnt
+    401546: Mom_rt_upArmDnSplitCtrlParent_jnt
+    401548: Mom_rt_upArmMidJntRzReader_loc
+    401550: Mom_rt_upArmMidJntRzReader_loc_frzGrp
+    401552: Mom_rt_upArmPvCtrl_dist
+    401554: Mom_rt_upArmPvCtrl_dist_ep
+    401556: Mom_rt_upArmPvCtrl_dist_sp
+    401558: Mom_rt_upArmRotReaderParent_jnt
+    401560: Mom_rt_upArmRotReaderParent_jnt_frzGrp
+    401562: Mom_rt_upArmRotReaderParent_jnt_frzGrp 1
+    401564: Mom_rt_upArmtwistJntReaderFollow_grp
+    401566: Mom_rt_upArmTwistReader_ikHandle
+    401568: Mom_rt_upArmTwistReader_loc
+    401570: Mom_rt_upArmupJntFollow_jnt
+    401572: Mom_rt_upArmupParJntFollow_jnt
+    401574: Mom_rt_upArmUpSplitCtrlParent_jnt
+    401576: Mom_rt_upArmUpSplitCtrlParent_jnt_frzGrp
+    401578: Mom_rt_upArmWeight_jnt
+    401580: Mom_rt_upArmWeightSplit_1_jnt
+    401582: Mom_rt_upLeg_alignFalse_grp
+    401584: Mom_rt_upLeg_alignFalse_grp_frzGrp
+    401586: Mom_rt_upLeg_alignTrue_grp
+    401588: Mom_rt_upLeg_alignTrueLocTarg_grp
+    401590: Mom_rt_upLeg_alignTrueLocTarg_grp_frzGrp
+    401592: Mom_rt_upLeg_alignTrueLocTarg_grp_frzGrp 1
+    401594: Mom_rt_upLeg_alignTrueWrldTarg_grp
+    401596: Mom_rt_upLeg_autoAlign_rig_grp
+    401598: Mom_rt_upLeg_autoAlign_rig_grp_frzGrp
+    401600: Mom_rt_upLeg_fk_ctrl
+    401602: Mom_rt_upLeg_fk_ctrl_frzGrp
+    401604: Mom_rt_upLeg_fk_ctrl_frzGrp 1
+    401606: Mom_rt_upLeg_fk_jnt
+    401608: Mom_rt_upLeg_ik_jnt
+    401610: Mom_rt_upLeg_jnt
+    401612: Mom_rt_upLeg_sec_fk_ctrl
+    401614: Mom_rt_upLeg_upJntFkCtrlAlign_grp
+    401616: Mom_rt_upLegCtrl_jnt
+    401618: Mom_rt_upLegCtrl_jnt_frzGrp
+    401620: Mom_rt_upLegCtrlSplit_1_jnt
+    401622: Mom_rt_upLegdnJntFollow_jnt
+    401624: Mom_rt_upLegDnSplitCtrlParent_jnt
+    401626: Mom_rt_upLegMidJntRzReader_loc
+    401628: Mom_rt_upLegMidJntRzReader_loc_frzGrp
+    401630: Mom_rt_upLegPvCtrl_dist
+    401632: Mom_rt_upLegPvCtrl_dist_ep
+    401634: Mom_rt_upLegPvCtrl_dist_sp
+    401636: Mom_rt_upLegRotReaderParent_jnt
+    401638: Mom_rt_upLegRotReaderParent_jnt_frzGrp
+    401640: Mom_rt_upLegRotReaderParent_jnt_frzGrp 1
+    401642: Mom_rt_upLegtwistJntReaderFollow_grp
+    401644: Mom_rt_upLegTwistReader_ikHandle
+    401646: Mom_rt_upLegTwistReader_loc
+    401648: Mom_rt_upLegupJntFollow_jnt
+    401650: Mom_rt_upLegupParJntFollow_jnt
+    401652: Mom_rt_upLegUpSplitCtrlParent_jnt
+    401654: Mom_rt_upLegUpSplitCtrlParent_jnt_frzGrp
+    401656: Mom_rt_upLegWeight_jnt
+    401658: Mom_rt_upLegWeightSplit_1_jnt
+    401660: Mom_rt_wrist_alignFalse_grp
+    401662: Mom_rt_wrist_alignFalse_grp_frzGrp
+    401664: Mom_rt_wrist_alignTrue_grp
+    401666: Mom_rt_wrist_alignTrueLocTarg_grp
+    401668: Mom_rt_wrist_alignTrueLocTarg_grp_frzGrp
+    401670: Mom_rt_wrist_alignTrueLocTarg_grp_frzGrp 1
+    401672: Mom_rt_wrist_alignTrueWrldTarg_grp
+    401674: Mom_rt_wrist_autoAlign_rig_grp
+    401676: Mom_rt_wrist_autoAlign_rig_grp_frzGrp
+    401678: Mom_rt_wrist_fk_ctrl
+    401680: Mom_rt_wrist_fk_ctrl_frzGrp
+    401682: Mom_rt_wrist_fk_ctrl_frzGrp 1
+    401684: Mom_rt_wrist_fk_jnt
+    401686: Mom_rt_wrist_ik_jnt
+    401688: Mom_rt_wrist_jnt
+    401690: Mom_rt_wrist_sec_fk_ctrl
+    401692: Mom_rt_wrist_upJntFkCtrlAlign_grp
+    401694: Mom_rt_wristCtrl_jnt
+    401696: Mom_rt_wristOrientTarget_loc
+    401698: Mom_rt_wristWeight_jnt
+    401700: Mom_rtArmIkCtrl_space_switch_grp
+    401702: Mom_rtHandCtrl_space_switch_grp
+    401704: Mom_rTipJntindex_ikHandle
+    401706: Mom_rTipJntmiddle_ikHandle
+    401708: Mom_rTipJntpinky_ikHandle
+    401710: Mom_rTipJntring_ikHandle
+    401712: Mom_rTipJntthumb_ikHandle
+    401714: Mom_rtLegIkCtrl_space_switch_grp
+    401716: Mom_Skeleton_grp
+    401718: Mom_spine_end_jnt
+    401720: Mom_spine_hi_jnt
+    401722: Mom_spine_low_jnt
+    401724: Mom_spine_mid_jnt
+    401726: Mom_spine_ribbon_surf
+    401728: Mom_spine_rig_grp
+    401730: Mom_spineHigh_ctrl
+    401732: Mom_spineHigh_ctrl_frzGrp
+    401734: Mom_spineHigh_ctrl_frzGrp 1
+    401736: Mom_spineLow_ctrl
+    401738: Mom_spineLow_ctrl_frzGrp
+    401740: Mom_spineLow_ctrl_frzGrp 1
+    401742: Mom_spineMid_1_ctrl
+    401744: Mom_spineMid_1_ctrl_frzGrp
+    401746: Mom_spineMid_1_ctrl_frzGrp 1
+    401748: Mom_spineNoScale_rig_grp
+    401750: Mom_spineRhFollicles_grp
+    401752: Mom_subMaster_ctrl
+    401754: Mom_subMaster_ctrl_frzGrp
+    401756: Mom_weightSpine_b_jnt
+    401758: Mom_weightSpine_c_jnt
+    401760: Mom_weightSpine_d_jnt
+    401762: Mom_weightSpine_e_jnt
+    401764: Mom_weightSpine_f_jnt
+    401766: Mom_weightSpine_g_jnt
+    401768: //RootNode
+    401770: obj_R_Eye
+    401772: obj_R_Eye1
+    401774: polySurface63
+    401776: rt_armWeightJnt_grp
+    401778: rt_armWtCtrlJnt_grp
+    401780: rt_legWeightJnt_grp
+    401782: rt_legWtCtrlJnt_grp
+    401784: weightSpine_grp
+    4300000: obj_R_Eye
+    4300002: loftedSurface15
+    4300004: loftedSurface14
+    4300006: loftedSurface10
+    4300008: loftedSurface11
+    4300010: loftedSurface13
+    4300012: hair:loftedSurface31
+    4300014: hair:loftedSurface30
+    4300016: hair:loftedSurface29
+    4300018: hair:loftedSurface28
+    4300020: hair:loftedSurface27
+    4300022: hair:loftedSurface26
+    4300024: hair:loftedSurface25
+    4300026: hair:loftedSurface24
+    4300028: hair:loftedSurface23
+    4300030: hair:loftedSurface22
+    4300032: hair:loftedSurface21
+    4300034: hair:loftedSurface20
+    4300036: hair:loftedSurface19
+    4300038: hair:loftedSurface18
+    4300040: hair:loftedSurface17
+    4300042: hair:loftedSurface16
+    4300044: hair:loftedSurface15
+    4300046: hair:loftedSurface14
+    4300048: hair:loftedSurface13
+    4300050: hair:loftedSurface12
+    4300052: hair:loftedSurface11
+    4300054: hair:loftedSurface10
+    4300056: hair:loftedSurface9
+    4300058: hair:loftedSurface8
+    4300060: hair:loftedSurface7
+    4300062: hair:loftedSurface6
+    4300064: hair:loftedSurface4
+    4300066: hair:loftedSurface3
+    4300068: hair:loftedSurface2
+    4300070: obj_R_Eye1
+    4300072: polySurface63
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: hair:loftedSurface10
+    13700002: hair:loftedSurface11
+    13700004: hair:loftedSurface12
+    13700006: hair:loftedSurface13
+    13700008: hair:loftedSurface14
+    13700010: hair:loftedSurface15
+    13700012: hair:loftedSurface16
+    13700014: hair:loftedSurface17
+    13700016: hair:loftedSurface18
+    13700018: hair:loftedSurface19
+    13700020: hair:loftedSurface2
+    13700022: hair:loftedSurface20
+    13700024: hair:loftedSurface21
+    13700026: hair:loftedSurface22
+    13700028: hair:loftedSurface23
+    13700030: hair:loftedSurface24
+    13700032: hair:loftedSurface25
+    13700034: hair:loftedSurface26
+    13700036: hair:loftedSurface27
+    13700038: hair:loftedSurface28
+    13700040: hair:loftedSurface29
+    13700042: hair:loftedSurface3
+    13700044: hair:loftedSurface30
+    13700046: hair:loftedSurface31
+    13700048: hair:loftedSurface4
+    13700050: hair:loftedSurface6
+    13700052: hair:loftedSurface7
+    13700054: hair:loftedSurface8
+    13700056: hair:loftedSurface9
+    13700058: loftedSurface10
+    13700060: loftedSurface11
+    13700062: loftedSurface13
+    13700064: loftedSurface14
+    13700066: loftedSurface15
+    13700068: obj_R_Eye
+    13700070: obj_R_Eye1
+    13700072: polySurface63
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
