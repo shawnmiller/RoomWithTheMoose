@@ -175,7 +175,7 @@ Phase
 
 	//Item Handling
 	//-------------------------------------------------------
-	BeginCustomEvent Name=ItemPickedup
+	BeginCustomEvent Name=ItemPickedUp
 		IncrementValue Name=InventoryItems Value=1
 	EndCustomEvent
 
