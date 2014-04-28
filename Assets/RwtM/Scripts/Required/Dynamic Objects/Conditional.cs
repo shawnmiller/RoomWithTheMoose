@@ -17,11 +17,14 @@ public class Conditional : DynamicObject
   {
     if (!runOnce)
     {
-      Debug.Log("Running Variable Fetch: " + Name);
-      if(Condition != PPS.PP_PARAM_CONDITION_ITEM)
+
+      if (Condition != PPS.PP_PARAM_CONDITION_ITEM)
+      {
+        Debug.Log("Running Variable Fetch: " + Name);
         CheckForValueOrName();
+        Debug.Log("Variable Found: " + (Var != null || Val != null));
+      }
       runOnce = true;
-      Debug.Log("Variable Found: " + (Var != null || Val != null));
     }
 
     if (!ValidateConditional())
@@ -48,7 +51,9 @@ public class Conditional : DynamicObject
     // Hacked in Item Testing
     if (Condition == PPS.PP_PARAM_CONDITION_ITEM)
     {
+      Debug.Log("Looking for scene item: " + Name);
       GameObject SceneItem = GameObject.Find(Name);
+      Debug.Log("Found: " + (SceneItem != null));
       return (SceneItem != null);
     }
     else
