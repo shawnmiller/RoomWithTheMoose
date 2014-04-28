@@ -149,7 +149,6 @@ Phase
 	OnBeginPhase Action=Phase2Start
 	BeginCustomEvent Name=Phase2Start
 		MakeInteractible Name=Toothbrush
-		MakeInteractible Name=Toilet
 		MakeInteractible Name=Shoes
 
 		EnableTrigger Name=ShoeTrigger
@@ -160,7 +159,9 @@ Phase
 	//-------------------------------------------------------
 	OnTimerComplete Name=Phase2Reminder Action=Phase2ObjectiveReminder
 
-	BeginCustomEvent Name=Phase2ObjectiveReminder PreReqs=0
+	BeginCustomEvent Name=Phase2ObjectiveReminder PreReqs=1
+		OnCondition Name=Toothbrush Condition=ItemInScene
+
 		PlaySound Name=MommyReP2 PlayFrom=Mom
 	EndCustomEvent
 
@@ -174,7 +175,7 @@ Phase
 
 	//Item Handling
 	//-------------------------------------------------------
-	BeginCustomEvent Name=ItemPickup
+	BeginCustomEvent Name=ItemPickedup
 		IncrementValue Name=InventoryItems Value=1
 	EndCustomEvent
 

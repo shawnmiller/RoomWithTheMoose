@@ -44,26 +44,41 @@ public class Conditional : DynamicObject
       TestActual = Val.Value;
     }
 
-    // Normally I wouldn't do something like this, but since we're forcing the validation
-    // of the Conditional before executing this, we can convert everything down to a
-    // float and comparisons should work.
-    switch (Condition)
+    // Hacked in Item Testing
+    if (Condition == PPS.PP_PARAM_CONDITION_ITEM)
     {
-      case ConditionalType.LessThan:
-        return (float)Var.Value < (float)TestActual;
-      case ConditionalType.EqualTo:
-        return (float)Var.Value == (float)TestActual;
-      case ConditionalType.NotEqualTo:
-        return !((float)Var.Value == (float)TestActual);
-      case ConditionalType.GreaterThan:
-        return (float)Var.Value > (float)TestActual;
-      default:
-        return false;
+      GameObject SceneItem = GameObject.Find(Name);
+      return (SceneItem != null);
+    }
+    else
+    {
+      // Normally I wouldn't do something like this, but since we're forcing the validation
+      // of the Conditional before executing this, we can convert everything down to a
+      // float and comparisons should work.
+      switch (Condition)
+      {
+        case ConditionalType.LessThan:
+          return (float)Var.Value < (float)TestActual;
+        case ConditionalType.EqualTo:
+          return (float)Var.Value == (float)TestActual;
+        case ConditionalType.NotEqualTo:
+          return !((float)Var.Value == (float)TestActual);
+        case ConditionalType.GreaterThan:
+          return (float)Var.Value > (float)TestActual;
+        default:
+          return false;
+      }
     }
   }
 
   private bool ValidateConditional()
   {
+    // Hacked in Item Checking
+    if (Condition == PPS.PP_PARAM_CONDITION_ITEM)
+    {
+      return true;
+    }
+
     if(Var == null)
     {
       Debug.LogError("Attempted to compare a Variable which was not created.");

@@ -75,6 +75,7 @@ public static class PPS
   public const string PP_PARAM_PATH = "Path";
   public const string PP_PARAM_WAIT_TIME = "Time";
   public const string PP_PARAM_EVENT_REQ = "PreReqs";
+  public const string PP_PARAM_CONDITION_ITEM = "ItemInScene";          // Condition
 
   // Conditionals
   public const string PP_COND_GT = "GreaterThan";
