@@ -170,7 +170,7 @@ Phase
 	OnTriggerEnter Name=ShoeTrigger Action=ShoeReminder
 	BeginCustomEvent Name=ShoeReminder
 		DisableTrigger Name=ShoeTrigger
-		PlaySound Name=ShoeReminder PlayFrom=Mom
+		PlaySound Name=MomShoeReminder PlayFrom=Mom
 	EndCustomEvent
 
 	//Item Handling
