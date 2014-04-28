@@ -142,7 +142,7 @@ Phase
 	Variable Name=InventoryItems Type=Integer Value=0 Global=False
 	Timer Name=Phase2Reminder Duration=50 RepeatCount=999 AutoStart=True Global=False
 	Sound Name=MommyReP2 Path=Audio/Level1/P2_Obj_Reminder Global=False
-	Sound Name=MommyReP2 Path=Audio/Level1/P2_Obj_Reminder Global=False
+	Sound Name=MomShoeReminder Path=Audio/Level1/ShoeReminder Global=False
 	
 	//Phase 2 Setup
 	//-------------------------------------------------------
@@ -170,7 +170,7 @@ Phase
 	OnTriggerEnter Name=ShoeTrigger Action=ShoeReminder
 	BeginCustomEvent Name=ShoeReminder
 		DisableTrigger Name=ShoeTrigger
-		PlaySound
+		PlaySound Name=ShoeReminder PlayFrom=Mom
 	EndCustomEvent
 
 	//Item Handling
