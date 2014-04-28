@@ -18,7 +18,8 @@ public class Conditional : DynamicObject
     if (!runOnce)
     {
       Debug.Log("Running Variable Fetch: " + Name);
-      CheckForValueOrName();
+      if(Condition != PPS.PP_PARAM_CONDITION_ITEM)
+        CheckForValueOrName();
       runOnce = true;
       Debug.Log("Variable Found: " + (Var != null || Val != null));
     }
