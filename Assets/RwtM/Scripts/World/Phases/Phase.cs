@@ -54,11 +54,16 @@ public class Phase
     //List<EventWatchObj> validEvents = EventWatchList.FindAll(x => x.GlobalEvent == eventName && x.Name == objectName);
     foreach (EventWatchObj e in EventWatchList)
     {
-      if (e.GlobalEvent.Equals(eventName, System.StringComparison.InvariantCultureIgnoreCase) && e.Name.Equals(objectName, System.StringComparison.InvariantCultureIgnoreCase))
+      try
       {
-        Debug.Log("Event Found: " + eventName + " For Instigator: " + e.Name + " Action: " + e.Action);
-        RunPhaseEvent(e.Action);
+        if (e.GlobalEvent.Equals(eventName, System.StringComparison.InvariantCultureIgnoreCase) && e.Name.Equals(objectName, System.StringComparison.InvariantCultureIgnoreCase))
+        {
+          Debug.Log("Event Found: " + eventName + " For Instigator: " + e.Name + " Action: " + e.Action);
+          RunPhaseEvent(e.Action);
+        }
       }
+      catch { } // Special case will occur here
+
       // Special case for OnBeginPhase
       if (eventName.Equals(PPS.PP_EVENT_BEGIN_PHASE, System.StringComparison.InvariantCultureIgnoreCase) && e.GlobalEvent.Equals(eventName, System.StringComparison.InvariantCultureIgnoreCase))
       {
