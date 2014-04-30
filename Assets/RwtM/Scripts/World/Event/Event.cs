@@ -41,8 +41,7 @@ public class Event : StateComponent
   {
     if (!running || _state.State != StateType.In_Game) { return; }
     if (next == null && eventData.Count == 0) { Destroy(this); }
-    if (eventData.Count == 0) { return; }
-
+		
     keeper.Tick();
 
     while (next != null && ShouldRunNext())
