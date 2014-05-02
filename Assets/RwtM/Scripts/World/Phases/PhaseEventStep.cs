@@ -7,6 +7,10 @@ public class PhaseEventStep
   public string Actor { get; set; }
   public float Value { get; set; }
 
+  // Hacked in for items
+  public bool Persistent { get; set; }
+  public int Uses { get; set; }
+
   public void Run()
   {
     switch (Action)
@@ -109,7 +113,9 @@ public class PhaseEventStep
     {
       if (item.GetComponent<InteractibleItem>() == null)
       {
-        item.AddComponent<InteractibleItem>();
+        InteractibleItem iItem = item.AddComponent<InteractibleItem>();
+        iItem.Persistent = Persistent;
+        iItem.MessageLimit = Uses;
         Debug.Log("Item Given Interaction: " + item.name);
       }
     }

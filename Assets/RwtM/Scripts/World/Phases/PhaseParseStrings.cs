@@ -76,6 +76,8 @@ public static class PPS
   public const string PP_PARAM_WAIT_TIME = "Time";
   public const string PP_PARAM_EVENT_REQ = "PreReqs";
   public const string PP_PARAM_CONDITION_ITEM = "ItemInScene";          // Condition
+  public const string PP_PARAM_USE_COUNT = "Uses";                      // Item Interaction
+  public const string PP_PARAM_PERSISTENT = "Persistent";               // Item Interaction
 
   // Conditionals
   public const string PP_COND_GT = "GreaterThan";
@@ -246,6 +248,8 @@ public static class PPS
     {PP_PARAM_CONDITION_REQUIREMENT, typeof(string)},
     {PP_PARAM_PATH, typeof(string)},
     {PP_PARAM_CONDITION_ITEM, typeof(string)},
+    {PP_PARAM_USE_COUNT, typeof(int)},
+    {PP_PARAM_PERSISTENT, typeof(bool)},
   };
 
   private static Dictionary<string, string> ParameterLiterals = new Dictionary<string, string>() {
