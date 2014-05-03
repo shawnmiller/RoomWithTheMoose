@@ -65,7 +65,7 @@ public class Phase
       catch { } // Special case will occur here
 
       // Special case for OnBeginPhase
-      if (eventName.Equals(PPS.PP_EVENT_BEGIN_PHASE, System.StringComparison.InvariantCultureIgnoreCase) && e.GlobalEvent.Equals(eventName, System.StringComparison.InvariantCultureIgnoreCase))
+      if (eventName.Equals(PP.EVENT_BEGIN_PHASE, System.StringComparison.InvariantCultureIgnoreCase) && e.GlobalEvent.Equals(eventName, System.StringComparison.InvariantCultureIgnoreCase))
       {
         Debug.Log("OnBeginPhase event was pushed, executing " + e.Action);
         RunPhaseEvent(e.Action);

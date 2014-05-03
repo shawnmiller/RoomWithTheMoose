@@ -18,7 +18,7 @@ public class Conditional : DynamicObject
     if (!runOnce)
     {
 
-      if (Condition != PPS.PP_PARAM_CONDITION_ITEM)
+      if (Condition != PP.PARAM_CONDITION_ITEM)
       {
         Debug.Log("Running Variable Fetch: " + Name);
         CheckForValueOrName();
@@ -49,7 +49,7 @@ public class Conditional : DynamicObject
     }
 
     // Hacked in Item Testing
-    if (Condition == PPS.PP_PARAM_CONDITION_ITEM)
+    if (Condition == PP.PARAM_CONDITION_ITEM)
     {
       Debug.Log("Looking for scene item: " + Name);
       GameObject SceneItem = GameObject.Find(Name);
@@ -80,7 +80,7 @@ public class Conditional : DynamicObject
   private bool ValidateConditional()
   {
     // Hacked in Item Checking
-    if (Condition == PPS.PP_PARAM_CONDITION_ITEM)
+    if (Condition == PP.PARAM_CONDITION_ITEM)
     {
       return true;
     }

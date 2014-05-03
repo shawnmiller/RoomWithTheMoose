@@ -79,28 +79,9 @@ public static class PP
   public const string PARAM_CONDITION_ITEM = "ItemInScene";          // Condition
   public const string PARAM_USE_COUNT = "Uses";                      // Item Interaction
   public const string PARAM_PERSISTENT = "Persistent";               // Item Interaction
-
-  public const string PARAM_GLOBAL = "Global";
-  public const string PARAM_NAME = "Name";
-  public const string PARAM_VALUE = "Value";                         // Variable
-  public const string PARAM_TYPE = "Type";                           // Variable
-  public const string PARAM_DURATION = "Duration";                   // Timer
-  public const string PARAM_REPEAT = "RepeatCount";                  // Timer
-  public const string PARAM_AUTOSTART = "AutoStart";                 // Timer, Sound
-  public const string PARAM_DESTROY_ON_PHASE = "DestroyOnPhase";     // Timer, Variable, Trigger
-  public const string PARAM_ACTION = "Action";                       // Predefined Events
-  //public const string PP_PARAM_SOUND_LOCATION = "PlayAt";             // Sound
-  public const string PARAM_SOUND_ACTOR = "PlayFrom";                // Sound
   public const string PARAM_SOUND_ACTOR_STOP = "StopOn";             // Sound
-  public const string PARAM_CONDITION_REQUIREMENT = "ConditionReq";  // Condition
-  public const string PARAM_PATH = "Path";
-  public const string PARAM_WAIT_TIME = "Time";
-  public const string PARAM_EVENT_REQ = "PreReqs";
-  public const string PARAM_USE_COUNT = "Uses";                      // Item Interaction
-  public const string PARAM_PERSISTENT = "Persistent";               // Item Interaction
   public const string PARAM_LOOP = "Loop";                           // Sound
   
->>>>>>> added stop sound option, some renaming
   // Conditionals
   public const string COND_GT = "GreaterThan";
   public const string COND_LT = "LessThan";
