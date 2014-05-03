@@ -95,7 +95,7 @@ public class TimerManager : Singleton<TimerManager>
 
   public void PushGlobalEvent(string Event, string Instigator)
   {
-    if (Event == PPS.PP_EVENT_BEGIN_PHASE)
+    if (Event == PP.EVENT_BEGIN_PHASE)
     {
       PurgeTimers();
     }
@@ -119,6 +119,6 @@ public class TimerManager : Singleton<TimerManager>
 
   private void ReportCompletedTimer(Timer timer)
   {
-    MessageDispatch.Send(PPS.PP_EVENT_TIMER_COMPLETED, timer.Name);
+    MessageDispatch.Send(PP.EVENT_TIMER_COMPLETED, timer.Name);
   }
 }

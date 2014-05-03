@@ -20,7 +20,7 @@ public class PhaseManager : Singleton<PhaseManager>, IMessageReceiver
     Debug.Log("CurrentPhaseIndex is Null? " + (Phases[CurrentPhaseIndex] == null));
     GlobalPhase.Init();
     Phases[CurrentPhaseIndex].Init();
-    Phases[CurrentPhaseIndex].PushGlobalEvent(PPS.PP_EVENT_BEGIN_PHASE, "");
+    Phases[CurrentPhaseIndex].PushGlobalEvent(PP.EVENT_BEGIN_PHASE, "");
   }
 
   void FixedUpdate()
@@ -37,7 +37,7 @@ public class PhaseManager : Singleton<PhaseManager>, IMessageReceiver
   void IMessageReceiver.PushGlobalEvent(string EventName, string Instigator)
   {
     Debug.Log("PhaseManager received event: " + EventName + " Instigator: " + Instigator);
-    if (EventName == PPS.PP_ACTION_END_PHASE)
+    if (EventName == PP.ACTION_END_PHASE)
     {
       MoveToNextPhase();
     }
@@ -55,9 +55,9 @@ public class PhaseManager : Singleton<PhaseManager>, IMessageReceiver
     }
     else
     {
-      TimerManager.Get().PushGlobalEvent(PPS.PP_EVENT_BEGIN_PHASE, "");
+      TimerManager.Get().PushGlobalEvent(PP.EVENT_BEGIN_PHASE, "");
       Phases[CurrentPhaseIndex].Init();
-      Phases[CurrentPhaseIndex].PushGlobalEvent(PPS.PP_EVENT_BEGIN_PHASE, "");
+      Phases[CurrentPhaseIndex].PushGlobalEvent(PP.EVENT_BEGIN_PHASE, "");
     }
   }
 

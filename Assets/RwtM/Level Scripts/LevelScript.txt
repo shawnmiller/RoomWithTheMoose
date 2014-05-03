@@ -66,7 +66,7 @@ EndGlobal
 Phase
 	Variable Name=InventoryItems Type=Integer Value=0 Global=False
 
-	Timer Name=Phase1Reminder Duration=45 RepeatCount=999 AutoStart=True Global=False
+	Timer Name=Phase1Reminder Duration=45 RepeatCount=999 AutoStart=False Global=False
 	Timer Name=Alarm Duration=1 RepeatCount=0 AutoStart=True Global=False
 	Timer Name=TestCond Duration=1 RepeatCount=0 AutoStart=True Global=False
 
@@ -83,7 +83,7 @@ Phase
 	OnBeginPhase Action=Phase1Start
 
 	BeginCustomEvent Name=Phase1Start
-		MakeInteractible Name=Alarm
+		MakeInteractible Name=Alarm Uses=1 Persistent=True
 	EndCustomEvent
 
 	// Post Alarm Off
@@ -91,9 +91,13 @@ Phase
 	OnPickUpItem Name=Alarm Action=BeginDressingSequence
 
 	BeginCustomEvent Name=BeginDressingSequence
-		MakeInteractible Name=Clothing
-		MakeInteractible Name=BookBag
-		MakeInteractible Name=VoiceRecorder
+		StopSound Name=AlarmSound StopOn=Alarm
+	
+		MakeInteractible Name=Clothing Uses=1 Persistent=False
+		MakeInteractible Name=BookBag Uses=1 Persistent=False
+		MakeInteractible Name=VoiceRecorder Uses=1 Persistent=False
+		
+		BeginTimer Name=Phase1Reminder
 
 		LegacyEvent Name=P1StartSequence
 	EndCustomEvent
@@ -111,7 +115,7 @@ Phase
 	OnTimerComplete Name=Alarm Action=AlarmRing
 
 	BeginCustomEvent Name=AlarmRing
-		PlaySound Name=AlarmSound PlayFrom=Alarm
+		PlaySound Name=AlarmSound PlayFrom=Alarm Loop=True
 	EndCustomEvent
 
 	// Item Handling
@@ -148,8 +152,9 @@ Phase
 	//-------------------------------------------------------
 	OnBeginPhase Action=Phase2Start
 	BeginCustomEvent Name=Phase2Start
-		MakeInteractible Name=Toothbrush
-		MakeInteractible Name=Shoes
+		MakeInteractible Name=Toothbrush Uses=1 Persistent=False
+		MakeInteractible Name=Toilet Uses=1 Persistent=False
+		MakeInteractible Name=Shoes Uses=1 Persistent=False
 
 		EnableTrigger Name=ShoeTrigger
 	EndCustomEvent
@@ -204,7 +209,7 @@ Phase
 	//-------------------------------------------------------
 	OnBeginPhase Action=Phase3Start
 	BeginCustomEvent Name=Phase3Start
-		MakeInteractible Name=Cereal
+		MakeInteractible Name=Cereal Uses=1 Persistent=True
 	EndCustomEvent
 
 	// Start Phone Interaction
@@ -212,7 +217,7 @@ Phase
 	OnTimerComplete Name=PhoneStart Action=PhoneRing
 	BeginCustomEvent Name=PhoneRing
 		BeginTimer Name=PhoneEnd
-		MakeInteractible Name=Phone
+		MakeInteractible Name=Phone Uses=1 Persistent=True
 		LegacyEvent Name=PhoneRinging
 	EndCustomEvent
 

@@ -4,6 +4,7 @@ public class SoundObj : DynamicObject
 {
   public string Actor;
   public AudioClip Sound;
+  public bool Loop;
 
   public string Path
   {

@@ -11,48 +11,54 @@ public class PhaseEventStep
   public bool Persistent { get; set; }
   public int Uses { get; set; }
 
+  // Hacked in for sounds
+  public bool Loop { get; set; }
+
   public void Run()
   {
     switch (Action)
     {
-      case PPS.PP_ACTION_END_GAME:
+      case PP.ACTION_END_GAME:
         EndGame();
         break;
-      case PPS.PP_ACTION_DISABLE_TRIGGER:
+      case PP.ACTION_DISABLE_TRIGGER:
         ToggleTrigger(false);
         break;
-      case PPS.PP_ACTION_ENABLE_TRIGGER:
+      case PP.ACTION_ENABLE_TRIGGER:
         ToggleTrigger(true);
         break;
-      case PPS.PP_ACTION_BEGIN_TIMER:
+      case PP.ACTION_BEGIN_TIMER:
         BeginTimer();
         break;
-      case PPS.PP_ACTION_INCREMENT_VALUE:
+      case PP.ACTION_INCREMENT_VALUE:
         IncrementValue();
         break;
-      case PPS.PP_ACTION_SET_VALUE:
+      case PP.ACTION_SET_VALUE:
         SetValue();
         break;
-      case PPS.PP_ACTION_TOGGLE_BOOL:
+      case PP.ACTION_TOGGLE_BOOL:
         ToggleBool();
         break;
-      case PPS.PP_ACTION_MAKE_INTERACTIBLE:
+      case PP.ACTION_MAKE_INTERACTIBLE:
         SetInteractible(true);
         break;
-      case PPS.PP_ACTION_REMOVE_INTERACTIBLE:
+      case PP.ACTION_REMOVE_INTERACTIBLE:
         SetInteractible(false);
         break;
-      case PPS.PP_ACTION_END_PHASE:
+      case PP.ACTION_END_PHASE:
         PhaseManager.Get().MoveToNextPhase();
         break;
-      case PPS.PP_ACTION_LEGACY_EVENT:
+      case PP.ACTION_LEGACY_EVENT:
         PlayLegacyEvent();
         break;
-      case PPS.PP_ACTION_PLAY_SOUND:
+      case PP.ACTION_PLAY_SOUND:
         Debug.Log("Playing Sound");
         PlaySound();
         break;
-      case PPS.PP_ACTION_WAIT:
+      case PP.ACTION_STOP_SOUND:
+        StopSound();
+        break;
+      case PP.ACTION_WAIT:
         Debug.Log("Action: Wait is NYI");
         break;
       default:
@@ -144,9 +150,37 @@ public class PhaseEventStep
     try
     {
       Debug.Log("Within PlaySound try block");
-      actor.AddComponent<AudioSource>().PlayOneShot(sound.Sound);
+      AudioSource aSource;
+
+      if (actor.audio && !actor.audio.isPlaying)
+      {
+        aSource = actor.audio;
+      }
+      else
+      {
+        aSource = actor.AddComponent<AudioSource>();
+      }
+
+      aSource.loop = Loop;
+      aSource.clip = sound.Sound;
+      aSource.Play();
     }
     catch { } // We already know what this could be, we don't care, dev will get the warning in console already.
+  }
+
+  private void StopSound()
+  {
+    GameObject actor = GameObject.Find(Actor);
+    AudioSource[] aSources = actor.GetComponents<AudioSource>();
+    SoundObj sound = ObjectController.Get().GetObject<SoundObj>(ObjectCategories.Sound, Name);
+
+    for (int i = 0; i < aSources.Length; ++i)
+    {
+      if (aSources[i].clip.name == sound.Sound.name)
+      {
+        aSources[i].Stop();
+      }
+    }
   }
 
   private void PlayLegacyEvent()

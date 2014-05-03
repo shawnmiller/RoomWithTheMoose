@@ -47,12 +47,12 @@ public static class SceneParser
         Debug.Log("Skipping: Empty Line");
         continue;
       }
-      if (line.TrimStart().Substring(0, 2) == PPS.PP_COMMENT_LINE)
+      if (line.TrimStart().Substring(0, 2) == PP.COMMENT_LINE)
       {
         Debug.Log("Skipping: Comment Line");
         continue;
       }
-      if (line == PPS.PP_PHASE_CLOSE)
+      if (line == PP.PHASE_CLOSE)
       {
         Debug.Log("Phase Ended");
         Manager.AddPhase(CurrentPhase);
@@ -62,23 +62,23 @@ public static class SceneParser
       {
         switch (line.GetWord(0, " ")) 
         {
-          case PPS.PP_PHASE_OPEN:
-          case PPS.PP_GLOBAL_OPEN:
+          case PP.PHASE_OPEN:
+          case PP.GLOBAL_OPEN:
             Debug.Log("Beginning New Phase");
             CurrentPhase = new Phase();
             break;
-          case PPS.PP_GLOBAL_CLOSE:
+          case PP.GLOBAL_CLOSE:
             Manager.AddGlobalPhase(CurrentPhase);
             CurrentPhase = null;
             break;
-          case PPS.PP_CUSTOM_EVENT_OPEN:
+          case PP.CUSTOM_EVENT_OPEN:
             string eName = line.GetWord(1, " ");
             eName = eName.SplitTextDelimited("=")[1];
 
             // Since Events can have prerequisite 
             string preReqCheck = line.GetLastWord(" ");
             Debug.Log("PreReqs for " + eName + ": " + preReqCheck);
-            if (preReqCheck.SplitTextDelimited("=")[0] == PPS.PP_PARAM_EVENT_REQ)
+            if (preReqCheck.SplitTextDelimited("=")[0] == PP.PARAM_EVENT_REQ)
             {
               Debug.Log("PreReqs found");
               CreateCustomEvent(ref fileReader, eName, Int32.Parse(preReqCheck.SplitTextDelimited("=")[1]));
@@ -90,23 +90,23 @@ public static class SceneParser
             }
 
             break;
-          case PPS.PP_EVENT_BEGIN_PHASE:
-          case PPS.PP_EVENT_ENTER_TRIGGER:
-          case PPS.PP_EVENT_ITEM_PICKUP:
-          case PPS.PP_EVENT_TIMER_COMPLETED:
+          case PP.EVENT_BEGIN_PHASE:
+          case PP.EVENT_ENTER_TRIGGER:
+          case PP.EVENT_ITEM_PICKUP:
+          case PP.EVENT_TIMER_COMPLETED:
             Debug.Log("Creating Event Watcher");
             CreateEventWatcher(line);
             break;
-          case PPS.PP_EVENT_MATH_CONDITION:
+          case PP.EVENT_MATH_CONDITION:
             CurrentPhase.AddConditional(CreateConditional(line));
             break;
-          case PPS.PP_OBJECT_TIMER:
-          case PPS.PP_OBJECT_VARIABLE:
-          case PPS.PP_OBJECT_SOUND:
+          case PP.OBJECT_TIMER:
+          case PP.OBJECT_VARIABLE:
+          case PP.OBJECT_SOUND:
             Debug.Log("Creating Object");
             CreateObject(line);
             break;
-          case PPS.PP_PHASE_CLOSE:
+          case PP.PHASE_CLOSE:
             break;
           default:
             Debug.Log("Couldn't parse line: " + line);
@@ -125,11 +125,14 @@ public static class SceneParser
   {
     List<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string, string>>();
     string[] inputs = line.SplitTextDelimited(" ");
+    Debug.Log("Found " + inputs.Length + " entries.");
     for (int i = 1; i < inputs.Length; ++i) 
     {
       string[] inputSplit = inputs[i].SplitTextDelimited("=");
       KeyValuePair<string, string> pair = new KeyValuePair<string, string>(inputSplit[CMD], inputSplit[VAL]);
       pairs.Add(pair);
+
+      Debug.Log("Added pair: " + pair.Key + " -> " + pair.Value);
     }
     return pairs;
   }
@@ -147,7 +150,7 @@ public static class SceneParser
       Debug.Log("Working With Value");
     }
 
-    PropertyInfo pInfo = obj.GetType().GetProperty(PPS.GetParameterLiteralName(property));
+    PropertyInfo pInfo = obj.GetType().GetProperty(PP.GetParameterLiteralName(property));
 
     if (pInfo == null)
     {
@@ -158,7 +161,7 @@ public static class SceneParser
       object val;
       if (typeOverride == "NullType")
       {
-        val = TypeConversion.Convert(PPS.GetParameterType(property), value);
+        val = TypeConversion.Convert(PP.GetParameterType(property), value);
       }
       else
       {
@@ -196,7 +199,7 @@ public static class SceneParser
     {
       // Special case scenario where we're intentionally casting Value as a string
       // in the event that it's the name of a variable.
-      if (pair.Key == PPS.PP_PARAM_VALUE)
+      if (pair.Key == PP.PARAM_VALUE)
       {
         SetProperty(condition, pair.Key, pair.Value, "string");
       }
@@ -228,7 +231,7 @@ public static class SceneParser
         Debug.Log("Skipping: Empty Line");
         continue;
       }
-      if(req.GetWord(0, " ") != PPS.PP_EVENT_MATH_CONDITION)
+      if(req.GetWord(0, " ") != PP.EVENT_MATH_CONDITION)
       {
         Debug.LogError("Found Actions before listed number of Prerequisites were added. Event Name: " + name);
         Debug.Break();
@@ -249,13 +252,13 @@ public static class SceneParser
         continue;
       }
 
-      if (line.GetWord(0, " ") == PPS.PP_CUSTOM_EVENT_CLOSE)
+      if (line.GetWord(0, " ") == PP.CUSTOM_EVENT_CLOSE)
       {
         Debug.Log("End of " + name + " event");
         break;
       }
 
-      if (line.GetWord(0, " ") == PPS.PP_EVENT_MATH_CONDITION)
+      if (line.GetWord(0, " ") == PP.EVENT_MATH_CONDITION)
       {
         Debug.LogError("Found a condition where one should not be. Event Name: " + name);
         Debug.Break();
@@ -280,13 +283,13 @@ public static class SceneParser
     Type type;
     switch (line.GetWord(0, " "))
     {
-      case PPS.PP_OBJECT_VARIABLE:
+      case PP.OBJECT_VARIABLE:
         type = typeof(Variable);
         break;
-      case PPS.PP_OBJECT_TIMER:
+      case PP.OBJECT_TIMER:
         type = typeof(Timer);
         break;
-      case PPS.PP_OBJECT_SOUND:
+      case PP.OBJECT_SOUND:
         type = typeof(SoundObj);
         break;
       default:
@@ -299,25 +302,26 @@ public static class SceneParser
     List<KeyValuePair<string, string>> inputs = BreakLine(line);
     foreach (KeyValuePair<string, string> pair in inputs)
     {
-      /*if (pair.Key == PPS.PP_PARAM_PATH)
+      /*if (pair.Key == PP.PARAM_PATH)
       {
         ((SoundObj)obj).Sound = Resources.LoadAssetAtPath(pair.Value, typeof(AudioClip)) as AudioClip;
       }
       else
       {*/
+        Debug.Log("Setting: " + pair.Key + " -> " + pair.Value);
         SetProperty(obj, pair.Key, pair.Value);
       //}
     }
 
     switch (line.GetWord(0, " "))
     {
-      case PPS.PP_OBJECT_VARIABLE:
+      case PP.OBJECT_VARIABLE:
         CurrentPhase.AddVariable((Variable)obj);
         break;
-      case PPS.PP_OBJECT_TIMER:
+      case PP.OBJECT_TIMER:
         CurrentPhase.AddTimer((Timer)obj);
         break;
-      case PPS.PP_OBJECT_SOUND:
+      case PP.OBJECT_SOUND:
         CurrentPhase.AddSound((SoundObj)obj);
         break;
     }

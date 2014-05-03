@@ -26,7 +26,7 @@ public class VariableManager : Singleton<VariableManager>, IMessageReceiver
   void IMessageReceiver.PushGlobalEvent(string EventName, string Instigator)
   {
     Debug.Log("VariableManager received event: " + EventName + " Instigator: " + Instigator);
-    if (EventName == PPS.PP_EVENT_BEGIN_PHASE)
+    if (EventName == PP.EVENT_BEGIN_PHASE)
     {
       PurgeNonGlobals();
     }

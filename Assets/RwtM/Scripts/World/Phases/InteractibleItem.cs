@@ -10,7 +10,8 @@ public class InteractibleItem : MonoBehaviour
   {
     if (MessageLimit != -1 && MessageCount < MessageLimit)
     {
-      MessageDispatch.Send(PPS.PP_EVENT_ITEM_PICKUP, this.name);
+      Debug.Log("Message Dispatching from " + name);
+      MessageDispatch.Send(PP.EVENT_ITEM_PICKUP, this.name);
       ++MessageCount;
     }
 
