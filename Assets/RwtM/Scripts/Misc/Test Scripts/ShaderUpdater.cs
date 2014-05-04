@@ -8,11 +8,7 @@ public class ShaderUpdater : MonoBehaviour
   void Start()
   {
     manager = ShaderManager.Get();
-    /*if (shaderMat == null)
-    {
-      shaderMat = Resources.LoadAssetAtPath("Assets/RwtM/Shaders/TemptedToTouch.mat", typeof(Material)) as Material;
-    }
-    renderer.material = shaderMat;*/
+    
     renderer.material = manager.TouchMaterial;
   }
 
@@ -22,6 +18,15 @@ public class ShaderUpdater : MonoBehaviour
 		{
 			return;
 		}
+
+    if (GetComponent<InteractibleItem>() != null)
+    {
+      renderer.material.SetColor("_Color", manager.KeyItemColor);
+    }
+    else
+    {
+      renderer.material.SetColor("_Color", manager.NormalColor);
+    }
     Vector4 position = manager.GetPosition();
     renderer.material.SetVector("_TempTouch", position);
   }

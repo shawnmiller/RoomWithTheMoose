@@ -3,6 +3,8 @@
 public class ShaderManager : Singleton<ShaderManager>
 {
   public Material TouchMaterial;
+  public Color NormalColor;
+  public Color KeyItemColor;
   Transform player;
 
   void Update()
