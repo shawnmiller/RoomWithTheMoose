@@ -42,7 +42,7 @@ ModelImporter:
     4300012: Nightsand_OBJ:Nightstand_Nightsand_OBJ:Nightstand_Upper_Drawer Obj_Nightstand
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
