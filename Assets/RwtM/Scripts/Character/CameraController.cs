@@ -64,7 +64,7 @@ public class CameraController : StateComponent
       return;
     }
 
-    isLooking = (Input.GetKey (KeyCode.Mouse1) ? true : false);
+    //isLooking = (Input.GetKey (KeyCode.Mouse1) ? true : false);
 
     if (!isLooking)
     {
