@@ -1,7 +1,7 @@
 ﻿Shader "RwtM/TheFeels" {
 	Properties {
 		_Color ("Lit Color", Color) = (0.31, 0.56, 0.78, 1)
-    _EdgeTex("Edge Texture", 2D) = "black" {}
+    //_EdgeTex("Edge Texture", 2D) = "black" {}
     _ComputedTex("Comp Texture", 2D) = "black" {}
     _Touch ("Touch Location", 2D) = ""
     _TempTouch ("Temp Touch", Vector) = (0,0,0,0)
@@ -17,23 +17,44 @@
 
     struct Input {
           float3 worldPos;
-          float2 uv_EdgeTex;
     };
 
     fixed4 _Color;
     float3 _TempTouch;
     half _Fade;
 
-    sampler2D _EdgeTex;
-    //sampler2D _CompTex;
+    float4 _HandPosition;
+
+    float4x4 _TouchLocationsHand;
+    float4x4 _TouchLocationsBody;
 
     void surf(Input IN, inout SurfaceOutput o) {
-      half dist = distance(IN.worldPos.xyz, _TempTouch.xyz);
+      half closest = 100000.0;
+      half cStrength = 1.0;
+
+      //half dist;
+      closest = distance(IN.worldPos.xyz, _HandPosition.xyz);
+
+      /*for(int i=0; i<4; ++i)
+      {
+        dist = distance(IN.worldPos.xyz, _TouchLocationsHand[i].xyz); 
+        if(dist < closest)
+        {
+          closest = dist;
+        }
+      }
+      for(int j=0; j<3; ++j) 
+      {
+        dist = distance(IN.worldPos.xyz, _TouchLocationsBody[j].xyz);
+        if(dist < closest)
+        {
+          closest = dist;
+          cStrength = _TouchLocationsBody[j].w;
+        }
+      }*/
+
       half4 cMod;
-      half3 edgeVal;
-      edgeVal = tex2D(_EdgeTex, IN.uv_EdgeTex).rgb;
-      cMod.rgb = _Color.rgb - dist * _Fade;
-      cMod.rgb += edgeVal * 0.2 - dist * _Fade;
+      cMod.rgb = _Color.rgb - closest * _Fade * cStrength;
       cMod.a = 1;
       o.Albedo = cMod;
     }

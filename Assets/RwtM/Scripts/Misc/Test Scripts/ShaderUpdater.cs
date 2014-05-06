@@ -27,7 +27,16 @@ public class ShaderUpdater : MonoBehaviour
     {
       renderer.material.SetColor("_Color", manager.NormalColor);
     }
-    Vector4 position = manager.GetPosition();
-    renderer.material.SetVector("_TempTouch", position);
+
+    Vector4 position = manager.GetHandPosition();
+    renderer.material.SetVector("_HandPosition", position);
+
+    /*Matrix4x4 FingerPositions = manager.GetLocationMatrix(ShaderManager.FINGERS);
+    renderer.material.SetMatrix("_TouchLocationsHand", FingerPositions);
+
+    Matrix4x4 BodyPositions = manager.GetLocationMatrix(ShaderManager.BODY);
+    renderer.material.SetMatrix("_TouchLocationsBody", BodyPositions);*/
+    //Vector4 position = manager.GetPosition();
+    //renderer.material.SetVector("_TempTouch", position);
   }
 }
