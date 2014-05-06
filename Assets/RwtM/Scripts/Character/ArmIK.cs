@@ -34,6 +34,7 @@ public class ArmIK : MonoBehaviour
   private float WCLength; // wrist -> clasp distance
   private float MaxHitDistance;
   private float PreviousDistance;
+  private float PreviousAngle;
 
   public float AntiJointLockAmount = 0.05f;
   public float HandThickness;
@@ -114,7 +115,7 @@ public class ArmIK : MonoBehaviour
 
   private void RotateWrist(ArmIKTarget IKTarget)
   {
-    if (IKTarget.IsTouching)
+    /*if (IKTarget.IsTouching)
     {
       Vector3 WristToHand = (FingerTip.position - WristJoint.position).normalized;
       Vector3 HandUpVector = Vector3.Cross(WristJoint.TransformDirection(Vector3.right), WristToHand);
@@ -126,7 +127,7 @@ public class ArmIK : MonoBehaviour
     {
       Vector3 NewWristRotation = Vector3.Lerp(WristJoint.localEulerAngles, BaseWristRotation, Time.fixedDeltaTime * MaxReturnLerpSpeed);
       WristJoint.localRotation = Quaternion.Euler(NewWristRotation);
-    }
+    }*/
   }
   
   private void ReturnToRest()
@@ -156,50 +157,39 @@ public class ArmIK : MonoBehaviour
     // Arccos((AdjSideA^2 + AdjSideB^2 - OppSideC^2) / (2*AdjSideA*AdjSideB))
     float ElbowAngle = Mathf.Acos((a*a + b*b - c*c) / (2*a*b)) * (180f / 3.1415f);
     ElbowAngle = (a*a + b*b - c*c);
-    //Debug.Log("Top: " + ElbowAngle);
-    //Debug.Log("Bottom: " + (2*a*b));
     ElbowAngle = ElbowAngle / (2*a*b);
-    //Debug.Log("Inner: " + ElbowAngle);
     ElbowAngle = Mathf.Acos(ElbowAngle);
-    //Debug.Log("Arccos: " + ElbowAngle);
     ElbowAngle = ElbowAngle * (180 / Mathf.PI);
-    //Debug.Log("Angle: " + ElbowAngle);
-    //ElbowAngle = 180f - ElbowAngle;
-    //Debug.Log("Elbow Angle: " + ElbowAngle);
-
-    
-
-    
-
-    //Debug.Log("Elbow Angle: " + ElbowAngle);
     Vector3 NewElbowRotation = BaseElbowRotation;
 
     float ElbowBend = 180 - ElbowAngle;
-    //Debug.Log("Angle: " + ElbowAngle);
-    //Debug.Log("Bend: " + ElbowBend);
     if (ElbowBend > ElbowMinBend && ElbowBend < ElbowMaxBend)
     {
-      //Debug.Log("Positive");
+      Debug.Log("Positive");
       //Debug.Log("C Value: " + c);
+      ElbowBend = Mathf.Clamp(ElbowBend, PreviousAngle - MaxAngleChangeSpeed*Time.fixedDeltaTime, PreviousAngle + MaxAngleChangeSpeed*Time.fixedDeltaTime);
       NewElbowRotation.z = ElbowBend;
+      PreviousAngle = ElbowBend;
     }
     else if (-ElbowBend > ElbowMinBend && -ElbowBend < ElbowMaxBend)
     {
-      //Debug.Log("Negative");
+      Debug.Log("Negative");
       //Debug.Log("C Value: " + c);
+      ElbowBend = Mathf.Clamp(ElbowBend, PreviousAngle - MaxAngleChangeSpeed * Time.fixedDeltaTime, PreviousAngle + MaxAngleChangeSpeed * Time.fixedDeltaTime);
       NewElbowRotation.z = -ElbowBend;
+      PreviousAngle = ElbowBend;
     }
     else
     {
-      //Debug.Log("Neither");
+      Debug.Log("Neither");
       //Debug.Log("C Value: " + c);
       NewElbowRotation.z = ElbowMinBend;
+      PreviousAngle = ElbowBend;
     }
-    //NewElbowRotation.z = ElbowAngle;
 
-    //NewElbowRotation.z = ElbowAngle;
-    //NewElbowRotation.z = Mathf.Clamp(180 - ElbowAngle, ElbowMinBend, ElbowMaxBend);
-    ElbowJoint.localRotation =  Quaternion.Euler(NewElbowRotation);
+    ElbowJoint.localRotation = Quaternion.Euler(NewElbowRotation);
+
+    
 
     /***************************Shoulder Handling***************************/
     // a is already correct
@@ -212,10 +202,6 @@ public class ArmIK : MonoBehaviour
     float ShoulderBend = 180f - ShoulderAngle;
     NewShoulderRotation.z = 180f + ShoulderBend;
     ShoulderJoint.localRotation = Quaternion.Euler(NewShoulderRotation);
-
-
-    /****************************Wrist Handling****************************/
-
   }
 
   private Vector3 GetWristTarget(ArmIKTarget IKTarget)
