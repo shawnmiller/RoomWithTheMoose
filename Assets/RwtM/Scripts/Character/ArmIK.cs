@@ -40,7 +40,7 @@ public class ArmIK : MonoBehaviour
   public float HandThickness;
   //private float HHPLength; // Hand Half-Point Length (mid-palm)
 
-  public float MaxAngleChangeSpeed;
+  public float MaxDistanceChangeSpeed;
   public float MaxReturnLerpSpeed;
 
   /******************************Wrist Flex******************************/
@@ -152,6 +152,7 @@ public class ArmIK : MonoBehaviour
     float b = LALength;
     float c = Vector3.Distance(ShoulderJoint.position, WristTarget);
     c = Mathf.Clamp(c, Mathf.Abs(a - b) + 0.01f, UALength + LALength - 0.01f);
+    c = Mathf.Clamp(c, PreviousDistance - MaxDistanceChangeSpeed * Time.fixedDeltaTime, PreviousDistance + MaxDistanceChangeSpeed * Time.fixedDeltaTime);
 
     // Law of Cosines for determining the angle of a joint with 3 known sides:
     // Arccos((AdjSideA^2 + AdjSideB^2 - OppSideC^2) / (2*AdjSideA*AdjSideB))
@@ -167,7 +168,7 @@ public class ArmIK : MonoBehaviour
     {
       Debug.Log("Positive");
       //Debug.Log("C Value: " + c);
-      ElbowBend = Mathf.Clamp(ElbowBend, PreviousAngle - MaxAngleChangeSpeed*Time.fixedDeltaTime, PreviousAngle + MaxAngleChangeSpeed*Time.fixedDeltaTime);
+      //ElbowBend = Mathf.Clamp(ElbowBend, PreviousAngle - MaxDistanceChangeSpeed*Time.fixedDeltaTime, PreviousAngle + MaxDistanceChangeSpeed*Time.fixedDeltaTime);
       NewElbowRotation.z = ElbowBend;
       PreviousAngle = ElbowBend;
     }
@@ -175,7 +176,7 @@ public class ArmIK : MonoBehaviour
     {
       Debug.Log("Negative");
       //Debug.Log("C Value: " + c);
-      ElbowBend = Mathf.Clamp(ElbowBend, PreviousAngle - MaxAngleChangeSpeed * Time.fixedDeltaTime, PreviousAngle + MaxAngleChangeSpeed * Time.fixedDeltaTime);
+      //ElbowBend = Mathf.Clamp(ElbowBend, PreviousAngle - MaxDistanceChangeSpeed * Time.fixedDeltaTime, PreviousAngle + MaxDistanceChangeSpeed * Time.fixedDeltaTime);
       NewElbowRotation.z = -ElbowBend;
       PreviousAngle = ElbowBend;
     }
