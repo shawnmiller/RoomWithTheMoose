@@ -22,7 +22,6 @@ public class ArmIK : MonoBehaviour
 
   private Vector3 BaseShoulderRotation;
   private Vector3 BaseElbowRotation;
-  private Vector3 BaseWristRotation;
 
   private Vector3 DirectionVector; // cached to avoid multiple calculations
 
@@ -42,6 +41,9 @@ public class ArmIK : MonoBehaviour
 
   public float MaxAngleChangeSpeed;
   public float MaxReturnLerpSpeed;
+
+  /******************************Wrist Flex******************************/
+  private Vector3 BaseWristRotation;
 
   void Start()
   {
@@ -88,7 +90,7 @@ public class ArmIK : MonoBehaviour
       IKTarget.Location = Hit.point;
       IKTarget.Distance = Hit.distance;
       IKTarget.Normal = Hit.normal;
-      IKTarget.UseNormal = true;
+      IKTarget.IsTouching = true;
 
       PositionIK(IKTarget);
     }
@@ -96,6 +98,7 @@ public class ArmIK : MonoBehaviour
     {
       ReturnToRest();
     }
+
     PreviousDistance = Vector3.Distance(ShoulderJoint.position, TargetPoint.position);
   }
 
@@ -103,15 +106,31 @@ public class ArmIK : MonoBehaviour
   {
     CurrentZ += Input.GetAxis("Mouse Y");
     Vector3 NewRotation = ArmPivotJoint.localEulerAngles;
+    CurrentZ = Mathf.Clamp(CurrentZ, ZMin, ZMax);
     NewRotation.x = -CurrentZ;
 
     ArmPivotJoint.localRotation = Quaternion.Euler(NewRotation);
   }
+
+  private void RotateWrist(ArmIKTarget IKTarget)
+  {
+    if (IKTarget.IsTouching)
+    {
+      Vector3 WristToHand = (FingerTip.position - WristJoint.position).normalized;
+      Vector3 HandUpVector = Vector3.Cross(WristJoint.TransformDirection(Vector3.right), WristToHand);
+      Quaternion RotationDifference = Quaternion.FromToRotation(HandUpVector, IKTarget.Normal);
+      //WristToHand = RotationDifference * WristToHand;
+      WristJoint.rotation = RotationDifference;
+    }
+    else
+    {
+      Vector3 NewWristRotation = Vector3.Lerp(WristJoint.localEulerAngles, BaseWristRotation, Time.fixedDeltaTime * MaxReturnLerpSpeed);
+      WristJoint.localRotation = Quaternion.Euler(NewWristRotation);
+    }
+  }
   
   private void ReturnToRest()
   {
-    Debug.Log("Returning to rest position.");
-
     ArmIKTarget IKTarget = new ArmIKTarget();
     IKTarget.Distance = Mathf.Min(MaxHitDistance, PreviousDistance + Time.fixedDeltaTime * MaxReturnLerpSpeed);
     IKTarget.Location = ShoulderJoint.position + DirectionVector * IKTarget.Distance;
@@ -193,6 +212,10 @@ public class ArmIK : MonoBehaviour
     float ShoulderBend = 180f - ShoulderAngle;
     NewShoulderRotation.z = 180f + ShoulderBend;
     ShoulderJoint.localRotation = Quaternion.Euler(NewShoulderRotation);
+
+
+    /****************************Wrist Handling****************************/
+
   }
 
   private Vector3 GetWristTarget(ArmIKTarget IKTarget)
