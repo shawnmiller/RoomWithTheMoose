@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using System.Collections;
 
 public class InteractableItem : GameComponent
@@ -37,3 +37,4 @@ public class InteractableItem : GameComponent
     return null;
   }
 }
+*/

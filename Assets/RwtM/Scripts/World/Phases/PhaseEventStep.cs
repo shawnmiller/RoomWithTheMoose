@@ -127,7 +127,7 @@ public class PhaseEventStep
     }
     else
     {
-      GameObject.Destroy(item.GetComponent<InteractableItem>());
+      GameObject.Destroy(item.GetComponent<InteractibleItem>());
       Debug.Log("Item Interaction Removed: " + item.name);
     }
   }
