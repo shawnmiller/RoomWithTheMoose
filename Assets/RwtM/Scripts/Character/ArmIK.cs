@@ -34,6 +34,8 @@ public class ArmIK : MonoBehaviour
   private float WCLength; // wrist -> clasp distance
   private float MaxHitDistance;
   private float PreviousDistance;
+  private float PreviousTargetDistance;
+  private float PreviousWristDistance;
   private float PreviousAngle;
 
   public float AntiJointLockAmount = 0.05f;
@@ -81,6 +83,9 @@ public class ArmIK : MonoBehaviour
   void FixedUpdate()
   {
     RotateArm();
+
+    PreviousTargetDistance = Vector3.Distance(ShoulderJoint.position, TargetPoint.position);
+    PreviousWristDistance = Vector3.Distance(ShoulderJoint.position, WristJoint.position);
 
     RaycastHit Hit;
     DirectionVector = (LookPoint.position - ShoulderJoint.position).normalized;
@@ -151,7 +156,7 @@ public class ArmIK : MonoBehaviour
     float b = LALength;
     float c = Vector3.Distance(ShoulderJoint.position, WristTarget);
     c = Mathf.Clamp(c, Mathf.Abs(a - b) + 0.01f, UALength + LALength - 0.01f);
-    c = Mathf.Clamp(c, PreviousDistance - MaxDistanceChangeSpeed * Time.fixedDeltaTime, PreviousDistance + MaxDistanceChangeSpeed * Time.fixedDeltaTime);
+    c = Mathf.Clamp(c, PreviousWristDistance - MaxDistanceChangeSpeed * Time.fixedDeltaTime, PreviousWristDistance + MaxDistanceChangeSpeed * Time.fixedDeltaTime);
 
     // Law of Cosines for determining the angle of a joint with 3 known sides:
     // Arccos((AdjSideA^2 + AdjSideB^2 - OppSideC^2) / (2*AdjSideA*AdjSideB))
