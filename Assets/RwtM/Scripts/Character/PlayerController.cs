@@ -4,74 +4,77 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : GameComponent
 {
-  private bool controllable = true;
+  public bool Controllable = true;
 
-  public bool Controllable
-  {
-    set { controllable = value; }
-  }
+  public float WalkSpeed;
+  public float Gravity;
 
-  [SerializeField]
-  private float walkSpeed;
-  [SerializeField]
-  private float runSpeedModifier;
-  [SerializeField]
-  private float gravity;
-  [SerializeField]
-  private float stamina;
-  [SerializeField]
-  private float staminaRegeneration;
-  //[SerializeField]
-  //private float rerunWaitTime;
-  [SerializeField]
-  private float minStartRunStamina;
-  private float stopRunTime;
-  public float currentStamina;
-  private bool isRunning;
+  public float NormalHeight;
+  public float CrouchHeight;
+  public float CrouchSpeed;
+  //public float RunSpeedModifier;
+  //public float Stamina;
+  //public float StaminaRegeneration;
+  //public float minStartRunStamina;
+  //private float stopRunTime;
+  //private float currentStamina;
+  //private bool isRunning;
   
   // Cached objects
   private GameState gameState;
-  private CharacterController controller;
+  private CharacterController Controller;
 
 	// Use this for initialization
 	void Start () 
   {
     gameState = GameState.Get ();
-    controller = transform.GetComponent<CharacterController> ();
-    currentStamina = stamina;
+    Controller = transform.GetComponent<CharacterController> ();
+    //currentStamina = Stamina;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
   {
-    if (!(gameState.State == StateType.In_Game) || !controllable)
+    if (!(gameState.State == StateType.In_Game) || !Controllable)
     {
       return;
     }
 
-    float currentSpeed = walkSpeed;
-    isRunning = DetermineRunState ();
+    float currentSpeed = WalkSpeed;
+    //isRunning = DetermineRunState ();
 
     // Stamina regeneration
-    if (!isRunning)
+    /*if (!isRunning)
     {
-      currentStamina = Mathf.Min (stamina, currentStamina + (staminaRegeneration * Time.fixedDeltaTime));
+      currentStamina = Mathf.Min (Stamina, currentStamina + (StaminaRegeneration * Time.fixedDeltaTime));
     }
     else
     {
-      currentSpeed *= runSpeedModifier;
+      currentSpeed *= RunSpeedModifier;
       currentStamina = Mathf.Max (0, currentStamina - Time.fixedDeltaTime);
+    }*/
+
+    if (Input.GetKey(KeyCode.LeftControl))
+    {
+      Controller.height = Mathf.Lerp(Controller.height, CrouchHeight, Time.fixedDeltaTime * CrouchSpeed);
+    }
+    else
+    {
+      float NewHeight = Mathf.Lerp(Controller.height, NormalHeight, Time.fixedDeltaTime * CrouchSpeed);
+      Controller.height = NewHeight;
+      Vector3 AdjustedPosition = transform.position;
+      AdjustedPosition.y += (NewHeight - Controller.height) + 0.05f;
+      transform.position = AdjustedPosition;
     }
 
-    //Vector3 moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical"));
     Vector3 moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical"));
     moveDirection = transform.TransformDirection (moveDirection);
     moveDirection = moveDirection.normalized;
     moveDirection = AlignToGroundNormal (moveDirection);
     moveDirection *= currentSpeed * Time.fixedDeltaTime;
-    moveDirection.y -= gravity * Time.fixedDeltaTime;
+    moveDirection.y -= Gravity * Time.fixedDeltaTime;
 
-    controller.Move (moveDirection);
+    Controller.Move (moveDirection);
 	}
 
   private Vector3 AlignToGroundNormal (Vector3 direction)
@@ -89,12 +92,12 @@ public class PlayerController : GameComponent
     }
   }
 
-  private bool DetermineRunState ()
+  /*private bool DetermineRunState ()
   {
     if (currentStamina - Time.fixedDeltaTime < 0)                                                   { return false; }
     if (!isRunning && currentStamina > minStartRunStamina && Input.GetKeyDown (KeyCode.LeftShift))  { return true; }
     if (isRunning && Input.GetKey (KeyCode.LeftShift))                                              { return true; }
 
     return false;
-  }
+  }*/
 }
