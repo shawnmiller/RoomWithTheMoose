@@ -86,7 +86,6 @@ public class ArmIK : MonoBehaviour
     DirectionVector = (LookPoint.position - ShoulderJoint.position).normalized;
     if (Physics.Raycast(ShoulderJoint.position, DirectionVector, out Hit, MaxHitDistance))
     {
-      Debug.Log("Hit: " + Hit.transform.name);
       ArmIKTarget IKTarget = new ArmIKTarget();
       IKTarget.Location = Hit.point;
       IKTarget.Distance = Hit.distance;
@@ -166,7 +165,7 @@ public class ArmIK : MonoBehaviour
     float ElbowBend = 180 - ElbowAngle;
     if (ElbowBend > ElbowMinBend && ElbowBend < ElbowMaxBend)
     {
-      Debug.Log("Positive");
+      //Debug.Log("Positive");
       //Debug.Log("C Value: " + c);
       //ElbowBend = Mathf.Clamp(ElbowBend, PreviousAngle - MaxDistanceChangeSpeed*Time.fixedDeltaTime, PreviousAngle + MaxDistanceChangeSpeed*Time.fixedDeltaTime);
       NewElbowRotation.z = ElbowBend;
@@ -174,7 +173,7 @@ public class ArmIK : MonoBehaviour
     }
     else if (-ElbowBend > ElbowMinBend && -ElbowBend < ElbowMaxBend)
     {
-      Debug.Log("Negative");
+      //Debug.Log("Negative");
       //Debug.Log("C Value: " + c);
       //ElbowBend = Mathf.Clamp(ElbowBend, PreviousAngle - MaxDistanceChangeSpeed * Time.fixedDeltaTime, PreviousAngle + MaxDistanceChangeSpeed * Time.fixedDeltaTime);
       NewElbowRotation.z = -ElbowBend;
@@ -182,13 +181,16 @@ public class ArmIK : MonoBehaviour
     }
     else
     {
-      Debug.Log("Neither");
+      //Debug.Log("Neither");
       //Debug.Log("C Value: " + c);
       NewElbowRotation.z = ElbowMinBend;
       PreviousAngle = ElbowBend;
     }
-
-    ElbowJoint.localRotation = Quaternion.Euler(NewElbowRotation);
+    try
+    {
+      ElbowJoint.localRotation = Quaternion.Euler(NewElbowRotation);
+    }
+    catch { }
 
     
 

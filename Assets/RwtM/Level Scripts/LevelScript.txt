@@ -66,7 +66,7 @@ EndGlobal
 Phase
 	Variable Name=InventoryItems Type=Integer Value=0 Global=False
 
-	Timer Name=Phase1Reminder Duration=45 RepeatCount=999 AutoStart=False Global=False
+	Timer Name=Phase1Reminder Duration=120 RepeatCount=999 AutoStart=False Global=False
 	Timer Name=Alarm Duration=1 RepeatCount=0 AutoStart=True Global=False
 	Timer Name=TestCond Duration=1 RepeatCount=0 AutoStart=True Global=False
 
@@ -92,6 +92,7 @@ Phase
 
 	BeginCustomEvent Name=BeginDressingSequence
 		StopSound Name=AlarmSound StopOn=Alarm
+		RemoveInteractible Name=Alarm
 	
 		MakeInteractible Name=Clothing Uses=1 Persistent=False
 		MakeInteractible Name=BookBag Uses=1 Persistent=False
@@ -143,8 +144,8 @@ EndPhase
 
 // Phase 2
 Phase
-	Variable Name=InventoryItems Type=Integer Value=0 Global=False
-	Timer Name=Phase2Reminder Duration=50 RepeatCount=999 AutoStart=True Global=False
+	Variable Name=P2InventoryItems Type=Integer Value=0 Global=False
+	Timer Name=Phase2Reminder Duration=120 RepeatCount=999 AutoStart=True Global=False
 	Sound Name=MommyReP2 Path=Audio/Level1/P2_Obj_Reminder Global=False
 	Sound Name=MomShoeReminder Path=Audio/Level1/P2_Shoe_Reminder Global=False
 	
@@ -152,8 +153,8 @@ Phase
 	//-------------------------------------------------------
 	OnBeginPhase Action=Phase2Start
 	BeginCustomEvent Name=Phase2Start
-		MakeInteractible Name=Toothbrush Uses=1 Persistent=False
-		MakeInteractible Name=Toilet Uses=1 Persistent=False
+		MakeInteractible Name=Toothbrush Uses=1 Persistent=True
+		//MakeInteractible Name=Toilet Uses=1 Persistent=True
 		MakeInteractible Name=Shoes Uses=1 Persistent=False
 
 		EnableTrigger Name=ShoeTrigger
@@ -164,8 +165,8 @@ Phase
 	//-------------------------------------------------------
 	OnTimerComplete Name=Phase2Reminder Action=Phase2ObjectiveReminder
 
-	BeginCustomEvent Name=Phase2ObjectiveReminder PreReqs=1
-		OnCondition Name=Toothbrush ConditionReq=ItemInScene
+	BeginCustomEvent Name=Phase2ObjectiveReminder PreReqs=0
+		//OnCondition Name=Toothbrush ConditionReq=ItemInScene
 
 		PlaySound Name=MommyReP2 PlayFrom=Mom
 	EndCustomEvent
@@ -181,7 +182,7 @@ Phase
 	//Item Handling
 	//-------------------------------------------------------
 	BeginCustomEvent Name=ItemPickedUp
-		IncrementValue Name=InventoryItems Value=1
+		IncrementValue Name=P2InventoryItems Value=1
 	EndCustomEvent
 
 	OnPickUpItem Name=Toothbrush Action=ItemPickedUp
@@ -189,12 +190,12 @@ Phase
 
 	//End of Phase Logic
 	//-------------------------------------------------------
-	OnCondition Name=InventoryItems ConditionReq=EqualTo Value=2 Action=EndPhase2
+	OnCondition Name=P2InventoryItems ConditionReq=EqualTo Value=2 Action=EndPhase2
 
 	BeginCustomEvent Name=EndPhase2
 		CompletePhase
 	EndCustomEvent
-EndPhase	
+EndPhase
 
 
 
@@ -202,12 +203,15 @@ EndPhase
 
 // Phase 3
 Phase
+	Variable Name=P3InventoryItems Type=Integer Value=0 Global=False
+	
 	Timer Name=PhoneStart Duration=5 RepeatCount=0 AutoStart=True Global=False
 	Timer Name=PhoneEnd Duration=18 RepeatCount=0 AutoStart=False Global=False
-	Timer Name=P3ObjReminder Duration=45 RepeatCount=99999 AutoStart=True Global=False
+	Timer Name=P3ObjReminder Duration=120 RepeatCount=99999 AutoStart=True Global=False
 	
 	Sound Name=Phase3ObjectiveReminder Path=Audio/Level1/P3_Obj_Reminder Global=False
 	Sound Name=PhoneRingSound Path=Audio/Level1/SoundByte_PhoneRing Global=False
+	Sound Name=FriendPhoneDialog Path=Audio/Level1/DG_Friend_Pickup_Phone Global=False
 
 	//Phase 3 Setup
 	//-------------------------------------------------------
@@ -265,8 +269,8 @@ Phase
 
 	//Item Handling
 	//-------------------------------------------------------
-	BeginCustomEvent Name=ItemPickup
-		IncrementValue Name=InventoryItems Value=1
+	BeginCustomEvent Name=ItemPickedUp
+		IncrementValue Name=P3InventoryItems Value=1
 	EndCustomEvent
 
 	OnPickUpItem Name=Cereal Action=ItemPickedUp
@@ -274,7 +278,7 @@ Phase
 
 	//End of Phase Logic 
 	//-------------------------------------------------------
-	OnCondition Name=InventoryItems ConditionReq=EqualTo Value=1 Action=EndPhase3
+	OnCondition Name=P3InventoryItems ConditionReq=EqualTo Value=1 Action=EndPhase3
 	
 	BeginCustomEvent Name=EndPhase3
 		CompletePhase

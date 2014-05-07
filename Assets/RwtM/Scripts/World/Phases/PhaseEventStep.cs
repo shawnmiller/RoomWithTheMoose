@@ -46,6 +46,7 @@ public class PhaseEventStep
         SetInteractible(false);
         break;
       case PP.ACTION_END_PHASE:
+        Debug.Log("Moving to next Phase");
         PhaseManager.Get().MoveToNextPhase();
         break;
       case PP.ACTION_LEGACY_EVENT:
