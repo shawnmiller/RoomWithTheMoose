@@ -76,7 +76,7 @@ Phase
 	//EndCustomEvent
 
 	Sound Name=MommyRe Path=Audio/Level1/P1_Obj_Reminder Global=False
-	Sound Name=AlarmSound Path=Audio/Level1/AlarmRing Global=False
+	Sound Name=AlarmSound Path=Audio/Level1/SoundByte_AlarmRing Global=False
 
 	// Phase 1 Setup
 	//-------------------------------------------------------
@@ -146,7 +146,7 @@ Phase
 	Variable Name=InventoryItems Type=Integer Value=0 Global=False
 	Timer Name=Phase2Reminder Duration=50 RepeatCount=999 AutoStart=True Global=False
 	Sound Name=MommyReP2 Path=Audio/Level1/P2_Obj_Reminder Global=False
-	Sound Name=MomShoeReminder Path=Audio/Level1/ShoeReminder Global=False
+	Sound Name=MomShoeReminder Path=Audio/Level1/P2_Shoe_Reminder Global=False
 	
 	//Phase 2 Setup
 	//-------------------------------------------------------
@@ -204,12 +204,21 @@ EndPhase
 Phase
 	Timer Name=PhoneStart Duration=5 RepeatCount=0 AutoStart=True Global=False
 	Timer Name=PhoneEnd Duration=18 RepeatCount=0 AutoStart=False Global=False
+	Timer Name=P3ObjReminder Duration=45 RepeatCount=99999 AutoStart=True Global=False
+	
+	Sound Name=Phase3ObjectiveReminder Path=Audio/Level1/P3_Obj_Reminder Global=False
+	Sound Name=PhoneRingSound Path=Audio/Level1/SoundByte_PhoneRing Global=False
 
 	//Phase 3 Setup
 	//-------------------------------------------------------
 	OnBeginPhase Action=Phase3Start
 	BeginCustomEvent Name=Phase3Start
 		MakeInteractible Name=Cereal Uses=1 Persistent=True
+	EndCustomEvent
+	
+	OnTimerComplete Name=P3ObjReminder Action=ObjectiveReminder
+	BeginCustomEvent Name=ObjectiveReminder
+		PlaySound Name=Phase3ObjectiveReminder PlayFrom=Mom
 	EndCustomEvent
 
 	// Start Phone Interaction
@@ -218,7 +227,7 @@ Phase
 	BeginCustomEvent Name=PhoneRing
 		BeginTimer Name=PhoneEnd
 		MakeInteractible Name=Phone Uses=1 Persistent=True
-		LegacyEvent Name=PhoneRinging
+		PlaySound Name=PhoneRingSound PlayFrom=Phone Loop=True
 	EndCustomEvent
 
 	//End Phone Interaction
@@ -226,11 +235,13 @@ Phase
 	OnTimerComplete Name=PhoneEnd Action=KillPhone
 	BeginCustomEvent Name=KillPhone
 		RemoveInteractible Name=Phone
+		StopSound Name=PhoneRingSound StopOn=Phone
 	EndCustomEvent
 
 	// FriendPickUp Unlock
 	OnPickUpItem Name=Phone Action=FriendPickUpTrue
 	BeginCustomEvent Name=FriendPickUpTrue
+		StopSound Name=PhoneRingSound StopOn=Phone
 		PlaySound Name=FriendPhoneDialog PlayFrom=Phone
 		ToggleBool Name=FriendPickUp Value=1
 	EndCustomEvent
