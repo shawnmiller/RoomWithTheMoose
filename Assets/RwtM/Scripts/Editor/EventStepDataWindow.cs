@@ -45,7 +45,28 @@ public class EventStepDataWindow : EditorWindow
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Spawn Helper"))
         {
-          this.helper = Instantiate((data.prefab != null ? data.prefab : this.defaultHelper), data.position, data.rotation) as GameObject;
+          if (!(data.position == Vector3.zero && data.rotation.eulerAngles == Vector3.zero))
+          {
+            this.helper = Instantiate((data.prefab != null ? data.prefab : this.defaultHelper), data.position, data.rotation) as GameObject;
+          }
+          else
+          {
+            Vector3 CamDirection = SceneView.currentDrawingSceneView.camera.transform.forward;
+
+            RaycastHit Hit;
+            Vector3 SpawnPoint;
+
+            if (Physics.Raycast(SceneView.currentDrawingSceneView.camera.transform.position, CamDirection, out Hit))
+            {
+              SpawnPoint = Hit.point;
+            }
+            else
+            {
+              SpawnPoint = SceneView.currentDrawingSceneView.camera.transform.position + CamDirection * 10f;
+            }
+
+            this.helper = Instantiate((data.prefab != null ? data.prefab : this.defaultHelper), SpawnPoint, data.rotation) as GameObject;
+          }
         }
         if (GUILayout.Button("Get Values"))
         {

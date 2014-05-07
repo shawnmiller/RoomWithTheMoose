@@ -177,6 +177,7 @@ Phase
 	BeginCustomEvent Name=ShoeReminder
 		DisableTrigger Name=ShoeTrigger
 		PlaySound Name=MomShoeReminder PlayFrom=Mom
+		LegacyEvent Name=MoveToKitchen
 	EndCustomEvent
 
 	//Item Handling
@@ -186,8 +187,13 @@ Phase
 	EndCustomEvent
 
 	OnPickUpItem Name=Toothbrush Action=ItemPickedUp
+	OnPickUpItem Name=Toothbrush Action=RemoveBrushInteract
 	OnPickUpItem Name=Shoes Action=ItemPickedUp
 
+	BeginCustomEvent Name=RemoveBrushInteract
+		RemoveInteractible Name=Toothbrush
+	EndCustomEvent
+	
 	//End of Phase Logic
 	//-------------------------------------------------------
 	OnCondition Name=P2InventoryItems ConditionReq=EqualTo Value=2 Action=EndPhase2
@@ -274,6 +280,11 @@ Phase
 	EndCustomEvent
 
 	OnPickUpItem Name=Cereal Action=ItemPickedUp
+	OnPickUpItem Name=Cereal Action=RemoveCerealInteract
+	
+	BeginCustomEvent Name=RemoveCerealInteract
+		RemoveInteractible Name=Cereal
+	EndCustomEvent
 	
 
 	//End of Phase Logic 
